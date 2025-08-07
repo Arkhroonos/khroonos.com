@@ -1,1 +1,12 @@
 /* Your styles goes here. */
+.app-container {
+  display: flex;
+  flex-direction: row; // stack children vertically
+  min-height: 100vh;
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: #fff;
+}
