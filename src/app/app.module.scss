@@ -1,11 +1,80 @@
 /* Your styles goes here. */
 .app-container {
-  display: flex;
-  flex-direction: row; // stack children vertically
-  min-height: 100vh;
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, auto); // 3 equal columns
+  grid-auto-rows: auto;
+  gap: 1rem;
+  padding: 0 200px;
+
+  div {
+    width: 100%;
+  }
+
+  /**
+  *Media query
+  */
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; // Stack everything on small screens
+  }
 }
 
+/**
+ *Grid layout for the components
+ */
+.navbar {
+  grid-column: 1 / span 3;
+}
+
+.infos {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.apprenticeship {
+  grid-column: 2 / span 2;
+  grid-row: 2;
+}
+
+.stack {
+  grid-column: 1 / span 2;
+  grid-row: 3;
+}
+
+.languages {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.motivation {
+  grid-column: 1 / span 2;
+  grid-row: 4;
+}
+
+.projects {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+.software {
+  grid-column: 1;
+  grid-row: 5;
+}
+
+.skills {
+  grid-column: 2 / span 2;
+  grid-row: 5;
+}
+
+.experience {
+  grid-column: 1 / span 2;
+  grid-row: 6;
+}
+
+.hobbies {
+  grid-column: 3;
+  grid-row: 6;
+}
 h1 {
   font-size: 1.5rem;
   color: #fff;
