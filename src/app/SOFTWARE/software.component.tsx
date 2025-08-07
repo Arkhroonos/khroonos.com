@@ -3,7 +3,7 @@ import styles from './software.component.module.scss';
 export function SoftwareComponent() {
   return (
     <div className={styles['container']}>
-      <h1>Welcome to SoftwareComponent!</h1>
+      <h1>SoftwareComponent!</h1>
     </div>
   );
 }

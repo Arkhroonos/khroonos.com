@@ -8,5 +8,9 @@
 .container {
   height: 945px;
   width: 315px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border-radius: 11px;
   background-color: slateblue;
 }

@@ -3,7 +3,7 @@ import styles from './experience.component.module.scss';
 export function ExperienceComponent() {
   return (
     <div className={styles['container']}>
-      <h1>Welcome to ExperienceComponent!</h1>
+      <h1>ExperienceComponent!</h1>
     </div>
   );
 }

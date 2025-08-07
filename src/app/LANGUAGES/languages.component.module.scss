@@ -6,7 +6,13 @@
  * }
 */
 .container {
-  height: 66px;
+  height: 65px;
   width: 315px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 11px;
   background-color: yellow;
+  h1 {
+    color: black;
+  }
 }

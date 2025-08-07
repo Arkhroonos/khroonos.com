@@ -9,5 +9,22 @@
 .container {
   height: 315px;
   width: 315px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #da1f1f;
+
+  .photowrapper {
+    margin-top: 20px;
+    height: 114px;
+    width: 114px;
+  }
+  .photo {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 2px solid #fff;
+  }
 }

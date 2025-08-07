@@ -1,14 +1,14 @@
 /* Your styles goes here. */
+:root {
+  box-sizing: border-box;
+}
 .app-container {
   display: grid;
   grid-template-columns: repeat(3, auto); // 3 equal columns
-  grid-auto-rows: auto;
+  grid-template-rows: repeat(6, auto);
   gap: 1rem;
   padding: 0 200px;
-
-  div {
-    width: 100%;
-  }
+  align-self: auto;
 
   /**
   *Media query
@@ -22,58 +22,91 @@
 /**
  *Grid layout for the components
  */
-.navbar {
-  grid-column: 1 / span 3;
-}
 
+.navbar {
+  grid-column: 2;
+  grid-row: 1;
+  width: 315px;
+  height: 100%;
+}
 .infos {
   grid-column: 1;
   grid-row: 2;
+  width: 315px;
+  min-width: 315px;
+  min-height: 315px;
 }
 
 .apprenticeship {
   grid-column: 2 / span 2;
   grid-row: 2;
+  width: 660px;
+  min-width: 660px;
+  min-height: 315px;
 }
 
 .stack {
-  grid-column: 1 / span 2;
+  grid-column: 2 / span 3;
   grid-row: 3;
+  width: 660px;
+  min-width: 660px;
+  min-height: 65px;
 }
 
 .languages {
-  grid-column: 3;
+  grid-column: 1;
   grid-row: 3;
+  width: 315px;
+  min-width: 315px;
+  min-height: 65px;
 }
 
 .motivation {
   grid-column: 1 / span 2;
   grid-row: 4;
+  width: 660px;
+  min-width: 660px;
+  min-height: 315px;
 }
 
 .projects {
   grid-column: 3;
   grid-row: 4;
+  width: 315px;
+  min-width: 315px;
+  min-height: 315px;
 }
 
 .software {
   grid-column: 1;
   grid-row: 5;
+  width: 315px;
+  min-width: 315px;
+  min-height: 315px;
 }
 
 .skills {
   grid-column: 2 / span 2;
   grid-row: 5;
+  width: 660px;
+  min-width: 660px;
+  min-height: 315px;
 }
 
 .experience {
   grid-column: 1 / span 2;
   grid-row: 6;
+  width: 660px;
+  min-width: 660px;
+  min-height: 945px;
 }
 
 .hobbies {
   grid-column: 3;
   grid-row: 6;
+  width: 315px;
+  min-width: 315px;
+  min-height: 945px;
 }
 h1 {
   font-size: 1.5rem;
