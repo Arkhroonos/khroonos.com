@@ -21,7 +21,7 @@ main {
   .app-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); // 3 equal columns
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(5, auto);
     grid-template-areas:
       'infos apprenticeship apprenticeship'
       'languages stack stack'
@@ -56,12 +56,14 @@ main {
 
     .languages {
       grid-area: languages;
-      height: 100%;
+      height: auto;
+      width: 100%;
+      margin: var(--grid-margin);
     }
 
     .motivation {
       grid-area: motivation;
-      height: 100%;
+      height: auto;
       width: 100%;
     }
 

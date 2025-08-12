@@ -1,16 +1,17 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
 .container {
   display: flex;
-  flex-direction: column;
-  justify-content: start;
+  flex-direction: row;
+  background-color: var(--background-color);
+  border-radius: var(--base-radius);
+  height: 100%;
 
-  background-color: #2b2b2b;
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 30px 30px;
+  }
 
   p {
     color: #fff;

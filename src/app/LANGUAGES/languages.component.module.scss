@@ -1,15 +1,14 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
 .container {
   display: flex;
   flex-direction: row;
-  background-color: rgb(255, 0, 238);
-  h1 {
-    color: black;
+  background-color: var(--background-color);
+  border-radius: var(--base-radius);
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 30px 30px;
   }
 }
