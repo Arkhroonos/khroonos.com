@@ -1,11 +1,22 @@
 .container {
   background-color: var(--primary-color);
-  height: 40px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 8px 8px;
+  padding: 0 30px;
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    width: 100%;
+  }
+
+  .mail-button{
+    background-color: var(--secondary-color);
+    border-radius: 8px 8px;
+    padding: 8px 16px;
+  }
 
   h1 {
     color: var(--text-color);
