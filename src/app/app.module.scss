@@ -4,10 +4,16 @@
 }
 .app-container {
   display: grid;
-  grid-template-columns: repeat(3, auto); // 3 equal columns
-  grid-template-rows: repeat(6, auto);
+  grid-template-columns: repeat(3, 1fr); // 3 equal columns
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    'infos apprenticeship apprenticeship'
+    'languages stack stack'
+    'motivation motivation projects'
+    'software skills skills'
+    'experience experience hobbies';
   gap: 1rem;
-  padding: 0 300px;
+  padding: 0 150px;
 }
 
 /**
@@ -15,89 +21,65 @@
  */
 
 .navbar {
-  grid-column: 2;
-  grid-row: 1;
-  width: 315px;
   height: 100%;
+  width: 100%;
 }
+
 .infos {
-  grid-column: 1;
-  grid-row: 2;
-  width: 315px;
-  min-width: 315px;
-  min-height: 315px;
+  grid-area: infos;
+  height: 100%;
+  width: 100%;
 }
 
 .apprenticeship {
-  grid-column: 2 / span 2;
-  grid-row: 2;
-  width: 660px;
-  min-width: 660px;
-  min-height: 315px;
+  grid-area: apprenticeship;
+  height: 100%;
+  width: 100%;
 }
 
 .stack {
-  grid-column: 2 / span 3;
-  grid-row: 3;
-  width: 660px;
-  min-width: 660px;
-  min-height: 65px;
+  grid-area: stack;
+  height: 100%;
 }
 
 .languages {
-  grid-column: 1;
-  grid-row: 3;
-  width: 315px;
-  min-width: 315px;
-  min-height: 65px;
+  grid-area: languages;
+  height: 100%;
 }
 
 .motivation {
-  grid-column: 1 / span 2;
-  grid-row: 4;
-  width: 660px;
-  min-width: 660px;
-  min-height: 315px;
+  grid-area: motivation;
+  height: 100%;
+  width: 100%;
 }
 
 .projects {
-  grid-column: 3;
-  grid-row: 4;
-  width: 315px;
-  min-width: 315px;
-  min-height: 315px;
+  grid-area: projects;
+  height: 100%;
+  width: 100%;
 }
 
 .software {
-  grid-column: 1;
-  grid-row: 5;
-  width: 315px;
-  min-width: 315px;
-  min-height: 315px;
+  grid-area: software;
+  height: 100%;
 }
 
 .skills {
-  grid-column: 2 / span 2;
-  grid-row: 5;
-  width: 660px;
-  min-width: 660px;
-  min-height: 315px;
+  grid-area: skills;
+  height: 100%;
+  width: 100%;
 }
 
 .experience {
-  grid-column: 1 / span 2;
-  grid-row: 6;
-  width: 660px;
-  min-width: 660px;
-  min-height: 945px;
+  grid-area: experience;
+  height: 100%;
+  width: 100%;
 }
 
 .hobbies {
-  grid-column: 3;
-  grid-row: 6;
-  width: 315px;
-  min-width: 315px;
-  min-height: 945px;
+  grid-area: hobbies;
+  height: 100%;
+  width: 100%;
 }
 h1 {
   font-size: 1.5rem;

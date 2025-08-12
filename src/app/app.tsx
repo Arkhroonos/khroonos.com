@@ -16,40 +16,42 @@ import HobbiesComponent from './HOBBIES/hobbies.component';
 
 export function App() {
   return (
-    <main className={styles['app-container']}>
+    <main>
       <div className={styles.navbar}>
         <NavbarComponent />
       </div>
-      <div className={styles.infos}>
-        <InfosComponent />
-      </div>
-      <div className={styles.apprenticeship}>
-        <ApprenticeshipComponent />
-      </div>
-      <div className={styles.languages}>
-        <LanguagesComponent />
-      </div>
-      <div className={styles.stack}>
-        <StackComponent />
-      </div>
-      <div className={styles.motivation}>
-        <MotivationComponent />
-      </div>
-      <div className={styles.projects}>
-        <ProjectsComponent />
-      </div>
-      <div className={styles.software}>
-        <SoftwareComponent />
-      </div>
-      <div className={styles.skills}>
-        <SkillsComponent />
-      </div>
-      <div className={styles.experience}>
-        <ExperienceComponent />
-      </div>
-      <div className={styles.hobbies}>
-        <HobbiesComponent />
-      </div>
+      <section className={styles['app-container']}>
+        <div className={styles.infos}>
+          <InfosComponent />
+        </div>
+        <div className={styles.apprenticeship}>
+          <ApprenticeshipComponent />
+        </div>
+        <div className={styles.languages}>
+          <LanguagesComponent />
+        </div>
+        <div className={styles.stack}>
+          <StackComponent />
+        </div>
+        <div className={styles.motivation}>
+          <MotivationComponent />
+        </div>
+        <div className={styles.projects}>
+          <ProjectsComponent />
+        </div>
+        <div className={styles.software}>
+          <SoftwareComponent />
+        </div>
+        <div className={styles.skills}>
+          <SkillsComponent />
+        </div>
+        <div className={styles.experience}>
+          <ExperienceComponent />
+        </div>
+        <div className={styles.hobbies}>
+          <HobbiesComponent />
+        </div>
+      </section>
     </main>
   );
 }

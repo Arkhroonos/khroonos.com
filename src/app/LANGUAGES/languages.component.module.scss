@@ -6,12 +6,9 @@
  * }
 */
 .container {
-  height: 65px;
-  width: 315px;
   display: flex;
   flex-direction: row;
-  border-radius: 11px;
-  background-color: yellow;
+  background-color: rgb(255, 0, 238);
   h1 {
     color: black;
   }
