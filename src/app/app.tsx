@@ -28,9 +28,6 @@ export function App() {
         <div className={styles.apprenticeship}>
           <ApprenticeshipComponent />
         </div>
-        <div className={styles.languages}>
-          <LanguagesComponent />
-        </div>
         <div className={styles.stack}>
           <StackComponent />
         </div>

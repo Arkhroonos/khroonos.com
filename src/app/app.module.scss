@@ -24,7 +24,7 @@ main {
     grid-template-rows: repeat(5, auto);
     grid-template-areas:
       'infos apprenticeship apprenticeship'
-      'languages stack stack'
+      'stack stack stack'
       'motivation motivation projects'
       'software skills skills'
       'experience experience hobbies';
@@ -51,13 +51,6 @@ main {
     .stack {
       grid-area: stack;
       height: 100%;
-      margin: var(--grid-margin);
-    }
-
-    .languages {
-      grid-area: languages;
-      height: auto;
-      width: 100%;
       margin: var(--grid-margin);
     }
 
