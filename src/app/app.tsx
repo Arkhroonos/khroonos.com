@@ -17,9 +17,10 @@ import HobbiesComponent from './HOBBIES/hobbies.component';
 export function App() {
   return (
     <main>
-      <div className={styles.navbar}>
+      <section className={styles['app-header']}>
         <NavbarComponent />
-      </div>
+      </section>
+
       <section className={styles['app-container']}>
         <div className={styles.infos}>
           <InfosComponent />

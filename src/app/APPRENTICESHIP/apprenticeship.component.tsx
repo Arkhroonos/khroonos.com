@@ -3,7 +3,7 @@ import styles from './apprenticeship.component.module.scss';
 export function ApprenticeshipComponent() {
   return (
     <div className={styles['container']}>
-      <div className={styles['content']}>
+      <div className={styles['content-wrapper']}>
         <h1>Alternant - Développeur Full-Stack</h1>
         <p>
           3ème Année de Bachelor

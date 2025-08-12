@@ -7,11 +7,17 @@
 */
 
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  background-color: #2b2b2b;
+  background-color: var(--background-color);
+  border-radius: var(--base-radius);
+  height: 100%;
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 30px 30px;
+  }
 
   .photowrapper {
     margin-top: 20px;
