@@ -3,6 +3,7 @@
   border-radius: 8px 8px;
   padding: 0 30px;
 
+
   .content-wrapper {
     display: flex;
     flex-direction: row;
@@ -10,6 +11,7 @@
     justify-content: space-between;
     height: 56px;
     width: 100%;
+    backdrop-filter: blur(10px);
 /*
  * Mail Button Styles
  */

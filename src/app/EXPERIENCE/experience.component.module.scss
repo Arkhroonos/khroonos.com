@@ -5,6 +5,7 @@
   border-radius: var(--base-radius);
   height: 100%;
 
+
   .content-wrapper {
     display: flex;
     flex-direction: column;
@@ -12,6 +13,8 @@
     align-items: start;
     padding: 30px 30px;
     width: 100%;
+    border-radius: var(--base-radius);
+
 
     .title-bar{
       width: 100%;
@@ -28,7 +31,6 @@
       align-items: center;
       gap: 1rem;
       margin: 1rem 0;
-      background-color: #0cecff;
       width: 100%;
       padding:0;
 
@@ -40,13 +42,29 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
+
+        .experience-description{
+
+          .experience-details-list{
+
+            .bullet-point{
+              color: var(--text-color);
+              font-size: 1.2rem;
+              font-family: 'inter', sans-serif;
+              text-align: justify;
+            }
+          }
+        }
 
         p {
           color: var(--text-color);
           font-size: 1.2rem;
           font-family: 'inter', sans-serif;
         }
-      }
+
+        }
+
 
 
     }
