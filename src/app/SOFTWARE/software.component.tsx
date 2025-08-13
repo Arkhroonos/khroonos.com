@@ -4,7 +4,9 @@ export function SoftwareComponent() {
   return (
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
-        <h1>SoftwareComponent!</h1>
+        <div className={styles['title-bar']}>
+          <h1 className={styles['title-bar-text']}>Softwares:</h1>
+        </div>
       </div>
     </div>
   );

@@ -4,7 +4,9 @@ export function MotivationComponent() {
   return (
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
-        <h1>Welcome to MotivationComponent!</h1>
+        <div className={styles['title-bar']}>
+          <h1 className={styles['title-bar-text']}>Motivation:</h1>
+        </div>
         <div className={styles['content']}>
           <p>
             Actuellement à la recherche d’un poste de développeur Full-Stack en

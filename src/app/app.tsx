@@ -1,11 +1,11 @@
-// Uncomment this line to use CSS modules
-// import styles from './app.module.scss';
+/*
+ * Importing Styles & Components
+ */
 import styles from 'src/app/app.module.scss';
 
 import NavbarComponent from './NAVBAR/navbar.component';
 import InfosComponent from './INFOS/infos.component';
 import ApprenticeshipComponent from './APPRENTICESHIP/apprenticeship.component';
-import LanguagesComponent from './LANGUAGES/languages.component';
 import StackComponent from './STACK/stack.component';
 import MotivationComponent from './MOTIVATION/motivation.component';
 import ProjectsComponent from './PROJECTS/projects.component';
@@ -13,6 +13,7 @@ import SoftwareComponent from './SOFTWARE/software.component';
 import SkillsComponent from './SKILLS/skills.component';
 import ExperienceComponent from './EXPERIENCE/experience.component';
 import HobbiesComponent from './HOBBIES/hobbies.component';
+import FooterComponent from './FOOTER/footer.component';
 
 export function App() {
   return (
@@ -48,6 +49,11 @@ export function App() {
         </div>
         <div className={styles.hobbies}>
           <HobbiesComponent />
+        </div>
+      </section>
+      <section className={styles['app-footer']}>
+        <div className={styles.footer}>
+        <FooterComponent/>
         </div>
       </section>
     </main>

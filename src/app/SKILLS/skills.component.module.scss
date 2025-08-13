@@ -11,5 +11,13 @@
     justify-content: start;
     align-items: start;
     padding: 30px 30px;
+    width: 100%;
+    .title-bar{
+      width: 100%;
+      border-bottom: 1px solid var(--border-color);
+      .title-bar-text{
+        color: var(--text-color);
+      }
+    }
   }
 }

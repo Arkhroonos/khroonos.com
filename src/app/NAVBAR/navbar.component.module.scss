@@ -10,16 +10,43 @@
     justify-content: space-between;
     height: 56px;
     width: 100%;
+/*
+ * Mail Button Styles
+ */
+    .mail-button{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--tertiary-color);
+      border-radius: 8px 8px;
+      padding: 8px 16px;
+
+      .mail-button:hover{
+        background-color: var(--secondary-color);
+      }
+
+      /*
+      * Anchor tag styles
+      */
+
+      a{
+        color: var(--text-color);
+        text-decoration: none;
+      }
+      /*
+      * Icon styles
+      */
+
+      #mail-icon{}
+
+    h1 {
+      color: var(--text-color);
+      font-size: 1rem;
+    }
+
+    }
   }
 
-  .mail-button{
-    background-color: var(--secondary-color);
-    border-radius: 8px 8px;
-    padding: 8px 16px;
-  }
 
-  h1 {
-    color: var(--text-color);
-    font-size: 1.5rem;
-  }
 }

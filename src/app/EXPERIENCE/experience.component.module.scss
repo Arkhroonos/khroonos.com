@@ -11,5 +11,44 @@
     justify-content: start;
     align-items: start;
     padding: 30px 30px;
+    width: 100%;
+
+    .title-bar{
+      width: 100%;
+      border-bottom: 1px solid var(--border-color);
+      .title-bar-text{
+        color: var(--text-color);
+
+      }
+    }
+    .experience-wrapper{
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+      gap: 1rem;
+      margin: 1rem 0;
+      background-color: #0cecff;
+      width: 100%;
+      padding:0;
+
+      .experience-date{
+        padding: 0 1rem;
+        border-right: 1px solid var(--border-color);
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+          color: var(--text-color);
+          font-size: 1.2rem;
+          font-family: 'inter', sans-serif;
+        }
+      }
+
+
+    }
   }
 }

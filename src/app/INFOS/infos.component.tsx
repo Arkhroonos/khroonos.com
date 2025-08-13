@@ -12,7 +12,7 @@ export function InfosComponent() {
           />
         </div>
         <div className={styles['ProfileInfos']}>
-          <h1 className="Profile-Name">Axel Priam</h1>
+          <h1 className="Profile-Name">Axel<br/>Priam</h1>
         </div>
         <div className={styles['ProfileInfos']}>
           <a href="mailto:" className="Email">

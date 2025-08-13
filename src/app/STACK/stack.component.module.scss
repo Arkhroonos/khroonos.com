@@ -7,8 +7,28 @@
   .content-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: start;
-    padding: 30px 30px;
+    padding: 15px 15px;
+    width: 100%;
+  }
+  .title-bar{
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    .title-bar-text{
+      color: var(--text-color);
+
+    }
+  }
+  .stack-icons-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+    p{
+      color: var(--text-color);
+    }
+
   }
 }
