@@ -22,6 +22,8 @@ export function App() {
         <NavbarComponent />
       </section>
 
+//TODO: WORK ON THE HERO SECTION WHEN I WILL HAVE MORE TIME AND KNOWLEDGE
+
       <section className={styles['app-container']}>
         <div className={styles.infos}>
           <InfosComponent />

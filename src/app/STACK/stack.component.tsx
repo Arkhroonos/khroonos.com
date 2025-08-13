@@ -10,21 +10,96 @@ export function StackComponent() {
         </div>
         <div className={styles['stack-icons-wrapper']}>
           <p>Basics</p>
+          <div className={styles['icon-wrapper']}>
           <img src={ironManIcon} alt="Iron Man icon" />
-          <img src={ironManIcon} alt="Iron Man icon" />
-          <img src={ironManIcon} alt="Iron Man icon" />
+            <p className={styles['element-name']} >
+              Iron Man
+            </p>
+          </div>
+
+          <div className={styles['icon-wrapper']}>
+            <img src={ironManIcon} alt="Iron Man icon" />
+            <p className={styles['element-name']} >
+              Iron Man
+            </p>
+          </div>
+
+          <div className={styles['icon-wrapper']}>
+            <img src={ironManIcon} alt="Iron Man icon" />
+            <p className={styles['element-name']} >
+              Iron Man
+            </p>
+          </div>
+
           <p>Languages</p>
-          <img src={ironManIcon} alt="Iron Man icon" />
-          <img src={ironManIcon} alt="Iron Man icon" />
-          <img src={ironManIcon} alt="Iron Man icon" />
+
+          <div className={styles['icon-wrapper']}>
+            <img src={ironManIcon} alt="Iron Man icon" />
+            <p className={styles['element-name']} >
+              Iron Man
+            </p>
+          </div>
+
+          <div className={styles['icon-wrapper']}>
+            <img src={ironManIcon} alt="Iron Man icon" />
+            <p className={styles['element-name']} >
+              Iron Man
+            </p>
+          </div>
+
+          <div className={styles['icon-wrapper']}>
+            <img src={ironManIcon} alt="Iron Man icon" />
+            <p className={styles['element-name']} >
+              Iron Man
+            </p>
+          </div>
+
           <p>Frameworks</p>
-          <img src={ironManIcon} alt="Iron Man icon" />
-          <img src={ironManIcon} alt="Iron Man icon" />
-          <img src={ironManIcon} alt="Iron Man icon" />
+
+          <div className={styles['icon-wrapper']}>
+            <img src={ironManIcon} alt="Iron Man icon" />
+            <p className={styles['element-name']} >
+              Iron Man
+            </p>
+          </div>
+
+          <div className={styles['icon-wrapper']}>
+            <img src={ironManIcon} alt="Iron Man icon" />
+            <p className={styles['element-name']} >
+              Iron Man
+            </p>
+          </div>
+
+          <div className={styles['icon-wrapper']}>
+            <img src={ironManIcon} alt="Iron Man icon" />
+            <p className={styles['element-name']} >
+              Iron Man
+            </p>
+          </div>
+
           <p>Tools</p>
-          <img src={ironManIcon} alt="Iron Man icon" />
-          <img src={ironManIcon} alt="Iron Man icon" />
-          <img src={ironManIcon} alt="Iron Man icon" />
+
+          <div className={styles['icon-wrapper']}>
+            <img src={ironManIcon} alt="Iron Man icon" />
+            <p className={styles['element-name']} >
+              Iron Man
+            </p>
+          </div>
+
+          <div className={styles['icon-wrapper']}>
+            <img src={ironManIcon} alt="Iron Man icon" />
+            <p className={styles['element-name']} >
+              Iron Man
+            </p>
+          </div>
+
+          <div className={styles['icon-wrapper']}>
+            <img src={ironManIcon} alt="Iron Man icon" />
+            <p className={styles['element-name']} >
+              Iron Man
+            </p>
+          </div>
+
 
         </div>
       </div>

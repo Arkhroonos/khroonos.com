@@ -28,6 +28,19 @@ export function InfosComponent() {
           <p className="city">Paris 13ème, France</p>
         </div>
       </div>
+      <div className={styles['social-media-wrapper']}>
+        <a href="https://www.linkedin.com/in/axel-priam-10999822a/" target="_blank" rel="noopener noreferrer">
+          <img src="/src/assets/medias/icons/linkedin.svg" alt="LinkedIn icon" />
+        </a>
+
+        <a href="https://github.com/AxelPriam" target="_blank" rel="noopener noreferrer">
+          <img src="/src/assets/medias/icons/github.svg" alt="GitHub icon" />
+        </a>
+
+        <a href="https://www.instagram.com/axel_priam/" target="_blank" rel="noopener noreferrer">
+          <img src="/src/assets/medias/icons/instagram.svg" alt="Instagram icon" />
+        </a>
+      </div>
     </div>
   );
 }
