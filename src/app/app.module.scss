@@ -1,7 +1,7 @@
 main {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: auto;
   box-sizing: border-box;
 
   /**
@@ -9,9 +9,12 @@ main {
   */
   .app-header {
     position: fixed;
-    height: 100%;
+    height: auto;
     width: 90%;
     align-self: center;
+    z-index: 999;
+
+
   }
 
   .app-footer {
@@ -38,6 +41,7 @@ main {
     gap: 1rem;
     padding: 0 300px;
     margin-top: 100px;
+    z-index: 1;
 
     /*
     **Grid layout for the components
@@ -58,7 +62,6 @@ main {
     .stack {
       grid-area: stack;
       height: 100%;
-      margin: var(--grid-margin);
     }
 
     .motivation {

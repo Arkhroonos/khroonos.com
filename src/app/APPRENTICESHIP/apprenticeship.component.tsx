@@ -4,7 +4,9 @@ export function ApprenticeshipComponent() {
   return (
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
+        <div className={styles['title-bar']}>
         <h1>Alternant - Développeur Full-Stack</h1>
+        </div>
         <p>
           3ème Année de Bachelor
           <br /> Concepteur Développeur d’Applications

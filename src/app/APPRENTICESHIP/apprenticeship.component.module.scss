@@ -1,11 +1,6 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
 .container {
+  display: flex;
+  flex-direction: row;
   background-color: var(--background-color);
   border-radius: var(--base-radius);
   height: 100%;
@@ -15,8 +10,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    padding: 30px 30px;
+    padding: 30px;
+    width: 100%;
+    .title-bar{
+      width: 100%;
+      border-bottom: 1px solid var(--border-color);
+      .title-bar-text{
+        color: var(--text-color);
+
+      }
+    }
   }
+
   p {
     color: #fff;
   }

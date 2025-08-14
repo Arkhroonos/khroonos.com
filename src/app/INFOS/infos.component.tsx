@@ -15,7 +15,7 @@ export function InfosComponent() {
           <h1 className="Profile-Name">Axel<br/>Priam</h1>
         </div>
         <div className={styles['ProfileInfos']}>
-          <a href="mailto:" className="Email">
+          <a href="mailto:priam.axel@gmail.com" className="Email">
             priam.axel@gmail.com
           </a>
         </div>

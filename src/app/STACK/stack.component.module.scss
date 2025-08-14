@@ -3,14 +3,16 @@
   flex-direction: row;
   background-color: var(--background-color);
   border-radius: var(--base-radius);
+  height: 100%;
 
   .content-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    padding: 15px 15px;
+    padding: 30px;
     width: 100%;
+
   }
   .title-bar{
     width: 100%;
@@ -21,9 +23,9 @@
     }
   }
   .stack-icons-wrapper{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(3,1fr);
     align-items: center;
     gap: 8px;
     p{
