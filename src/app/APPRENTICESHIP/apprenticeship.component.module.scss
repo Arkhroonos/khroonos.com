@@ -3,6 +3,7 @@
   flex-direction: row;
   background-color: var(--background-color);
   border-radius: var(--base-radius);
+  border: 1px solid var(--border-color);
   height: 100%;
 
   .content-wrapper {
@@ -10,11 +11,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    padding: 30px;
     width: 100%;
+
+
     .title-bar{
       width: 100%;
       border-bottom: 1px solid var(--border-color);
+
       .title-bar-text{
         color: var(--text-color);
 
@@ -22,12 +25,22 @@
     }
   }
 
-  p {
-    color: #fff;
+  .apprenticeship-wrapper{
+    background-color: antiquewhite;
   }
 
+  h1{
+    color: var(--text-color);
+    text-align: center;
+  }
+  p {
+    color: var(--text-color-secondary);
+    padding: 0 10px;
+  }
+
+
   a {
-    color: #fff;
+    color: var(--text-color-secondary);
     text-decoration: none;
   }
 }

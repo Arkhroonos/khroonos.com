@@ -2,7 +2,7 @@
   background-color: var(--primary-color);
   border-radius: 8px 8px;
   padding: 0 30px;
-
+  border: 1px solid var(--border-color);
 
   .content-wrapper {
     display: flex;
@@ -12,10 +12,10 @@
     height: 56px;
     width: 100%;
     backdrop-filter: blur(10px);
-/*
+    /*
  * Mail Button Styles
  */
-    .mail-button{
+    .mail-button {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -24,7 +24,7 @@
       border-radius: 8px 8px;
       padding: 8px 16px;
 
-      .mail-button:hover{
+      .mail-button:hover {
         background-color: var(--secondary-color);
       }
 
@@ -32,7 +32,7 @@
       * Anchor tag styles
       */
 
-      a{
+      a {
         color: var(--text-color);
         text-decoration: none;
       }
@@ -40,15 +40,13 @@
       * Icon styles
       */
 
-      #mail-icon{}
+      #mail-icon {
+      }
 
-    h1 {
-      color: var(--text-color);
-      font-size: 1rem;
-    }
-
+      h1 {
+        color: var(--text-color);
+        font-size: 1rem;
+      }
     }
   }
-
-
 }

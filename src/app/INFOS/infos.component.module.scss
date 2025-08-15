@@ -1,55 +1,23 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
-
 .container {
   background-color: var(--background-color);
   border-radius: var(--base-radius);
-  height: 100%;
+  border: 1px solid var(--border-color);
+  height: auto;
 
   .content-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    padding: 30px 30px;
   }
 
-  .photowrapper {
-    margin-top: 20px;
-    height: 114px;
-    width: 114px;
-  }
-
-  .photo {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border: 2px solid #fff;
-  }
-
-  a {
-    color: #fff;
-  }
-
-  p {
-    color: #fff;
-  }
+  .profile-name{
+  font-size: 1rem;}
 }
 
-.social-media-wrapper{
-  height: 40px;
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  gap: 10px;
-  padding: 0 32px;
-  border-radius: 0 0 24px 24px;
-  background: #530080;
+
+.marquee-wrapper {
+  height: 100px;
+  background: antiquewhite;
 
 }

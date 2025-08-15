@@ -4,6 +4,7 @@
   background-color: var(--background-color);
   border-radius: var(--base-radius);
   height: 100%;
+  border: 1px solid var(--border-color);
 
   .content-wrapper {
     display: flex;
