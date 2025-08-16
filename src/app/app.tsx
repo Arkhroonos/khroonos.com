@@ -14,8 +14,6 @@ import SkillsComponent from './SKILLS/skills.component';
 import ExperienceComponent from './EXPERIENCE/experience.component';
 import HobbiesComponent from './HOBBIES/hobbies.component';
 import FooterComponent from './FOOTER/footer.component';
-import MarqueeComponent from './MARQUEE/marquee.component';
-import marqueeComponent from './MARQUEE/marquee.component';
 
 //TODO: WORK ON THE HERO SECTION WHEN I WILL HAVE MORE TIME AND KNOWLEDGE
 export function App() {
@@ -25,13 +23,11 @@ export function App() {
         <NavbarComponent />
       </section>
 
+      <section className={styles['app-hero']}>
+        <InfosComponent />
+      </section>
+
       <section className={styles['app-container']}>
-        <div className={styles.infos}>
-          <InfosComponent />
-        </div>
-        <div className={styles['marqueeComponent']}>
-          <MarqueeComponent />
-        </div>
         <div className={styles.apprenticeship}>
           <ApprenticeshipComponent />
         </div>

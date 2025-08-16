@@ -1,19 +1,45 @@
 import styles from './hobbies.component.module.scss';
 
-export function HobbiesComponent() {
+interface Hobby {
+  title: string[];
+}
+
+interface HobbiesComponentProps {
+  hobbies?: Hobby[];
+}
+
+export function HobbiesComponent({ hobbies }: HobbiesComponentProps) {
+  const defaultHobbies: Hobby[] = [
+    {
+      title: [
+        'Photographie',
+        'Design',
+        'Developpement Personnel',
+        'Musculation',
+        'Jeux Vidéos',
+        'Veille Technologique',
+      ],
+    },
+  ];
+
+  const displayedHobbies = hobbies ?? defaultHobbies;
   return (
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
         <div className={styles['title-bar']}>
           <h1 className={styles['title-bar-text']}>Hobbies:</h1>
         </div>
-        <ul className={styles['hobbies-list']}>
-          <li>Design & Photographie</li>
-          <li>Développement Personnel</li>
-          <li>Musculation / Natation</li>
-          <li>Jeux vidéo</li>
-          <li>Veille technologique</li>
-        </ul>
+        {displayedHobbies.map((hobby, index) => (
+          <div key={index} className={styles['hobby-wrapper']}>
+            <div className={styles['hobby-chip']}>
+              {hobby.title.map((item, i) => (
+                <div key={i} className={styles['chip']}>
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

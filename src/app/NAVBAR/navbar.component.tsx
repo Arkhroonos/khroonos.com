@@ -2,8 +2,8 @@ import styles from './navbar.component.module.scss';
 
 const today = new Date();
 
-function formatDate(date) {
-  return new Intl.DateTimeFormat('en-US', {
+function formatDate(date: Date) {
+  return new Intl.DateTimeFormat('fr-FR', {
     weekday: 'long',
     year: 'numeric',
     month: 'long',

@@ -3,21 +3,46 @@
   border-radius: var(--base-radius);
   border: 1px solid var(--border-color);
   height: auto;
+  margin: 100px 100px 40px 100px;
 
-  .content-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
+  .profile-name {
+    font-size: 40rem;
+    text-align: center;
   }
-
-  .profile-name{
-  font-size: 1rem;}
 }
 
-
 .marquee-wrapper {
-  height: 100px;
-  background: antiquewhite;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  box-sizing: border-box;
+  color: var(--span-zone-color);
+  background-color: var(--secondary-color);
+  padding: 1rem 0;
 
+}
+
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 40s linear infinite;
+
+
+  span {
+    font-family: 'Humane', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 2rem;
+    font-size: 9rem;
+    color: var(--text-color);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-80%);
+  }
 }

@@ -1,6 +1,7 @@
 import styles from './skills.component.module.scss';
 
 interface Skill {
+  id: number;
   title: string;
   items: string[];
 }
@@ -11,18 +12,22 @@ interface SkillsComponentProps {
 export function SkillsComponent({ skills }: SkillsComponentProps) {
   const defaultSkills: Skill[] = [
     {
+      id: 1,
       title: 'Web Design - UI',
       items: ['Creation de Maquette', 'Wireframing', 'Responsive Design'],
     },
     {
+      id: 2,
       title: 'Branding & Identité Visuelle',
       items: ['Logos', 'Chartes Graphiques'],
     },
     {
+      id: 3,
       title: 'Contenu & stratégie digitale',
       items: ['Redaction Web', 'Structuration de contenu'],
     },
     {
+      id: 4,
       title: 'Gestion de projets digitaux',
       items: ['Coordination des équipes', 'Suivi de production'],
     },
@@ -38,8 +43,8 @@ export function SkillsComponent({ skills }: SkillsComponentProps) {
         </div>
 
         <div className={styles['skills-wrapper']}>
-          {displayedSkills.map((skill, index) => (
-            <div key={index} className={styles['skill-wrapper']}>
+          {displayedSkills.map((skill, id) => (
+            <div key={id} className={styles['skill-wrapper']}>
               <div className={styles['skill-type']}>
                 <h2>{skill.title}</h2>
               </div>
