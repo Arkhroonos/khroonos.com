@@ -15,10 +15,10 @@ export function NavbarComponent() {
   return (
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
-        <h1>Hello ! Happy {formatDate(today)}</h1>
-        <div className={styles['mail-button']}>
-          <a href="mailto: priam.axel@gmail.com">Contact Me !</a>
-        </div>
+        <h1 className={styles['date']}>Hello ! Happy {formatDate(today)}</h1>
+      </div>
+      <div className={styles['button-wrapper']}>
+        <a href="mailto: priam.axel@gmail.com">Contact Me !</a>
       </div>
     </div>
   );

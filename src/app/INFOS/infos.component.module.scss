@@ -1,9 +1,9 @@
 .container {
-  background-color: var(--background-color);
+  background-color: rgba(0, 0, 0, 0.34);
   border-radius: var(--base-radius);
   border: 1px solid var(--border-color);
   height: auto;
-  margin: 100px 100px 40px 100px;
+  margin: 100px 100px 0 100px;
 
   .profile-name {
     font-size: 40rem;
@@ -17,7 +17,7 @@
   white-space: nowrap;
   box-sizing: border-box;
   color: var(--span-zone-color);
-  background-color: var(--secondary-color);
+  background-color: var(--span-zone-color);
   padding: 1rem 0;
 
 }
@@ -25,7 +25,7 @@
 .marquee-text {
   display: inline-block;
   white-space: nowrap;
-  animation: marquee 40s linear infinite;
+  animation: marquee 50s linear infinite;
 
 
   span {

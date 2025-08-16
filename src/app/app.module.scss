@@ -10,7 +10,7 @@ main {
   .app-header {
     position: fixed;
     height: auto;
-    width: 90%;
+    width: 100%;
     align-self: center;
     z-index: 999;
 
@@ -22,6 +22,9 @@ main {
     height: 100vh;
     padding: 0 100px;
     align-self: center;
+    background-image: url("src/assets/medias/images/CityScape/orange_walls.jpeg");
+    background-size: cover;
+
 
   }
 
@@ -36,6 +39,7 @@ main {
   */
 
   .app-container {
+    margin-top:40px;
     display: grid;
     grid-template-columns: repeat(4, 1fr); // 3 equal columns
     grid-template-rows: repeat(7, auto);

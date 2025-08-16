@@ -1,8 +1,8 @@
 import styles from './infos.component.module.scss';
 
 export function InfosComponent() {
-  const skills = ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Sass //'];
-  const marqueeText = skills.join(' // ');
+  const skills = ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Sass •'];
+  const marqueeText = skills.join(' • ');
 
   return (
     <div className={styles['container']}>

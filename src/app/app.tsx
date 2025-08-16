@@ -14,8 +14,8 @@ import SkillsComponent from './SKILLS/skills.component';
 import ExperienceComponent from './EXPERIENCE/experience.component';
 import HobbiesComponent from './HOBBIES/hobbies.component';
 import FooterComponent from './FOOTER/footer.component';
+import SocialsComponent from './SOCIALS/socials.component';
 
-//TODO: WORK ON THE HERO SECTION WHEN I WILL HAVE MORE TIME AND KNOWLEDGE
 export function App() {
   return (
     <main>
