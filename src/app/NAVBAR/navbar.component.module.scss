@@ -1,21 +1,28 @@
 //TODO [Axel-2025-08-16]: Regler le probleme de mise en page de la NavBar
 
 .container {
-  border-bottom: var(--border-size) solid var(--border-color);
+  border: var(--border-size) solid var(--border-color);
+  border-radius: var(--rounded-corners);
   backdrop-filter: blur(10px);
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: auto;
 
-  .content-wrapper {
-    width: 70%;
+  /** Liquid Glass Effect**/
+  flex: 1 1 auto;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+  color: var(--lg-text);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+  backdrop-filter: blur(10px);
 
+  .content-wrapper {
+    width: 100%;
     padding: 0 1rem;
 
     .date {
-      font-size: 4rem;
+      font-size: 2rem;
       color: var(--text-color);
     }
   }

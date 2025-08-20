@@ -2,24 +2,42 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-/*Imported Fonts*/
+/*Other Imported Fonts*/
 
+@font-face {
+  font-family: 'Neopixel';
+  src: url('/src/assets/medias/fonts/neopixel/neopixel-regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Madeleine';
+  src: url('src/assets/medias/fonts/madeleine/Madeleine Stories-Regular-38d0.woff2') format( 'woff2');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Baunk';
+  src: url('src/assets/medias/fonts/baunk/Baunk.woff') format('woff2');
+}
 
 :root {
   background-color: #2B2B2B;
   box-sizing: border-box;
   margin: 0;
-  background-image: url("src/assets/medias/images/backgrounds/obsidian-background.jpeg");
+  background-image: url("src/assets/medias/images/backgrounds/blackdesert.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+
+
 
   /* Couleurs principales */
   --primary-color: #2b2b2bbf;
   --secondary-color: #530080;
   --tertiary-color: rgba(43, 43, 43, 0.56);
   --background-color: #2B2B2B;
-  --text-color: rgb(197, 197, 197);
+  --text-color: rgb(234, 234, 234);
   --text-color-secondary: #000000;
   --span-zone-color: #530080;
 
@@ -30,7 +48,7 @@
   --chips-color-secondary: rgba(255, 134, 12, 0.71);
 
   /** Borders & Shadows **/
-  --border-color: rgba(170, 170, 170, 0.35);
+  --border-color: rgba(170, 170, 170, 0.20);
   --border-size: 2px;
 
   /* Text Styles*/
@@ -38,7 +56,7 @@
     font-size: 2.5rem;
     color: var(--text-color);
     text-transform: uppercase;
-    font-family: 'Abril Fatface', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     margin: 0;
   }

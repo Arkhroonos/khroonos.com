@@ -7,7 +7,12 @@ export function ApprenticeshipComponent() {
         <h1>Alternant - Développeur Full-Stack</h1>
       </div>
       <div className={styles['apprenticeship-wrapper']}>
-        <p>
+        <p className={styles['apprenticeship-text']}>
+          2023 - 2024
+          <br />
+          <a href="https://www.etna.io/" target="_blank" rel="noopener noreferrer">
+            ETNA Ivry-Sur-Seine
+          </a>
           3ème Année de Bachelor
           <br /> Concepteur Développeur d’Applications
           <br /> Rythme : 3 Semaines Entreprise / 1 jour Présentiel + E-Learning

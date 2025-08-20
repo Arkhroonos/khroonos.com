@@ -29,6 +29,7 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      background-color: var(--title-bar-color);
 
     }
 
@@ -36,7 +37,11 @@
 
   .content {
     color: var(--text-color);
-    padding: 0 10px;
+
+    .about-text{
+      text-align: justify;
+      padding: 0 40px;
+    }
   }
 }
 

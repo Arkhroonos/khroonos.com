@@ -10,7 +10,13 @@ function formatDate(date: Date) {
     day: 'numeric',
   }).format(date);
 }
-
+function formatHour(hour: Hour) {
+  return new Intl.DateTimeFormat('fr-FR', {
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: true,
+  });
+}
 export function NavbarComponent() {
   return (
     <div className={styles['container']}>

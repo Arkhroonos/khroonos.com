@@ -7,7 +7,7 @@ export function MotivationComponent() {
         <h1 className={styles['title-bar-text']}>About Me</h1>
       </div>
       <div className={styles['content']}>
-        <p>
+        <p className={styles['about-text']}>
           Hey ! Moi c’est Axel De 2013 à 2025, j’ai passé plus d’une décennie dans le commerce,
           entre Zara et Apple.
           <br />
