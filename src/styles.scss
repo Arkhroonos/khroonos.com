@@ -51,6 +51,7 @@
 :root {
   background-color: #000000;
   box-sizing: border-box;
+  margin: 0;
 
   /* Couleurs principales */
   --primary-color: #2b2b2bbf;
@@ -93,8 +94,27 @@
   }
 
 
-  /*Global Design*/
-  --base-radius: 4px;
+  /*Radius & Padding*/
   --general-padding: 30px;
+
+  --base-radius: 4px;
+  --rounded-corners: 64px;
   --grid-margin: 8px 0 8px 0;
+  --left-radius: 64px 0 0 64px;
+  --bottom-radius: 0 0 64px 64px;
+  --top-radius: 64px 64px 0 0;
+  --right-radius: 0 64px 64px 0;
+
+  /*Smaller radius*/
+
+  --left-radius-small: 16px 0 0 16px;
+  --bottom-radius-small: 0 0 16px 16px;
+  --top-radius-small: 16px 16px 0 0;
+  --right-radius-small: 0 16px 16px 0;
 }
+
+//TODO:[2025-08-16]: Ameliorer :
+//  border: 1px solid var(--border-color);
+//  backdrop-filter: grayscale(1) blur(10px);
+//  mask: radial-gradient(50% 50%, rgb(0, 0, 0) 55.1573%, rgba(0, 0, 0, 0) 100%);
+//  opacity: 1;

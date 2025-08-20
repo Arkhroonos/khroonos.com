@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: row;
   background-color: var(--background-color);
-  border-radius: var(--base-radius);
+  border-radius: var(--rounded-corners);
   height: 100%;
   border: 1px solid var(--border-color);
+
 
   .content-wrapper {
     display: flex;

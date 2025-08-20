@@ -1,8 +1,8 @@
 //TODO [Axel-2025-08-16]: Regler le probleme de mise en page de la NavBar
 
 .container {
-  background-color: var(--background-color);
   border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
   display: flex;
   flex-direction: row;
   align-items: center;
