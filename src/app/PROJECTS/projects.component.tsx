@@ -32,15 +32,15 @@ export function ProjectsComponent() {
                   onClick={() => toggleProject(index)}
                   style={{ cursor: 'pointer' }}
                 >
-                  <h2>
-                    {project.name} ({project.year})
-                  </h2>
+                  <h2>{project.name}</h2>
                   <span>{isOpen ? '▲' : '▼'}</span>
                 </div>
 
                 {isOpen && (
                   <div className={styles['project-content']}>
-                    <p>{project.description}</p>
+                    <p>
+                      {project.year} - {project.description}
+                    </p>
 
                     <div className={styles['software-logos']}>
                       {project.softwares.map((s, i) => (
