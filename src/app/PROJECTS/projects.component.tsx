@@ -32,27 +32,36 @@ export function ProjectsComponent() {
                   onClick={() => toggleProject(index)}
                   style={{ cursor: 'pointer' }}
                 >
-                  <h2>{project.name}</h2>
-                  <span>{isOpen ? '▲' : '▼'}</span>
+                  <div className={styles['project-name']}>
+                    <h2>{project.name}</h2>
+                  </div>
+                  <span>{isOpen ? '-' : '+'}</span>
                 </div>
 
                 {isOpen && (
                   <div className={styles['project-content']}>
-                    <p>
-                      {project.year} - {project.description}
-                    </p>
-
-                    <div className={styles['software-logos']}>
-                      {project.softwares.map((s, i) => (
-                        <img
-                          key={i}
-                          src={s.logo}
-                          alt={s.title}
-                          className={styles['software-logo']}
-                        />
-                      ))}
+                    <div className={styles['project-gallery']}>
+                      <GalleryComponent images={project.images} projectName={project.name} />
                     </div>
-                    <GalleryComponent images={project.images} projectName={project.name} />
+
+                    <div className={styles['project-infos']}>
+                      <div className={styles['project-date']}>{project.year}</div>
+
+                      <div className={styles['software-logos']}>
+                        {project.softwares.map((s, i) => (
+                          <img
+                            key={i}
+                            src={s.logo}
+                            alt={s.title}
+                            className={styles['software-logo']}
+                          />
+                        ))}
+                      </div>
+
+                      <div className={styles['project-description']}>
+                        <p>{project.description}</p>
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>

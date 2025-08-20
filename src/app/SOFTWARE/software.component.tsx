@@ -1,45 +1,15 @@
 import styles from './software.component.module.scss';
-
-export interface Software {
-  type: string;
-  title: string;
-  logo: string;
-}
+import { softwaresLibrary, Software } from '../DATAS/softwares';
 
 interface SoftwaresComponentProps {
   softwares?: Software[];
+  exclude?: string[];
 }
-//todo: ajouter les logos des softwares de Webflow, XCODE.
+//TODO: Corriger le problème d'exclusion de logiciels
+export function SoftwareComponent({ softwares, exclude = [] }: SoftwaresComponentProps) {
+  let displayedSoftwares: Software[] = softwares ?? Object.values(softwaresLibrary);
 
-export function SoftwareComponent({ softwares }: SoftwaresComponentProps) {
-  const defaultSoftwares: Software[] = [
-    { type: 'Management', title: 'Slack', logo: 'src/assets/medias/icons/logos/cib-slack.png' },
-    { type: 'Management', title: 'Trello', logo: 'src/assets/medias/icons/logos/cib-trello.png' },
-    { type: 'Management', title: 'Notion', logo: 'src/assets/medias/icons/logos/cib-notion.png' },
-    { type: 'Design', title: 'Figma', logo: 'src/assets/medias/icons/logos/cib-figma.png' },
-    {
-      type: 'Design',
-      title: 'Adobe Photoshop',
-      logo: 'src/assets/medias/icons/logos/cib-adobe-photoshop.png',
-    },
-    {
-      type: 'Design',
-      title: 'Adobe Illustrator',
-      logo: 'src/assets/medias/icons/logos/cib-adobe-illustrator.png',
-    },
-    {
-      type: 'Development',
-      title: 'WebStorm',
-      logo: 'src/assets/medias/icons/logos/cib-webstorm.png',
-    },
-    {
-      type: 'Development',
-      title: 'Visual Studio Code',
-      logo: 'src/assets/medias/icons/logos/cib-visual-studio-code.png',
-    },
-  ];
-
-  const displayedSoftwares = softwares ?? defaultSoftwares;
+  displayedSoftwares = displayedSoftwares.filter((software) => !exclude.includes(software.title));
 
   const groupedSoftwares = displayedSoftwares.reduce<Record<string, Software[]>>(
     (acc, software) => {
@@ -63,8 +33,8 @@ export function SoftwareComponent({ softwares }: SoftwaresComponentProps) {
           <div key={type} className={styles['software-group']}>
             <h2 className={styles['software-type']}>{type}</h2>
             <div className={styles['software-list']}>
-              {softwares.map((software, index) => (
-                <div key={index} className={styles['software-wrapper']}>
+              {softwares.map((software) => (
+                <div key={software.title} className={styles['software-wrapper']}>
                   <img
                     src={software.logo}
                     alt={software.title}

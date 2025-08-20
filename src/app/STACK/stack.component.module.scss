@@ -1,10 +1,16 @@
 .container {
   display: flex;
   flex-direction: row;
-  background-color: var(--background-color);
+  background-color: var(--liquid-glass-color);
   border-radius: var(--rounded-corners);
   height: 100%;
-  border: 1px solid var(--border-color);
+  border: var(--border-size) solid var(--border-color);
+  /** Liquid Glass Effect**/
+  flex: 1 1 auto;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+  color: var(--lg-text);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+  backdrop-filter: blur(10px);
 
 
   .content-wrapper {
@@ -16,40 +22,61 @@
     width: 100%;
 
   }
-  .title-bar{
-    width: 100%;
-    border-bottom: 1px solid var(--border-color);
-    .title-bar-text{
+
+  .title-bar {
+    width: auto;
+    padding: 0 1rem;
+    border: var(--border-size) solid var(--border-color);
+    border-radius: var(--rounded-corners);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--title-bar-color);
+
+    .title-logo{
+
+      //TODO: Configure logo
+    }
+
+    .title-bar-text {
       color: var(--text-color);
 
     }
   }
-  .stack-wrapper{
+
+  .stack-wrapper {
     display: flex;
-    grid-template-columns: repeat(6,1fr);
-    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     align-items: center;
     gap: 8px;
 
-    .stack-chip{
+    .stack-chip {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
 
-      .chip{
-        border: 1px solid var(--border-color);
-        border-radius: var(--base-radius);
+
+      .chip {
+        border: var(--border-size) solid var(--border-color);
+        border-radius: var(--rounded-corners);
         color: var(--text-color);
+        background-color: var(--chips-color);
         padding: 4px 8px;
         margin: 4px;
       }
     }
 
 
-    p{
+    /*p {
       color: var(--text-color);
-    }
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      text-transform: uppercase;
+    }*/
 
   }
 }

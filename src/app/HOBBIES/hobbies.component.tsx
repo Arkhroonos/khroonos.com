@@ -27,7 +27,7 @@ export function HobbiesComponent({ hobbies }: HobbiesComponentProps) {
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
         <div className={styles['title-bar']}>
-          <h1 className={styles['title-bar-text']}>Hobbies:</h1>
+          <h1 className={styles['title-bar-text']}>Hobbies</h1>
         </div>
         {displayedHobbies.map((hobby, index) => (
           <div key={index} className={styles['hobby-wrapper']}>

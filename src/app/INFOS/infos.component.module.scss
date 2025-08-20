@@ -1,13 +1,19 @@
 .container {
-  background-color: rgba(0, 0, 0, 0.34);
+  background-color: var(--liquid-glass-color);
   border-radius: var(--rounded-corners);
-  border: 1px solid var(--border-color);
+  border: var(--border-size) solid var(--border-color);
   height: auto;
   margin: 100px 100px 0 100px;
+  /** Liquid Glass Effect**/
+  flex: 1 1 auto;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+  color: var(--lg-text);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+  backdrop-filter: blur(10px);
 
 
   .profile-name {
-    font-size: 40rem;
+    font-size: 10rem;
     text-align: center;
   }
 }
@@ -17,8 +23,6 @@
   width: 100%;
   white-space: nowrap;
   box-sizing: border-box;
-  color: var(--span-zone-color);
-  background-color: var(--span-zone-color);
   padding: 1rem 0;
   border-radius: 0 0 64px 64px;
 
@@ -28,14 +32,16 @@
   display: inline-block;
   white-space: nowrap;
   animation: marquee 50s linear infinite;
+  border-top: var(--border-size) solid var(--border-color);
+
 
 
   span {
-    font-family: 'Humane', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     text-transform: uppercase;
     margin-right: 2rem;
-    font-size: 9rem;
+    font-size: 4rem;
     color: var(--text-color);
   }
 }

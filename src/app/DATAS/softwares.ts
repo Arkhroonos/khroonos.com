@@ -5,7 +5,11 @@ export interface Software {
 }
 
 export const softwaresLibrary: Record<string, Software> = {
-  Figma: { type: 'Design', title: 'Figma', logo: 'src/assets/medias/icons/logos/cib-figma.png' },
+  Figma: {
+    type: 'Design',
+    title: 'Figma',
+    logo: 'src/assets/medias/icons/logos/Figma_Symbol_0.svg',
+  },
   Illustrator: {
     type: 'Design',
     title: 'Adobe Illustrator',
@@ -45,12 +49,12 @@ export const softwaresLibrary: Record<string, Software> = {
   Webflow: {
     type: 'Web Design',
     title: 'Webflow',
-    logo: 'src/assets/medias/icons/logos/cib-webflow.png', //TODO: Chercher Logo
+    logo: 'src/assets/medias/icons/logos/Webflow_idbjN5tmQv_0.svg', //TODO: Chercher Logo
   },
   Javascript: {
     type: 'Programming Languages',
     title: 'JavaScript',
-    logo: 'src/assets/medias/icons/logos/cib-javascript.svg',
+    logo: 'src/assets/medias/icons/logos/cib-js.svg',
   },
   TypeScript: {
     type: 'Programming Languages',
@@ -86,6 +90,6 @@ export const softwaresLibrary: Record<string, Software> = {
   SASS: {
     type: 'UI - Styling',
     title: 'SASS',
-    logo: 'src/assets/medias/icons/logos/cib-sass.svg',
+    logo: 'src/assets/medias/icons/logos/cib-sass-alt.svg',
   },
 };

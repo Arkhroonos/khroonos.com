@@ -44,4 +44,13 @@ export const experiences: Experience[] = [
       'Priorisation des tâches',
     ],
   },
+
+  {
+    date: '2012-2014',
+    title: 'The Kase',
+    description: [
+      'Mise en rayon des coques de téléphone personnalisées',
+      'Vente de produits personnalisés',
+    ],
+  },
 ];

@@ -12,7 +12,7 @@ export function ExperienceComponent({ experiences }: ExperiencesComponentProps) 
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
         <div className={styles['title-bar']}>
-          <h1 className={styles['title-bar-text']}>Experience:</h1>
+          <h1 className={styles['title-bar-text']}>Experiences</h1>
         </div>
 
         {displayedExperiences.map((experience, index) => (

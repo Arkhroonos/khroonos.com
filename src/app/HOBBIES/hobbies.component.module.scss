@@ -1,42 +1,57 @@
 .container {
   display: flex;
   flex-direction: row;
-  background-color: var(--background-color);
-  border-radius: var(--base-radius);
-  border: 1px solid var(--rounded-corners);
+  background-color: var(--liquid-glass-color);
+  border-radius: var(--rounded-corners);
+  border: 1px solid var(--border-color);
   height: 100%;
+  /** Liquid Glass Effect**/
+  flex: 1 1 auto;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+  color: var(--lg-text);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+  backdrop-filter: blur(10px);
 
   .content-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    padding: 30px ;
+    padding: 30px;
     width: 100%;
 
-    .title-bar{
-      width: 100%;
-      border-bottom: 1px solid var(--border-color);
-      .title-bar-text{
+    .title-bar {
+      width: auto;
+      padding: 0 1rem;
+      border: var(--border-size) solid var(--border-color);
+      border-radius: var(--rounded-corners);
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--title-bar-color);
+
+      .title-bar-text {
         color: var(--text-color);
 
       }
     }
-    .hobby-chip{
-      display:flex;
+
+    .hobby-chip {
+      display: flex;
       flex-direction: row;
       align-items: center;
 
-      .chip{
-        border: 1px solid var(--border-color);
-        border-radius: var(--base-radius);
+      .chip {
+        border: var(--border-size) solid var(--border-color);
+        border-radius: var(--rounded-corners);
         color: var(--text-color);
         padding: 4px 8px;
         margin: 4px;
 
-        p{
-           color: var(--text-color);
-         }
+        p {
+          color: var(--text-color);
+        }
       }
     }
   }

@@ -40,6 +40,12 @@ export function StackComponent({ stack }: StackComponentProps) {
       <div className={styles['content-wrapper']}>
         <div className={styles['title-bar']}>
           <h1 className={styles['title-bar-text']}>Stack</h1>
+          {/* <div className={styles['title-logo']}>
+            <img
+              className={styles['title-icon']}
+              src="src/assets/medias/icons/section-icons/gallery-icon.svg"
+            />
+          </div>*/}
         </div>
         {displayedStack.map((element, index) => (
           <div key={index} className={styles['stack-wrapper']}>

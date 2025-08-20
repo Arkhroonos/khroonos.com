@@ -1,31 +1,46 @@
 .container {
   display: flex;
   flex-direction: row;
-  background-color: var(--background-color);
+  background-color: var(--liquid-glass-color);
   border-radius: var(--rounded-corners);
-  border: 1px solid var(--border-color);
+  border: var(--border-size) solid var(--border-color);
   height: 100%;
-
+  overflow: hidden;
+  /** Liquid Glass Effect**/
+  flex: 1 1 auto;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+  color: var(--lg-text);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+  backdrop-filter: blur(10px);
 
   .content-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    padding: 30px ;
+    padding: 30px;
     width: 100%;
     border-radius: var(--base-radius);
 
 
-    .title-bar{
-      width: 100%;
-      border-bottom: 1px solid var(--border-color);
-      .title-bar-text{
+    .title-bar {
+      width: auto;
+      padding: 0 1rem;
+      border: var(--border-size) solid var(--border-color);
+      border-radius: var(--rounded-corners);
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--title-bar-color);
+
+      .title-bar-text {
         color: var(--text-color);
 
       }
     }
-    .experience-wrapper{
+
+    .experience-wrapper {
       display: flex;
       flex-direction: row;
       justify-content: start;
@@ -33,23 +48,25 @@
       gap: 1rem;
       margin: 1rem 0;
       width: 100%;
-      padding:0;
+      padding: 0;
 
-      .experience-date{
+      .experience-date {
         padding: 0 1rem;
-        border-right: 1px solid var(--border-color);
-        height: 80%;
+        border: var(--border-size) solid var(--border-color);
+        height: auto;
+        border-radius: var(--rounded-corners);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
+        background-color: var(--title-bar-color);
 
-        .experience-description{
+        .experience-description {
 
-          .experience-details-list{
+          .experience-details-list {
 
-            .bullet-point{
+            .bullet-point {
               color: var(--text-color);
               font-size: 1.2rem;
               font-family: 'inter', sans-serif;
@@ -64,8 +81,7 @@
           font-family: 'inter', sans-serif;
         }
 
-        }
-
+      }
 
 
     }

@@ -1,23 +1,82 @@
 .container {
   display: flex;
   flex-direction: row;
-  background-color: var(--background-color);
+  background-color: var(--liquid-glass-color);
   border-radius: var(--rounded-corners);
-  border: 1px solid var(--border-color);
+  border: var(--border-size) solid var(--border-color);
   height: 100%;
+  /** Liquid Glass Effect**/
+  flex: 1 1 auto;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+  color: var(--lg-text);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+  backdrop-filter: blur(10px);
 
   .content-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: start;
+    justify-content: flex-start;
+    align-items: flex-start;
     padding: 30px;
     width: 100%;
-    .title-bar{
+
+    .title-bar {
+      width: auto;
+      padding: 0 1rem;
+      border: var(--border-size) solid var(--border-color);
+      border-radius: var(--rounded-corners);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      background-color: var(--title-bar-color);
+
+      .title-bar-text {
+        /*color: var(--text-color);
+        font-size: 1.5rem;
+        font-weight: bold;*/
+      }
+    }
+
+    .software-group {
       width: 100%;
-      border-bottom: 1px solid var(--border-color);
-      .title-bar-text{
+      margin-bottom: 30px;
+
+      .software-type {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 15px;
         color: var(--text-color);
+      }
+
+      .software-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 20px;
+
+        .software-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          background-color: var(--card-background, transparent);
+          border-radius: var(--rounded-corners);
+          padding: 10px;
+
+          .software-logo {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            margin-bottom: 10px;
+          }
+
+          h3 {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            margin: 0;
+          }
+        }
       }
     }
   }
