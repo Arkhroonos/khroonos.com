@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background-color: var(--liquid-glass-color);
   border-radius: var(--rounded-corners);
   border: var(--border-size) solid var(--border-color);
@@ -15,75 +15,78 @@
 
   .content-wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 30px;
-    width: 100%;
     border-radius: var(--base-radius);
 
 
-    .title-bar {
+    .title-bar-text {
+      height: (var(--pill-size));
       width: auto;
       padding: 0 1rem;
       border: var(--border-size) solid var(--border-color);
       border-radius: var(--rounded-corners);
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       background-color: var(--title-bar-color);
 
-      .title-bar-text {
-        color: var(--text-color);
-
+      .icon {
+        width: var(--icon-size);
+        height: var(--icon-size);
       }
+
     }
 
-    .experience-wrapper {
+
+
+    }
+
+  .experience-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: var(--general-padding);
+
+    .experience-date {
+      padding: 0 1rem;
+      border: var(--border-size) solid var(--border-color);
+      height: auto;
+      border-radius: var(--rounded-corners);
       display: flex;
-      flex-direction: row;
-      justify-content: start;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      gap: 1rem;
-      margin: 1rem 0;
-      width: 100%;
-      padding: 0;
+      text-align: center;
+      background-color: var(--title-bar-color);
 
-      .experience-date {
-        padding: 0 1rem;
-        border: var(--border-size) solid var(--border-color);
-        height: auto;
-        border-radius: var(--rounded-corners);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background-color: var(--title-bar-color);
+      .experience-description {
 
-        .experience-description {
+        .experience-details-list {
 
-          .experience-details-list {
-
-            .bullet-point {
-              color: var(--text-color);
-              font-size: 1.2rem;
-              font-family: 'inter', sans-serif;
-              text-align: justify;
-            }
+          .bullet-point {
+            color: var(--text-color);
+            font-size: 1.2rem;
+            font-family: 'inter', sans-serif;
+            text-align: justify;
           }
         }
-
-        p {
-          color: var(--text-color);
-          font-size: 1.2rem;
-          font-family: 'inter', sans-serif;
-        }
-
       }
 
-
+      p {
+        color: var(--text-color);
+        font-size: 1.2rem;
+        font-family: 'inter', sans-serif;
+      }
     }
   }
 }
+
+
+

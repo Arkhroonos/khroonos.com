@@ -1,12 +1,25 @@
 import styles from './software.component.module.scss';
 import { softwaresLibrary, Software } from '../DATAS/softwares';
-
+import { IconsLibrary } from '../DATAS/icons';
 interface SoftwaresComponentProps {
   softwares?: Software[];
   exclude?: string[];
 }
 //TODO: Corriger le problème d'exclusion de logiciels
-export function SoftwareComponent({ softwares, exclude = [] }: SoftwaresComponentProps) {
+export function SoftwareComponent({
+  softwares,
+  exclude = [
+    'HTML',
+    'CSS',
+    'SASS',
+    'Angular',
+    'React',
+    'TypeScript',
+    'Javascript',
+    'Webflow',
+    'NodeJS',
+  ],
+}: SoftwaresComponentProps) {
   let displayedSoftwares: Software[] = softwares ?? Object.values(softwaresLibrary);
 
   displayedSoftwares = displayedSoftwares.filter((software) => !exclude.includes(software.title));
@@ -25,28 +38,23 @@ export function SoftwareComponent({ softwares, exclude = [] }: SoftwaresComponen
   return (
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
-        <div className={styles['title-bar']}>
-          <h1 className={styles['title-bar-text']}>Softwares</h1>
-        </div>
-
-        {Object.entries(groupedSoftwares).map(([type, softwares]) => (
-          <div key={type} className={styles['software-group']}>
-            <h2 className={styles['software-type']}>{type}</h2>
-            <div className={styles['software-list']}>
-              {softwares.map((software) => (
-                <div key={software.title} className={styles['software-wrapper']}>
-                  <img
-                    src={software.logo}
-                    alt={software.title}
-                    className={styles['software-logo']}
-                  />
-                  <h3>{software.title}</h3>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
+        <h1 className={styles['title-bar-text']}>Softwares</h1>
+        <img className={styles['icon']} src={IconsLibrary.Phone.icon1} alt="phone-icon" />
       </div>
+
+      {Object.entries(groupedSoftwares).map(([type, softwares]) => (
+        <div key={type} className={styles['software-group']}>
+          {/*<h2 className={styles['software-type']}>{type}</h2>*/}
+          <div className={styles['software-list']}>
+            {softwares.map((software) => (
+              <div key={software.title} className={styles['software-wrapper']}>
+                <img src={software.logo} alt={software.title} className={styles['software-logo']} />
+                <h3>{software.title}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }

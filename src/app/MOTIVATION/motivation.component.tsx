@@ -1,10 +1,12 @@
 import styles from './motivation.component.module.scss';
+import { IconsLibrary } from '../DATAS/icons';
 
 export function MotivationComponent() {
   return (
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
         <h1 className={styles['title-bar-text']}>About Me</h1>
+        <img className={styles['icon']} src={IconsLibrary.Phone.icon1} alt="phone-icon" />
       </div>
       <div className={styles['content']}>
         <p className={styles['about-text']}>

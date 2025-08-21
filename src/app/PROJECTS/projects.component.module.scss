@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background-color: var(--liquid-glass-color);
   border-radius: var(--rounded-corners);
   border: var(--border-size) solid var(--border-color);
@@ -14,134 +14,136 @@
 
   .content-wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 30px;
-    width: 100%;
+    width: auto;
 
 
-    .title-bar {
+    .title-bar-text {
+      height:var(--pill-size);
       width: auto;
       padding: 0 1rem;
       border: var(--border-size) solid var(--border-color);
       border-radius: var(--rounded-corners);
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
       background-color: var(--title-bar-color);
+    }
+    .icon{
+      width:var(--icon-size);
+      height:var(--icon-size);
+    }
+  }
 
-      .title-bar-text {
+  .projects-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .project-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+      border-bottom: var(--border-size) solid var(--border-color);
+
+      .project-name {
+        font-family: 'Abril Fatface', sans-serif;
+        font-size: 2rem;
+        color: var(--text-color);
+        margin: 0
+      }
+
+      span {
         color: var(--text-color);
       }
     }
 
-    .projects-wrapper {
+
+    /* Project Grid */
+    .project-content {
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: 'gallery gallery infos';
+      gap: 2rem;
+      align-items: start;
+
+    }
+
+    /* Zone des infos (droite) */
+    .project-infos {
+      grid-area: infos;
       display: flex;
       flex-direction: column;
-      width: 100%;
+      justify-content: start;
+      align-items: start;
+      gap: 1rem;
+      height: 100%;
+      border-left: 1px solid var(--border-color);
+      padding-left: 1rem;
 
-      .project-header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+
+      .project-date {
+        border: 1px solid var(--border-color);
+        border-radius: var(--rounded-corners);
+        background-color: #000000;
         padding: 0 1rem;
-        border-bottom: var(--border-size) solid var(--border-color);
-
-        .project-name {
-          font-family: 'Abril Fatface', sans-serif;
-          font-size: 2rem;
-          color: var(--text-color);
-          margin: 0
-        }
-
-        span {
-          color: var(--text-color);
-        }
-      }
-
-
-      /* Project Grid */
-      .project-content {
-        padding: 1rem;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: 'gallery gallery infos';
-        gap: 2rem;
-        align-items: start;
-
-      }
-
-      /* Zone des infos (droite) */
-      .project-infos {
-        grid-area: infos;
+        height: auto;
         display: flex;
         flex-direction: column;
-        justify-content: start;
-        align-items: start;
-        gap: 1rem;
-        height: 100%;
-        border-left: 1px solid var(--border-color);
-        padding-left: 1rem;
-
-
-        .project-date {
-          border: 1px solid var(--border-color);
-          border-radius: var(--rounded-corners);
-          background-color: #000000;
-          padding: 0 1rem;
-          height: auto;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          color: var(--text-color);
-          font-family: 'Abril Fatface', sans-serif;
-        }
-
-        .software-logos {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          gap: 0.5rem;
-
-        }
-
-        p {
-          margin: 0;
-          color: var(--text-color);
-        }
+        justify-content: center;
+        align-items: center;
+        color: var(--text-color);
+        font-family: 'Abril Fatface', sans-serif;
       }
 
-      /* Zone galerie (gauche) */
-      .project-gallery {
-        grid-area: gallery;
-      }
-
-      /* Logos des logiciels */
       .software-logos {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         gap: 0.5rem;
 
-        .software-logo {
-          width: 32px;
-          height: 32px;
-          object-fit: contain;
-          filter: brightness(0) invert(1); // logos blancs si besoin
-        }
       }
 
-      /* Description */
-      .project-description {
-        p {
-          margin: 0;
-          line-height: 1.5;
-          color: var(--text-color);
-        }
+      p {
+        margin: 0;
+        color: var(--text-color);
+      }
+    }
+
+    /* Zone galerie (gauche) */
+    .project-gallery {
+      grid-area: gallery;
+    }
+
+    /* Logos des logiciels */
+    .software-logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+
+      .software-logo {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+        filter: brightness(0) invert(1); // logos blancs si besoin
+      }
+    }
+
+    /* Description */
+    .project-description {
+      p {
+        margin: 0;
+        line-height: 1.5;
+        color: var(--text-color);
       }
     }
   }
 }
+

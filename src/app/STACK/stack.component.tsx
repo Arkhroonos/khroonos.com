@@ -1,4 +1,5 @@
 import styles from './stack.component.module.scss';
+import { IconsLibrary } from '../DATAS/icons';
 
 interface stackElement {
   id: number;
@@ -38,30 +39,24 @@ export function StackComponent({ stack }: StackComponentProps) {
   return (
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
-        <div className={styles['title-bar']}>
-          <h1 className={styles['title-bar-text']}>Stack</h1>
-          {/* <div className={styles['title-logo']}>
-            <img
-              className={styles['title-icon']}
-              src="src/assets/medias/icons/section-icons/gallery-icon.svg"
-            />
-          </div>*/}
-        </div>
-        {displayedStack.map((element, index) => (
-          <div key={index} className={styles['stack-wrapper']}>
-            <div className={styles['stack-type']}>
-              <h2>{element.type}</h2>
-            </div>
-            <div className={styles['stack-chip']}>
-              {element.name.map((item, i) => (
-                <div key={i} className={styles['chip']}>
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
+        <h1 className={styles['title-bar-text']}>Stack</h1>
+        <img className={styles['icon']} src={IconsLibrary.Phone.icon1} alt="phone-icon" />
       </div>
+
+      {displayedStack.map((element, index) => (
+        <div key={index} className={styles['stack-wrapper']}>
+          <div className={styles['stack-type']}>
+            <h2>{element.type}</h2>
+          </div>
+          <div className={styles['stack-chip']}>
+            {element.name.map((item, i) => (
+              <div key={i} className={styles['chip']}>
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }

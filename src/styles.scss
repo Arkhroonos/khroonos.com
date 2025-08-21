@@ -51,6 +51,10 @@
   --border-color: rgba(170, 170, 170, 0.20);
   --border-size: 2px;
 
+  /** icons-pills Heights & Widths **/
+  --icon-size:3rem;
+  --pill-size:3rem;
+
   /* Text Styles*/
   h1 {
     font-size: 2.5rem;
@@ -82,7 +86,7 @@
 
 
   /*Radius & Padding*/
-  --general-padding: 30px;
+  --general-padding: 30px; /*0.5rem 2rem*/
 
   --base-radius: 4px;
   --rounded-corners: 64px;

@@ -14,7 +14,6 @@ import SkillsComponent from './SKILLS/skills.component';
 import ExperienceComponent from './EXPERIENCE/experience.component';
 import HobbiesComponent from './HOBBIES/hobbies.component';
 import FooterComponent from './FOOTER/footer.component';
-import SocialsComponent from './SOCIALS/socials.component';
 
 export function App() {
   return (

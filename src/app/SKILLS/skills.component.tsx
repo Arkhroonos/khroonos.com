@@ -1,4 +1,5 @@
 import styles from './skills.component.module.scss';
+import { IconsLibrary } from '../DATAS/icons';
 
 interface Skill {
   id: number;
@@ -38,24 +39,23 @@ export function SkillsComponent({ skills }: SkillsComponentProps) {
   return (
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
-        <div className={styles['title-bar']}>
-          <h1 className={styles['title-bar-text']}>Skills</h1>
-        </div>
+        <h1 className={styles['title-bar-text']}>Skills</h1>
+        <img className={styles['icon']} src={IconsLibrary.Phone.icon1} alt="phone-icon" />
+      </div>
 
-        <div className={styles['skills-wrapper']}>
-          {displayedSkills.map((skill, id) => (
-            <div key={id} className={styles['skill-wrapper']}>
-              <div className={styles['skill-type']}>
-                <h2>{skill.title}</h2>
-              </div>
-              <ul className={styles['skill-list']}>
-                {skill.items.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
+      <div className={styles['skills-wrapper']}>
+        {displayedSkills.map((skill, id) => (
+          <div key={id} className={styles['skill-wrapper']}>
+            <div className={styles['skill-type']}>
+              <h2>{skill.title}</h2>
             </div>
-          ))}
-        </div>
+            <ul className={styles['skill-list']}>
+              {skill.items.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </div>
   );

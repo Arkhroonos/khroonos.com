@@ -72,7 +72,7 @@ export const softwaresLibrary: Record<string, Software> = {
     logo: 'src/assets/medias/icons/logos/cib-angular.svg',
   },
 
-  Nodejs: {
+  NodeJS: {
     type: 'Back-end libraries & frameworks',
     title: 'Node.js',
     logo: 'src/assets/medias/icons/logos/cib-nodejs.svg',
