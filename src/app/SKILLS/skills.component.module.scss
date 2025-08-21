@@ -32,12 +32,12 @@
       justify-content: space-between;
       align-items: center;
       background-color: var(--title-bar-color);
+    }
 
       .icon {
         width: var(--icon-size);
         height: var(--icon-size);
       }
-    }
   }
   .skill-wrapper {
   display:grid;

@@ -23,10 +23,10 @@ export function NavbarComponent() {
       </div>
       <div className={styles['content-wrapper']}>
         <a href="tel:+33666483991" className={styles['contact-link']}>
-          <img className={styles['icon']} src={IconsLibrary.Phone.icon1} alt="phone-icon" />
+          <img className={styles['icon']} src={IconsLibrary.Phone.icon2} alt="phone-icon" />
         </a>
         <a href="mailto:priam.axel@gmail.com" className={styles['contact-link']}>
-          <img className={styles['icon']} src={IconsLibrary.Mail.icon1} alt="mail-icon" />
+          <img className={styles['icon']} src={IconsLibrary.Mail.icon2} alt="mail-icon" />
         </a>
       </div>
     </div>

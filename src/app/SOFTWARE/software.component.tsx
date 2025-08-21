@@ -39,7 +39,7 @@ export function SoftwareComponent({
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
         <h1 className={styles['title-bar-text']}>Softwares</h1>
-        <img className={styles['icon']} src={IconsLibrary.Phone.icon1} alt="phone-icon" />
+        <img className={styles['icon']} src={IconsLibrary.Softwares.icon2} alt="phone-icon" />
       </div>
 
       {Object.entries(groupedSoftwares).map(([type, softwares]) => (

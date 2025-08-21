@@ -6,7 +6,7 @@ export function MotivationComponent() {
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
         <h1 className={styles['title-bar-text']}>About Me</h1>
-        <img className={styles['icon']} src={IconsLibrary.Phone.icon1} alt="phone-icon" />
+        <img className={styles['icon']} src={IconsLibrary.About.icon2} alt="phone-icon" />
       </div>
       <div className={styles['content']}>
         <p className={styles['about-text']}>

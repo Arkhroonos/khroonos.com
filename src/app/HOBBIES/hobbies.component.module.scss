@@ -27,11 +27,10 @@
       border-radius: var(--rounded-corners);
       text-align: center;
       background-color: var(--title-bar-color);
-
-      .icon {
-        width: var(--icon-size);
-        height: var(--icon-size);
-      }
+    }
+    .icon {
+      width: var(--icon-size);
+      height: var(--icon-size);
     }
   }
 

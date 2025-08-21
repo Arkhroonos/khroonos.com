@@ -40,7 +40,7 @@ export function StackComponent({ stack }: StackComponentProps) {
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
         <h1 className={styles['title-bar-text']}>Stack</h1>
-        <img className={styles['icon']} src={IconsLibrary.Phone.icon1} alt="phone-icon" />
+        <img className={styles['icon']} src={IconsLibrary.Stack.icon2} alt="phone-icon" />
       </div>
 
       {displayedStack.map((element, index) => (

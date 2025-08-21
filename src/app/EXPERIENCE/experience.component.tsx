@@ -13,7 +13,7 @@ export function ExperienceComponent({ experiences }: ExperiencesComponentProps) 
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
         <h1 className={styles['title-bar-text']}>Experiences</h1>
-        <img className={styles['icon']} src={IconsLibrary.Phone.icon1} alt="phone-icon" />
+        <img className={styles['icon']} src={IconsLibrary.Experiences.icon2} alt="phone-icon" />
       </div>
 
       {displayedExperiences.map((experience, index) => (

@@ -36,12 +36,8 @@
       margin: 0 0.2rem;
 
       .icon {
-        filter: grayscale(100%);
-        transition: filter 0.2s ease-in-out;
-      }
-
-      .icon:hover {
-        filter: grayscale(0%);
+        height: 2rem;
+        width: 2rem;
       }
 
     }

@@ -28,7 +28,7 @@ export function HobbiesComponent({ hobbies }: HobbiesComponentProps) {
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
         <h1 className={styles['title-bar-text']}>Hobbies</h1>
-        <img className={styles['icon']} src={IconsLibrary.Phone.icon1} alt="phone-icon" />
+        <img className={styles['icon']} src={IconsLibrary.Hobby.icon2} alt="phone-icon" />
       </div>
 
       {displayedHobbies.map((hobby, index) => (

@@ -1,11 +1,19 @@
 import styles from './apprenticeship.component.module.scss';
+import { IconsLibrary } from '../DATAS/icons';
+import { informations } from '../DATAS/informations';
 
 export function ApprenticeshipComponent() {
   return (
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
-        <h1>Alternant - Développeur Full-Stack</h1>
+        <div className={styles['apprenticeship-image']}>
+          <img className={styles['profile-image']} src={informations.photo} alt="profile-image" />
+        </div>
       </div>
+      <h1>
+        {informations.name} {informations.surname}
+      </h1>
+
       <div className={styles['apprenticeship-wrapper']}>
         <p className={styles['apprenticeship-text']}>
           2023 - 2024
