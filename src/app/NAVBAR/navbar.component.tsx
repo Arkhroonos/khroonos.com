@@ -16,7 +16,7 @@ export function NavbarComponent() {
   return (
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
-        <h1 className={styles['test']}>Linkedin + Medium</h1>
+        <div className={styles['icon']}>src={IconsLibrary.linkedin.icon1}</div>
       </div>
       <div className={styles['content-wrapper']}>
         <h1 className={styles['date']}>{formatDate(today)}</h1>

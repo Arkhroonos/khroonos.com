@@ -77,4 +77,10 @@ export const IconsLibrary = {
     name: 'Info',
     alt: 'Info Icon',
   },
+
+  linkedin: {
+    icon1: 'src/assets/medias/icons/logos/Linkedin Liquid Glass ! -iOS-Dark-40x40@2x.png',
+    name: 'Linkedin',
+    alt: 'Linkedin Icon',
+  },
 };
