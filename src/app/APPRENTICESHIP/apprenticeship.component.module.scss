@@ -1,6 +1,13 @@
 .container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-areas:
+'content-wrapper profile-info'
+'apprenticeship-wrapper apprenticeship-wrapper';
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+
   border-radius: 64px;
   background-color: var(--liquid-glass-color);
   border: var(--border-size) solid var(--border-color);
@@ -42,8 +49,6 @@
         border-radius: 100%;
       }
     }
-
-
   }
 
   .apprenticeship-wrapper {

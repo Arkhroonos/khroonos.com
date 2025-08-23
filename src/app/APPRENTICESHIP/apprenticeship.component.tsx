@@ -1,5 +1,4 @@
 import styles from './apprenticeship.component.module.scss';
-import { IconsLibrary } from '../DATAS/icons';
 import { informations } from '../DATAS/informations';
 
 export function ApprenticeshipComponent() {
@@ -10,9 +9,11 @@ export function ApprenticeshipComponent() {
           <img className={styles['profile-image']} src={informations.photo} alt="profile-image" />
         </div>
       </div>
-      <h1>
-        {informations.name} {informations.surname}
-      </h1>
+      <div className={styles['profile-infos']}>
+        <h1>
+          {informations.name} {informations.surname}
+        </h1>
+      </div>
 
       <div className={styles['apprenticeship-wrapper']}>
         <p className={styles['apprenticeship-text']}>

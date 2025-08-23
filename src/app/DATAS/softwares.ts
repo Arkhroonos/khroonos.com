@@ -8,74 +8,74 @@ export const softwaresLibrary: Record<string, Software> = {
   Figma: {
     type: 'Design',
     title: 'Figma',
-    logo: 'src/assets/medias/icons/logos/Figma_Symbol_0.svg',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg',
   },
   Illustrator: {
     type: 'Design',
     title: 'Adobe Illustrator',
-    logo: 'src/assets/medias/icons/logos/cib-adobe-illustrator.svg',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-plain.svg',
   },
   Photoshop: {
     type: 'Design',
     title: 'Adobe Photoshop',
-    logo: 'src/assets/medias/icons/logos/cib-adobe-photoshop.svg',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-plain.svg',
   },
   WebStorm: {
     type: 'Development',
     title: 'WebStorm',
-    logo: 'src/assets/medias/icons/logos/cib-webstorm.svg',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webstorm/webstorm-plain.svg',
   },
   VSCode: {
     type: 'Development',
     title: 'Visual Studio Code',
-    logo: 'src/assets/medias/icons/logos/cib-visual-studio-code.svg',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-plain-wordmark.svg',
   },
   Slack: {
     type: 'Management',
     title: 'Slack',
-    logo: 'src/assets/medias/icons/logos/cib-slack.svg',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/slack/slack-plain.svg',
   },
   Trello: {
     type: 'Management',
     title: 'Trello',
-    logo: 'src/assets/medias/icons/logos/cib-trello.svg',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-plain.svg',
   },
   Notion: {
     type: 'Management',
     title: 'Notion',
-    logo: 'src/assets/medias/icons/logos/cib-notion.svg',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/notion/notion-plain.svg',
   },
 
   Webflow: {
     type: 'Web Design',
     title: 'Webflow',
-    logo: 'src/assets/medias/icons/logos/Webflow_idbjN5tmQv_0.svg', //TODO: Chercher Logo
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webflow/webflow-original.svg', //TODO: Chercher Logo
   },
   Javascript: {
     type: 'Programming Languages',
     title: 'JavaScript',
-    logo: 'src/assets/medias/icons/logos/cib-js.svg',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg',
   },
   TypeScript: {
     type: 'Programming Languages',
     title: 'TypeScript',
-    logo: 'src/assets/medias/icons/logos/cib-typescript.svg',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg',
   },
   React: {
     type: 'Front-end libraries & frameworks',
     title: 'React',
-    logo: 'src/assets/medias/icons/logos/cib-react.svg',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
   },
   Angular: {
     type: 'Front-end libraries & frameworks',
     title: 'Angular',
-    logo: 'src/assets/medias/icons/logos/cib-angular.svg',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-plain.svg',
   },
 
   NodeJS: {
     type: 'Back-end libraries & frameworks',
     title: 'Node.js',
-    logo: 'src/assets/medias/icons/logos/cib-nodejs.svg',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain.svg',
   },
   HTML: {
     type: 'UI - Styling',
@@ -90,6 +90,6 @@ export const softwaresLibrary: Record<string, Software> = {
   SASS: {
     type: 'UI - Styling',
     title: 'SASS',
-    logo: 'src/assets/medias/icons/logos/cib-sass-alt.svg',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg',
   },
 };

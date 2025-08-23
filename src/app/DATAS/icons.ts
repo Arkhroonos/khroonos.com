@@ -83,4 +83,10 @@ export const IconsLibrary = {
     name: 'Linkedin',
     alt: 'Linkedin Icon',
   },
+
+  Mouse: {
+    icon1: 'src/assets/medias/icons/utilities/mouse-minimal 1.svg',
+    name: 'Mouse',
+    alt: 'Mouse Icon',
+  },
 };

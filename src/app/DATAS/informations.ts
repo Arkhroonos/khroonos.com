@@ -20,6 +20,7 @@ export const informations: Informations = {
   name: 'Axel',
   surname: 'Priam',
   nickname: 'Khroonos',
+  job: 'Développeur Fullstack',
   age: 35,
   email: 'priam.axel@gmail.com',
   country: 'France',

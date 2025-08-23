@@ -5,7 +5,6 @@ interface SoftwaresComponentProps {
   softwares?: Software[];
   exclude?: string[];
 }
-//TODO: Corriger le problème d'exclusion de logiciels
 export function SoftwareComponent({
   softwares,
   exclude = [

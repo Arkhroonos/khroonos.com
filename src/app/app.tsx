@@ -14,6 +14,7 @@ import SkillsComponent from './SKILLS/skills.component';
 import ExperienceComponent from './EXPERIENCE/experience.component';
 import HobbiesComponent from './HOBBIES/hobbies.component';
 import FooterComponent from './FOOTER/footer.component';
+import MarqueeComponent from './MARQUEE/marquee.component';
 
 export function App() {
   return (
@@ -24,6 +25,7 @@ export function App() {
 
       <section className={styles['app-hero']}>
         <InfosComponent />
+        <MarqueeComponent />
       </section>
 
       <section className={styles['app-container']}>

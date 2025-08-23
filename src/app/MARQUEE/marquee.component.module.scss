@@ -1,0 +1,35 @@
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 1rem 0;
+  align-self: end;
+
+}
+
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 100s linear infinite;
+  border: var(--border-size) solid var(--border-color);
+
+
+  span {
+    font-family: 'Baunk', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 2rem;
+    font-size: 4rem;
+    color: var(--text-color);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-80%);
+  }
+}

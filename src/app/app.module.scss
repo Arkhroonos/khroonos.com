@@ -22,12 +22,18 @@ main {
   }
 
   .app-hero {
-    width: 70%;
+    width: 100%;
     height: 100vh;
     padding: 0 100px;
     align-self: center;
-    /*background-image: url("src/assets/medias/images/backgrounds/obsidian-background.jpeg");*/
+    background-image: url("src/assets/medias/images/backgrounds/blackdesert.jpg");;
     background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 
 
   }

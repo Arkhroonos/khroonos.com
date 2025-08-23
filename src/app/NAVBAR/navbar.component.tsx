@@ -1,5 +1,6 @@
 import styles from './navbar.component.module.scss';
 import { IconsLibrary } from '../DATAS/icons';
+import { informations } from '../DATAS/informations';
 
 const today = new Date();
 
@@ -16,7 +17,9 @@ export function NavbarComponent() {
   return (
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
-        <div className={styles['icon']}>src={IconsLibrary.linkedin.icon1}</div>
+        <h1 className={styles['name']}>
+          {informations.name} {informations.surname}
+        </h1>
       </div>
       <div className={styles['content-wrapper']}>
         <h1 className={styles['date']}>{formatDate(today)}</h1>

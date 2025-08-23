@@ -2,12 +2,20 @@
   background-color: var(--liquid-glass-color);
   border-radius: var(--rounded-corners);
   border: var(--border-size) solid var(--border-color);
-  height: auto;
-  margin: 100px 100px 0 100px;
+  height: 60%;
+  margin: 6.25rem 6.25rem 6.25rem 6.25rem;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex : 1 1 auto;
+
+
 
 
   /** Liquid Glass Effect**/
-  flex: 1 1 auto;
+
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
   color: var(--lg-text);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
@@ -16,46 +24,33 @@
 
 
   .profile-name {
-    padding: 1rem 0 0 0;
+    padding: 2rem;
     font-size: 10rem;
     text-align: center;
     font-family: 'Baunk', sans-serif;
   }
-}
-
-.marquee-wrapper {
-  overflow: hidden;
-  width: 100%;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 1rem 0;
-  border-radius: 0 0 64px 64px;
-
-}
-
-.marquee-text {
-  display: inline-block;
-  white-space: nowrap;
-  animation: marquee 50s linear infinite;
-  border-top: var(--border-size) solid var(--border-color);
-
-
-
-  span {
+  .job{
+    font-size: 2rem;
     font-family: 'Inter', sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-right: 2rem;
-    font-size: 4rem;
-    color: var(--text-color);
+    text-align: center;
   }
+
+}
+
+.mouse {
+  height: 4rem;
+  animation: marquee 1s linear infinite;
+  margin-bottom: 2rem;
+
 }
 
 @keyframes marquee {
   0% {
-    transform: translateX(0%);
+    transform: translateY(0%);
+
   }
   100% {
-    transform: translateX(-80%);
+    transform: translateY(-10%);
   }
+
 }
