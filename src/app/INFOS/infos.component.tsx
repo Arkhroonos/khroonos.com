@@ -9,7 +9,7 @@ export function InfosComponent() {
         <h1 className={styles['profile-name']}>
           {informations.name} {informations.surname}
         </h1>
-        <h2 className={styles['job']}>{informations.job}</h2>
+        <h2 className={styles['job-name']}>{informations.job}</h2>
       </div>
       <img
         className={styles['mouse']}
