@@ -1,14 +1,14 @@
 .container {
+  //Size & Shape
+  height: 100%;
+
+  //Display
   display: flex;
   flex-direction: column;
-  background-color: var(--liquid-glass-color);
-  border-radius: var(--rounded-corners);
-  border: var(--border-size) solid var(--border-color);
-  height: 100%;
   overflow: hidden;
+
   /** Liquid Glass Effect**/
   flex: 1 1 auto;
-  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
   color: var(--lg-text);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
   backdrop-filter: blur(10px);
@@ -23,63 +23,103 @@
 
 
     .title-bar-text {
+      //Size & Shape
       height: (var(--pill-size));
       width: auto;
       padding: 0 1rem;
       border: var(--border-size) solid var(--border-color);
       border-radius: var(--rounded-corners);
+
+      //Display
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      background-color: var(--title-bar-color);
+
+      //Shadows
+      background-color: var(--liquid-glass-color);
+      box-shadow: var(--shadow-color);
     }
 
-      .icon {
-        width: var(--icon-size);
-        height: var(--icon-size);
-      }
+    .icon {
+      width: var(--icon-size);
+      height: var(--icon-size);
     }
+  }
 
-  .experience-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
+  .experiences {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    margin: 1rem 0;
     padding: var(--general-padding);
 
-    .experience-date {
-      padding: 0 1rem;
+    .experience-wrapper {
+      // Size & Shape
       border: var(--border-size) solid var(--border-color);
-      height: auto;
       border-radius: var(--rounded-corners);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background-color: var(--title-bar-color);
+      padding: var(--general-padding);
+
+      //Display
+      display: grid;
+      grid-template-areas:
+              'experience-infos experience-infos experience-date'
+              'experience-description experience-description experience-description';
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 1rem;
+      margin: 1rem 0;
+      align-items: baseline;
+      justify-content: start;
+
+      //Shadows
+      background-color: var(--liquid-glass-color);
+      box-shadow: var(--shadow-color);
+
+      .experience-infos {
+        grid-area: experience-infos;
+
+        .experience-title-text {
+          text-wrap: nowrap;
+        }
+      }
+
+      .experience-date {
+        grid-area: experience-date;
+        padding: 0 1rem;
+        border: var(--border-size) solid var(--border-color);
+        height: 1.5rem;
+        width: auto;
+        border-radius: var(--rounded-corners);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgba(64, 1, 1, 0.73);
+        text-wrap: nowrap;
+      }
+
 
       .experience-description {
+        grid-area: experience-description;
 
         .experience-details-list {
 
+
           .bullet-point {
             color: var(--text-color);
-            font-size: 1.2rem;
+            font-size: 0.9rem;
             font-family: 'inter', sans-serif;
-            text-align: justify;
           }
         }
       }
 
       p {
         color: var(--text-color);
-        font-size: 1.2rem;
+        font-size: 0.8rem;
         font-family: 'inter', sans-serif;
       }
+
     }
   }
 }

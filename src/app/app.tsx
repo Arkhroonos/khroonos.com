@@ -41,9 +41,6 @@ export function App() {
         <div className={styles.projects}>
           <ProjectsComponent />
         </div>
-        <div className={styles.software}>
-          <SoftwareComponent />
-        </div>
         <div className={styles.skills}>
           <SkillsComponent />
         </div>

@@ -57,22 +57,22 @@
 
       .software-wrapper {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        justify-content: center;
-        text-align: center;
         background-color: var(--card-background, transparent);
         border-radius: var(--rounded-corners);
+        border: var(--border-size) solid var(--border-color);
         padding: 10px;
+        gap: 1rem;
+
 
         .software-logo {
-          width: 1rem;
-          height: 1rem;
+          width: 2rem;
+          height: 2rem;
           max-width: 1rem;
           max-height: 1rem;
           object-fit: fill;
           margin-bottom: 10px;
-          color: antiquewhite;
         }
 
         h3 {

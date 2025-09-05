@@ -1,13 +1,9 @@
 .container {
   display: flex;
   flex-direction: column;
-  background-color: var(--liquid-glass-color);
-  border-radius: var(--rounded-corners);
-  border: var(--border-size) solid var(--border-color);
   height: 100%;
   /** Liquid Glass Effect**/
   flex: 1 1 auto;
-  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
   color: var(--lg-text);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
   backdrop-filter: blur(10px);
@@ -18,31 +14,63 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: var(--general-padding);
+    padding: 30px 0;
 
 
     .title-bar-text {
+      //Size & Shape
       height: (var(--pill-size));
       width: auto;
       padding: 0 1rem;
       border: var(--border-size) solid var(--border-color);
       border-radius: var(--rounded-corners);
+
+      //Display
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      background-color: var(--title-bar-color);
+
+      //Shadows
+      background-color: var(--liquid-glass-color);
+      box-shadow: var(--shadow-color);
+
+
     }
 
-      .icon {
-        width: var(--icon-size);
-        height: var(--icon-size);
-      }
+    .icon {
+      width: var(--icon-size);
+      height: var(--icon-size);
+    }
   }
-  .skill-wrapper {
-  display:grid;
-    grid-template-columns: repeat(2,1fr);
-    padding: var(--general-padding);
+
+  .skills-wrapper {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+
+    .skill-wrapper {
+      //Size & Shape
+      border: var(--border-size) solid var(--border-color);
+      border-radius: var(--rounded-corners);
+      padding: var(--general-padding);
+      height: 9.375rem;
+
+      //Display
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      //Shadows
+      background-color: var(--liquid-glass-color);
+      box-shadow: var(--shadow-color);
+
+      .skill-item{
+        font-size: 0.9rem;
+      }
+
+    }
   }
 }
+
+//TODO: CORRECT ALIGNEMENT OF SKILLS

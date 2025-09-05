@@ -15,7 +15,7 @@ export function SkillsComponent({ skills }: SkillsComponentProps) {
     {
       id: 1,
       title: 'Web Design - UI',
-      items: ['Creation de Maquette', 'Wireframing', 'Responsive Design'],
+      items: ['Creation de Maquette', 'Responsive Design'],
     },
     {
       id: 2,
@@ -51,7 +51,9 @@ export function SkillsComponent({ skills }: SkillsComponentProps) {
             </div>
             <ul className={styles['skill-list']}>
               {skill.items.map((item, i) => (
-                <li key={i}>{item}</li>
+                <li key={i} className={styles['skill-item']}>
+                  {item}
+                </li>
               ))}
             </ul>
           </div>

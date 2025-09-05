@@ -16,13 +16,15 @@ export function ExperienceComponent({ experiences }: ExperiencesComponentProps) 
         <img className={styles['icon']} src={IconsLibrary.Experiences.icon2} alt="phone-icon" />
       </div>
 
-      {displayedExperiences.map((experience, index) => (
-        <div key={index} className={styles['experience-wrapper']}>
-          <div className={styles['experience-date']}>
-            <p>{experience.date}</p>
-          </div>
-          <div className={styles['experience-infos']}>
-            <h2 className={styles['experience-title-text']}>{experience.title}</h2>
+      <div className={styles['experiences']}>
+        {displayedExperiences.map((experience, index) => (
+          <div key={index} className={styles['experience-wrapper']}>
+            <div className={styles['experience-date']}>
+              <p>{experience.date}</p>
+            </div>
+            <div className={styles['experience-infos']}>
+              <h2 className={styles['experience-title-text']}>{experience.title}</h2>
+            </div>
             <div className={styles['experience-description']}>
               <ul className={styles['experience-details-list']}>
                 {experience.description.map((detail, i) => (
@@ -33,8 +35,8 @@ export function ExperienceComponent({ experiences }: ExperiencesComponentProps) 
               </ul>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

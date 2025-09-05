@@ -42,21 +42,22 @@ export function StackComponent({ stack }: StackComponentProps) {
         <h1 className={styles['title-bar-text']}>Stack</h1>
         <img className={styles['icon']} src={IconsLibrary.Stack.icon2} alt="phone-icon" />
       </div>
-
-      {displayedStack.map((element, index) => (
-        <div key={index} className={styles['stack-wrapper']}>
-          <div className={styles['stack-type']}>
-            <h2>{element.type}</h2>
+      <div className={styles['stack-infos']}>
+        {displayedStack.map((element, index) => (
+          <div key={index} className={styles['stack-wrapper']}>
+            <div className={styles['stack-type']}>
+              <h2>{element.type}</h2>
+            </div>
+            <div className={styles['stack-chip']}>
+              {element.name.map((item, i) => (
+                <div key={i} className={styles['chip']}>
+                  {item}
+                </div>
+              ))}
+            </div>
           </div>
-          <div className={styles['stack-chip']}>
-            {element.name.map((item, i) => (
-              <div key={i} className={styles['chip']}>
-                {item}
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
