@@ -44,6 +44,13 @@
     }
   }
 
+  .skills-introduction {
+    display: flex;
+    .introduction-text {
+      color: var(--text-color);
+    }
+  }
+
   .skills-wrapper {
     display:grid;
     grid-template-columns: repeat(2, 1fr);

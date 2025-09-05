@@ -10,7 +10,7 @@
 
 
 :root {
-  background-color: #2B2B2B;
+  background-color: #191616;
   box-sizing: border-box;
   margin: 0;
   background-size: cover;
@@ -29,15 +29,15 @@
   --span-zone-color: #530080;
 
   /**Liquid colors **/
-  --liquid-glass-color: rgba(0, 0, 0, 0.3);
+  --liquid-glass-color: rgba(0, 0, 0, 0.71);
   --title-bar-color: rgba(43, 43, 43, 0.94);
   --chips-color: rgb(0, 0, 0);
   --chips-color-secondary: rgba(255, 134, 12, 0.71);
 
   /** Borders & Shadows **/
-  --border-color: rgba(170, 170, 170, 0.25);
+  --border-color: rgba(170, 170, 170, 0.37);
   --border-size: 2px;
-  --shadow-color: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+  --shadow-color: 0 10px px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 0, 0, 0.1);
 
   /** icons-pills Heights & Widths **/
   --icon-size:3rem;

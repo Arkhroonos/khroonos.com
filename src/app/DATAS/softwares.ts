@@ -1,7 +1,7 @@
 export interface Software {
-  type: string;
-  title: string;
-  logo: string;
+  type?: string;
+  title?: string;
+  logo?: string;
 }
 
 export const softwaresLibrary: Record<string, Software> = {

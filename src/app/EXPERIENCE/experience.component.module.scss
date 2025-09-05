@@ -47,6 +47,13 @@
     }
   }
 
+  .introduction {
+
+    .introduction-text {
+      color: var(--text-color);
+    }
+  }
+
   .experiences {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
