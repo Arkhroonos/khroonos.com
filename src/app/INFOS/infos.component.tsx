@@ -12,7 +12,11 @@ export function InfosComponent() {
         </h1>
         <h2 className={styles['job-name']}>{informations.job}</h2>
       </div>
-      <img className={styles['mouse']} src={IconsLibrary.Mouse.Icon} alt={IconsLibrary.Mouse.alt} />
+      <img
+        className={styles['mouse']}
+        src={IconsLibrary.Mouse.icon1}
+        alt={IconsLibrary.Mouse.alt}
+      />
     </>
   );
 }
