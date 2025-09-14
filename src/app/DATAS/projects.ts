@@ -4,16 +4,17 @@ export interface Work {
   name?: string;
   year?: string;
   type?: string[];
-  softwares?: Software[];
+  softwares?: Software[] | undefined;
   description?: string;
   images?: string[];
-  color?: string;
   story?: string;
   introduction?: string;
+  id: number;
 }
 
 export const projects: Work[] = [
   {
+    id: 1,
     name: 'PESH Neuroeveil',
     year: '2025',
     type: ['Branding', 'Design'],
@@ -23,12 +24,12 @@ export const projects: Work[] = [
       'src/assets/medias/images/Projects Images/Le Rucher Castelainaisien/Logo Rucher Castelnaisien Avec Fond.png',
       'src/assets/medias/images/Projects Images/Le Rucher Castelainaisien/Etiquette Miel Rucher Castelainaisien avec Fond.png',
     ],
-    color: '#da3e6b',
     story:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget tincidunt condimentum, nisl nisl tincidunt nisl, eget tincidunt condimentum nisl nisl nisl.',
   },
 
   {
+    id: 2,
     name: 'Creaesthetic',
     year: '2025',
     type: ['Branding', 'Design'],
@@ -38,24 +39,24 @@ export const projects: Work[] = [
       'src/assets/medias/images/Projects Images/Le Rucher Castelainaisien/Logo Rucher Castelnaisien Avec Fond.png',
       'src/assets/medias/images/Projects Images/Le Rucher Castelainaisien/Etiquette Miel Rucher Castelainaisien avec Fond.png',
     ],
-    color: '#000000',
     story:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget tincidunt condimentum, nisl nisl tincidunt nisl, eget tincidunt condimentum nisl nisl nisl.',
   },
 
   {
+    id: 3,
     name: 'Hexuvium',
     year: '2024',
     type: ['Branding', 'Design', 'Web Design'],
     softwares: [softwaresLibrary.Figma, softwaresLibrary.Illustrator, softwaresLibrary.Photoshop],
     description: 'Projet de branding et de webdesign.',
     images: ['/images/hexuvium-1.png', '/images/hexuvium-2.png'],
-    color: '#f2d399',
     story:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget tincidunt condimentum, nisl nisl tincidunt nisl, eget tincidunt condimentum nisl nisl nisl.',
   },
 
   {
+    id: 4,
     name: 'Le Rucher Castelainaisien',
     year: '2024',
     type: ['Branding', 'Design', 'Web Design'],
@@ -65,12 +66,12 @@ export const projects: Work[] = [
       'src/assets/medias/images/Projects Images/Le Rucher Castelainaisien/Logo Rucher Castelnaisien Avec Fond.png',
       'src/assets/medias/images/Projects Images/Le Rucher Castelainaisien/Etiquette Miel Rucher Castelainaisien avec Fond.png',
     ],
-    color: 'rgba(49,255,207,0.45)',
     story:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget tincidunt condimentum, nisl nisl tincidunt nisl, eget tincidunt condimentum nisl nisl nisl.',
   },
   {
     //TODO: Retirer ce projet & ajouter les autres
+    id: 5,
     name: 'Dopeland',
     year: '2019',
     type: ['Branding', 'Design', 'Web Design'],
@@ -80,7 +81,6 @@ export const projects: Work[] = [
       'src/assets/medias/images/Projects Images/Le Rucher Castelainaisien/Logo Rucher Castelnaisien Avec Fond.png',
       'src/assets/medias/images/Projects Images/Le Rucher Castelainaisien/Etiquette Miel Rucher Castelainaisien avec Fond.png',
     ],
-    color: 'rgba(255,134,12,0.71)',
     story:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget tincidunt condimentum, nisl nisl tincidunt nisl, eget tincidunt condimentum nisl nisl nisl.',
   },

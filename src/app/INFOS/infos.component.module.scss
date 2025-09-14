@@ -1,8 +1,5 @@
 .container {
-  background-color: var(--liquid-glass-color);
-  border-radius: var(--rounded-corners);
-  border: var(--border-size) solid var(--border-color);
-  height: 60%;
+  height: auto;
   margin: 6.25rem 6.25rem 3.5rem 6.25rem;
   display: flex;
   width: auto;
@@ -14,10 +11,9 @@
 
   /** Liquid Glass Effect**/
 
-  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+
   color: var(--lg-text);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
-  backdrop-filter: blur(10px);
 
 
   .profile-name {
@@ -25,31 +21,38 @@
     font-size: 12rem;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
+    font-weight: 400;
     text-transform: uppercase;
-    color:var(--text-color);
+    color: var(--text-color);
     width: auto;
+
   }
 
   .job-name {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    text-transform: capitalize;
-    color: var(--text-color);
+    text-transform: uppercase;
+    color: var(--emphasis);
     width: auto;
     font-weight: 200;
+    backdrop-filter: blur(10px);
+    background-color: var(--liquid-glass-color);
+    border-radius: var(--rounded-corners);
+    border: var(--border-size) solid var(--border-color);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1.5rem;
 
   }
 
 }
 
 
-
 .mouse {
   height: 4rem;
   animation: mouse-rebound 1s linear infinite;
   margin-bottom: 2rem;
+
 
 }
 

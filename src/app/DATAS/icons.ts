@@ -1,5 +1,5 @@
 export interface Icons {
-  icon1: string;
+  icon1?: string;
   icon2?: string;
   icon3?: string;
   name: string;

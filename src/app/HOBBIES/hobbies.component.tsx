@@ -1,5 +1,4 @@
 import styles from './hobbies.component.module.scss';
-import { IconsLibrary } from '../DATAS/icons';
 
 interface Hobby {
   title: string[];
@@ -28,7 +27,6 @@ export function HobbiesComponent({ hobbies }: HobbiesComponentProps) {
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
         <h1 className={styles['title-bar-text']}>Hobbies</h1>
-        <img className={styles['icon']} src={IconsLibrary.Hobby.icon2} alt="phone-icon" />
       </div>
 
       {displayedHobbies.map((hobby, index) => (

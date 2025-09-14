@@ -1,6 +1,5 @@
 import styles from './experience.component.module.scss';
 import { experiences as defaultExperiences, Experience } from '../DATAS/experiences';
-import { IconsLibrary } from '../DATAS/icons';
 
 interface ExperiencesComponentProps {
   experiences?: Experience[];
@@ -22,7 +21,6 @@ export function ExperienceComponent({ experiences }: ExperiencesComponentProps) 
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
         <h1 className={styles['title-bar-text']}>Experiences</h1>
-        <img className={styles['icon']} src={IconsLibrary.Experiences.icon2} alt="phone-icon" />
       </div>
       <div className={styles['introduction']}>
         <p className={styles['introduction-text']}>{experiencesIntroduction}</p>

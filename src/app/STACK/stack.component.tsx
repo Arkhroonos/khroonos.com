@@ -51,7 +51,6 @@ Nunc posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat.`;
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
         <h1 className={styles['title-bar-text']}>Stack</h1>
-        <img className={styles['icon']} src={IconsLibrary.Stack.icon2} alt="phone-icon" />
       </div>
       <div className={styles['stack-infos']}>
         <p className={styles['stack-text']}>{stackText}</p>

@@ -19,22 +19,16 @@
   }
 
   .title-bar-text {
-    //Size & Shape
-    height: (var(--pill-size));
-    width: auto;
-    padding: 0 1rem;
-    border: var(--border-size) solid var(--border-color);
-    border-radius: var(--rounded-corners);
-
     //Display
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    //Shadows
-    background-color: var(--liquid-glass-color);
-    box-shadow: var(--shadow-color);
+    //Text
+    font-size: 8rem;
+    font-weight: 600;
+    color: var(--emphasis);
 
   }
 

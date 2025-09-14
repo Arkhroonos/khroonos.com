@@ -1,5 +1,4 @@
 import styles from './motivation.component.module.scss';
-import { IconsLibrary } from '../DATAS/icons';
 import { informations } from '../DATAS/informations';
 
 export function MotivationComponent() {
@@ -7,8 +6,8 @@ export function MotivationComponent() {
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
         <h1 className={styles['title-bar-text']}>About Me</h1>
-        <img className={styles['icon']} src={IconsLibrary.About.icon2} alt="phone-icon" />
       </div>
+
       <div className={styles['infos-wrapper']}>
         <div className={styles['info-wrapper']}>
           <p className={styles['info-text']}>{informations.city}</p>

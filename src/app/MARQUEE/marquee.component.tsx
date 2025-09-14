@@ -1,7 +1,7 @@
 import styles from './marquee.component.module.scss';
 
 export function MarqueeComponent() {
-  const skills = ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Sass •'];
+  const skills = ['TypeScript', 'React', 'Next.js', 'Angular', 'Nest.js', 'Sass •'];
   const marqueeText = skills.join(' • ');
 
   return (

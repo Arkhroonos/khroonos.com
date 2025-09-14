@@ -1,16 +1,14 @@
 .container {
   display: flex;
   flex-direction: column;
-  background-color: var(--liquid-glass-color);
-  border-radius: var(--rounded-corners);
-  border: var(--border-size) solid var(--border-color);
+
 
   /** Liquid Glass Effect**/
   flex: 1 1 auto;
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
   color: var(--lg-text);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
-  backdrop-filter: blur(10px);
+
 
   .content-wrapper {
     display: flex;
@@ -20,17 +18,9 @@
     padding: 30px;
 
     .title-bar-text {
-      height: (var(--pill-size));
-      width: auto;
-      padding: 0 1rem;
-      border: var(--border-size) solid var(--border-color);
-      border-radius: var(--rounded-corners);
-      text-align: center;
-      background-color: var(--title-bar-color);
-    }
-    .icon {
-      width: var(--icon-size);
-      height: var(--icon-size);
+      font-size: 8rem;
+      font-weight: 600;
+      color: var(--emphasis);
     }
   }
 
@@ -39,6 +29,11 @@
     display: flex;
     flex-direction: row;
     padding: 0 var(--general-padding);
+    backdrop-filter: blur(10px);
+    background-color: var(--liquid-glass-color);
+    border-radius: var(--rounded-corners);
+    border: var(--border-size) solid var(--border-color);
+
 
     .hobby-chip {
       display: flex;
