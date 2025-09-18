@@ -44,7 +44,7 @@ export function ProjectsComponent() {
             <p className={styles['project-description']}>{project.description}</p>
             <button
               className={styles['project-button']}
-              onClick={() => (window.location.href = `/projects/${project.id}`)}
+              onClick={() => (window.location.href = `/project/${project.id}`)}
             >
               Voir le projet
             </button>

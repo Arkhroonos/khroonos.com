@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from './theme-switcher.module.scss';
 
-const colorVariants = ['#850000', '#734E40', '#a5a68f', '#d9ae89', '#F77E2D', '#962E40'];
+const colorVariants = ['#F77E2D', '#734E40', '#a5a68f', '#d9ae89', '#850000', '#962E40'];
 
 export function ThemeSwitcher() {
   const [color, setColor] = useState(colorVariants[0]);

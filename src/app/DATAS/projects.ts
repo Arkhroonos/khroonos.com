@@ -9,12 +9,12 @@ export interface Work {
   images?: string[];
   story?: string;
   introduction?: string;
-  id: number;
+  id: string;
 }
 
 export const projects: Work[] = [
   {
-    id: 1,
+    id: '1',
     name: 'PESH Neuroeveil',
     year: '2025',
     type: ['Branding', 'Design'],
@@ -29,7 +29,7 @@ export const projects: Work[] = [
   },
 
   {
-    id: 2,
+    id: '2',
     name: 'Creaesthetic',
     year: '2025',
     type: ['Branding', 'Design'],
@@ -44,7 +44,7 @@ export const projects: Work[] = [
   },
 
   {
-    id: 3,
+    id: '3',
     name: 'Hexuvium',
     year: '2024',
     type: ['Branding', 'Design', 'Web Design'],
@@ -56,7 +56,7 @@ export const projects: Work[] = [
   },
 
   {
-    id: 4,
+    id: '4',
     name: 'Le Rucher Castelainaisien',
     year: '2024',
     type: ['Branding', 'Design', 'Web Design'],
@@ -71,7 +71,7 @@ export const projects: Work[] = [
   },
   {
     //TODO: Retirer ce projet & ajouter les autres
-    id: 5,
+    id: '5',
     name: 'Dopeland',
     year: '2019',
     type: ['Branding', 'Design', 'Web Design'],

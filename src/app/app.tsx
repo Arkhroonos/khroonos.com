@@ -15,6 +15,7 @@ import ExperienceComponent from './EXPERIENCE/experience.component';
 import HobbiesComponent from './HOBBIES/hobbies.component';
 import MarqueeComponent from './MARQUEE/marquee.component';
 import ThemeSwitcher from './THEME/theme-switcher';
+import NavbarComponent from './navbar/navbar.component';
 
 /**
  * Main Page layout
@@ -23,30 +24,7 @@ export function App() {
   return (
     <main>
       <section className={styles['app-header']}>
-        <div className={styles['container']}>
-          <div className={styles['content-wrapper']}>
-            <div className={styles['nav-link']}>
-              <a href="#aboutme" className={styles['link']}>
-                About Me
-              </a>
-            </div>
-            <div className={styles['nav-link']}>
-              <a href="#projects" className={styles['link']}>
-                Projects
-              </a>
-            </div>
-            <div className={styles['nav-link']}>
-              <a href="#stack" className={styles['link']}>
-                Stack
-              </a>
-            </div>
-            <div className={styles['nav-link']}>
-              <a href="#experiences" className={styles['link']}>
-                Experiences
-              </a>
-            </div>
-          </div>
-        </div>
+        <NavbarComponent />
       </section>
 
       <section className={styles['app-hero']} id="hero">

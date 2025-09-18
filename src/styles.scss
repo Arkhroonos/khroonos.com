@@ -25,7 +25,7 @@
   --text-color: #EAEAEAFF;
   --text-color-secondary: #000000;
   --span-zone-color: #530080;
-  --emphasis: #850000;
+  --emphasis: #F77E2D;
   --experiences-color: #F77E2DBA;
 
   /**Liquid colors **/
@@ -94,9 +94,13 @@
   }
 
 
-  /*Radius & Padding*/
-  --general-padding: 30px; /*0.5rem 2rem*/
+ /*Padding*/
+  --general-padding: 2rem; /*0.5rem 2rem*/
 
+  /*Margin*/
+  --general-margin: 6rem;
+
+  /*Radius */
   --base-radius: 4px;
   --rounded-corners: 3rem;
   --grid-margin: 8px 0 8px 0;
