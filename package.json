@@ -6,13 +6,17 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "dev": "next dev",
+    "build:next": "next build",
+    "start:next": "next start"
   },
   "nx": {
     "includedScripts": []
   },
   "dependencies": {
     "devicon": "^2.17.0",
+    "next": "^14.2.12",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-icons": "^5.5.0",
