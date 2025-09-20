@@ -16,7 +16,7 @@ import './styles.scss';
  */
 import ProjectPage from './app/pages/ProjectPage';
 import AboutPage from './app/pages/AboutPage';
-import ProjectsPage from './app/pages/ProjectsPages';
+import ProjectsPage from './app/pages/ProjectsPage';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

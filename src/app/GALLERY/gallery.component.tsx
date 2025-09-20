@@ -1,4 +1,11 @@
+/**
+ * React Imports
+ */
 import { useState } from 'react';
+
+/**
+ * Internal Imports
+ */
 import styles from './gallery.component.module.scss';
 
 interface GalleryProps {

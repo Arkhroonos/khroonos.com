@@ -1,10 +1,14 @@
+/**
+ * TypeScript Interface for Work
+ */
+
 import { Software, softwaresLibrary } from './softwares';
 
 export interface Work {
   name?: string;
   year?: string;
   type?: string[];
-  softwares?: Software[] | undefined;
+  softwares?: Software[];
   description?: string;
   images?: string[];
   story?: string;

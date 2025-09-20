@@ -1,3 +1,6 @@
+/**
+ * TypeScript Interface for Software
+ */
 export interface Software {
   type?: string;
   title?: string;

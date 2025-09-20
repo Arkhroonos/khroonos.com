@@ -1,10 +1,11 @@
-.project-page {
+.page {
   display: flex;
   flex-direction: column;
   width: 100%;
   box-sizing: border-box;
 
   .app-header {
+    background-color: transparent;
     position: fixed;
     height: auto;
     align-self: center;
@@ -15,31 +16,25 @@
     align-items: center;
     width: auto;
   }
-
-  .project-content {
+  .content {
     display: flex;
     flex-direction: column;
     margin-top: var(--general-margin);
+    padding: var(--general-padding);
 
-    p {
-      color: var(--text-color);
-    }
+    .title-bar-text {
 
-    .project-year{
-      height: 1.5rem;
-      width: auto;
-      border-radius: var(--rounded-corners);
+      //Display
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      flex-direction: row;
+      justify-content: space-between;
       align-items: center;
-      text-align: center;
-      background-color: var(--emphasis);
-      text-wrap: nowrap;
+
+
+      //Text
+      font-size: 4rem;
+      font-weight: 600;
+      color: var(--emphasis);
     }
   }
 }
-
-
-
-

@@ -52,6 +52,24 @@
     .introduction-text {
       color: var(--text-color);
     }
+    .allProjects-button {
+      align-self: start;
+      padding: 0.5rem 1.5rem;
+      border: var(--border-size) solid var(--border-color);
+      border-radius: var(--rounded-corners);
+      background: var(--chips-color);
+      color: var(--text-color);
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--button-transition);
+
+      &:hover {
+        background: var(--emphasis);
+        color: #fff;
+        transform: var(--button-transform);
+      }
+    }
+
   }
 
   /** ======================

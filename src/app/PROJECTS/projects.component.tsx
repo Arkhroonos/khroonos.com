@@ -1,4 +1,11 @@
+/**
+ * React Imports
+ */
 import { useState } from 'react';
+
+/**
+ * Internal Imports
+ */
 import styles from './projects.component.module.scss';
 import { projects } from '../DATAS/projects';
 
@@ -31,6 +38,12 @@ export function ProjectsComponent() {
 
       <div className={styles['projects-introduction']}>
         <p className={styles['introduction-text']}>{projectIntroduction}</p>
+        <button
+          className={styles['allProjects-button']}
+          onClick={() => (window.location.href = '/projects')}
+        >
+          Voir tous les projets
+        </button>
       </div>
 
       <div className={styles['projects-wrapper']}>

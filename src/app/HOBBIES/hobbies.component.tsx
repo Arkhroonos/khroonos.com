@@ -1,3 +1,6 @@
+/**
+ * Internal Imports
+ */
 import styles from './hobbies.component.module.scss';
 
 interface Hobby {

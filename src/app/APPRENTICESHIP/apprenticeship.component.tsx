@@ -1,3 +1,6 @@
+/**
+ * Internal Imports
+ */
 import styles from './apprenticeship.component.module.scss';
 import { informations } from '../DATAS/informations';
 

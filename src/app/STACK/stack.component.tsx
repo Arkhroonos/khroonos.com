@@ -1,3 +1,7 @@
+/**
+ * Internal Imports
+ */
+
 import styles from './stack.component.module.scss';
 import { IconsLibrary } from '../DATAS/icons';
 

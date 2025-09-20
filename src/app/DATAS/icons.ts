@@ -1,3 +1,6 @@
+/**
+ * TypeScript Interface for Icons
+ */
 export interface Icons {
   icon1?: string;
   icon2?: string;

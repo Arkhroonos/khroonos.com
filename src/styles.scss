@@ -32,7 +32,7 @@
   --liquid-glass-color: rgba(0, 0, 0, 0.6);
   --title-bar-color: rgba(43, 43, 43, 0.94);
   --chips-color: rgb(0, 0, 0);
-  --chips-color-secondary: rgba(255, 134, 12, 0.71);
+  --chips-color-secondary: #F77E2DBA;
 
   /** Borders & Shadows **/
   --border-color: rgba(170, 170, 170, 0.37);
@@ -91,11 +91,16 @@
 
   a{
     color: var(--text-color);
+    text-decoration: none;
   }
 
-
+ /*Buttons*/
+  --button-transition: all 0.3s ease;
+  --button-transform: translate(-2px);
+  --button-padding: 0.5rem 1rem;
  /*Padding*/
   --general-padding: 2rem; /*0.5rem 2rem*/
+  --pages-padding:0 6.25rem;
 
   /*Margin*/
   --general-margin: 6rem;

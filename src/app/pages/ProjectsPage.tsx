@@ -1,19 +1,16 @@
-/**
- * Internal Imports
- */
-import styles from './pagesStyles/AboutPage.module.scss';
+import styles from './pagesStyles/ProjectsPage.module.scss';
 import NavbarComponent from '../navbar/navbar.component';
 import FooterComponent from '../footer/footer.component';
 import ThemeSwitcher from '../THEME/theme-switcher';
 
-export default function AboutPage() {
+export default function ProjectsPage() {
   return (
     <div className={styles['page']}>
-      <section>
+      <section className={styles['app-header']}>
         <NavbarComponent />
       </section>
       <main className={styles['content']}>
-        <h1 className={styles['title-bar-text']}>About Me</h1>
+        <h1 className={styles['title-bar-text']}>Projects</h1>
       </main>
       <section>
         <FooterComponent />
@@ -24,4 +21,3 @@ export default function AboutPage() {
     </div>
   );
 }
-//todo: change page layout & remove inline styles

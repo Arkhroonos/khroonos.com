@@ -1,3 +1,6 @@
+/**
+ * Internal Imports
+ */
 import styles from './marquee.component.module.scss';
 
 export function MarqueeComponent() {

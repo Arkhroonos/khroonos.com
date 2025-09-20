@@ -1,3 +1,6 @@
+/**
+ * Internal Imports
+ */
 import styles from './skills.component.module.scss';
 import { IconsLibrary } from '../DATAS/icons';
 

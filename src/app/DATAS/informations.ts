@@ -1,4 +1,6 @@
-import { Work, projects } from './projects';
+/**
+ * TypeScript Interface for Informations
+ */
 
 export interface Informations {
   photo?: string;

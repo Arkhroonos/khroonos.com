@@ -1,3 +1,6 @@
+/**
+ * TypeScript Interface for Experience
+ */
 export interface Experience {
   date: string;
   title: string;

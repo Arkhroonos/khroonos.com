@@ -1,3 +1,6 @@
+/**
+ * Internal Imports
+ */
 import styles from './experience.component.module.scss';
 import { experiences as defaultExperiences, Experience } from '../DATAS/experiences';
 

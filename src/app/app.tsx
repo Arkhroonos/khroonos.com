@@ -16,6 +16,7 @@ import HobbiesComponent from './HOBBIES/hobbies.component';
 import MarqueeComponent from './MARQUEE/marquee.component';
 import ThemeSwitcher from './THEME/theme-switcher';
 import NavbarComponent from './navbar/navbar.component';
+import FooterComponent from './footer/footer.component';
 
 /**
  * Main Page layout
@@ -52,17 +53,10 @@ export function App() {
           <HobbiesComponent />
         </div>
       </section>
-      <section className={styles['app-footer']}>
-        <div className={styles.footer}>
-          <div className={styles['container']}>
-            <div className={styles['content-wrapper']}>
-              <h1>Footer</h1>
-            </div>
-            <div className={styles['footer-links']}></div>
-          </div>
-        </div>
+      <section>
+        <FooterComponent />
       </section>
-      <section className={styles['app-theme-switcher']}>
+      <section>
         <ThemeSwitcher />
       </section>
     </main>

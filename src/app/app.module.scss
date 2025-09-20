@@ -4,169 +4,20 @@ main {
   flex-direction: column;
   width: 100%;
   box-sizing: border-box;
-  /**
-  *NavBar Layout & Parameters
-  */
-  .app-header {
-    position: fixed;
-    height: auto;
-    align-self: center;
-    z-index: 999;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-
-
-    .container {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      height: auto;
-      flex: 1 1 auto;
-      padding-top: 1rem;
-
-
-      .content-wrapper {
-        border: var(--border-size) solid var(--border-color);
-        border-radius: var(--rounded-corners);
-        width: auto;
-        margin: 0 1rem;
-        padding: 0.5rem 1rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--liquid-glass-color);
-
-        /** Liquid Glass Effect**/
-
-        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
-        color: var(--lg-text);
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
-        backdrop-filter: blur(10px);
-
-        .nav-link {
-          margin: 0 0.5rem;
-          color: var(--text-color);
-          text-decoration: none;
-          transition: color 0.3s ease;
-          padding: 0 1rem;
-
-
-          .link {
-            color: var(--text-color);
-            text-decoration: none;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 200;
-            text-transform: UpperCase;
-            font-size: 2rem;
-          }
-
-          .link:hover {
-            color: var(--emphasis);
-            text-decoration: none;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 200;
-            text-transform: UpperCase;
-            font-size: 2rem;
-            transition: color 0.3s ease;
-          }
-        }
-
-
-        .contact-link {
-          margin: 0 0.2rem;
-
-          .icon {
-            height: 2rem;
-            width: 2rem;
-            justify-self: center;
-            align-self: center;
-          }
-
-        }
-      }
-    }
-  }
+  overflow-x: hidden;
 
   .app-hero {
-    width: 100vw;
+    width: 100%;
     height: auto;
     padding: 0 100px;
     align-self: center;
-    background-image: url("src/assets/medias/images/backgrounds/blackdesert.jpg");;
+    background-image: url("src/assets/medias/images/backgrounds/blackdesert.jpg");
     background-size: cover;
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
-  }
-
-  .app-footer {
-    position: static;
-    bottom: 4rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    z-index: 998;
-
-    .container {
-      background-color: var(---background-color);
-      border-radius: var(--rounded-corners);
-      margin: 100px 0 0 0;
-      border: var(--border-size) solid var(--border-color);
-      /** Liquid Glass Effect**/
-      flex: 1 1 auto;
-      box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
-      color: var(--lg-text);
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
-      backdrop-filter: blur(10px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: auto;
-      padding: 0 1rem;
-
-
-      .content-wrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
-        align-items: start;
-        padding: 0 1rem;
-      }
-      .footer-links{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-        .footer-icon {
-          width: 1.5rem;
-          height: 1.5rem;
-          transition: color 0.3s ease;
-        }
-      }
-    }
-
-
-  }
-
-  .app-theme-switcher {
-    position: fixed;
-    top: 30rem;
-    right: 1rem;
-    z-index: 997;
   }
 
   /**
@@ -174,7 +25,8 @@ main {
   */
 
   .app-container {
-    margin-top: 40px;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr); // 3 equal columns
     grid-template-rows: repeat(6, auto);
@@ -186,7 +38,7 @@ main {
       'experience experience experience experience'
       'hobbies hobbies hobbies hobbies';
     gap: 1rem;
-    padding: 0 100px;
+    padding: var(--pages-padding);
     z-index: 1;
 
     /*

@@ -1,3 +1,6 @@
+/**
+ * Internal Imports
+ */
 import styles from './infos.component.module.scss';
 import { IconsLibrary } from '../DATAS/icons';
 import { informations } from '../DATAS/informations';

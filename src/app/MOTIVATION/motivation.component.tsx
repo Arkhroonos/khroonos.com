@@ -1,3 +1,6 @@
+/**
+ * Internal Imports
+ */
 import styles from './motivation.component.module.scss';
 import { informations } from '../DATAS/informations';
 import LinkedInIcon from 'src/assets/medias/icons/logos/Platform=LinkedIn, Color=Negative.svg';
