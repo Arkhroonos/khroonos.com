@@ -16,6 +16,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  width: 100%;
 
   /* Couleurs principales */
   --primary-color: #2b2b2bbf;
@@ -27,6 +28,8 @@
   --span-zone-color: #530080;
   --emphasis: #F77E2D;
   --experiences-color: #F77E2DBA;
+  --text-on-emphasis: #FFFFFF; /* valeur par défaut (sera écrasée par JS) */
+  --text-on-emphasis-hover: #DDDDDD; /* valeur par défaut */
 
   /**Liquid colors **/
   --liquid-glass-color: rgba(0, 0, 0, 0.6);
@@ -47,6 +50,7 @@
   --section-gap: 4rem 0;
 
   /* Text Styles*/
+
   h1 {
     font-size: 2.5rem;
     color: var(--text-color);
@@ -73,7 +77,7 @@
   }
 
   p {
-    color: var(--text-color-);
+    color: var(--text-color);
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
     text-align: justify;
@@ -89,18 +93,18 @@
     font-weight: 200;
   }
 
-  a{
+  a {
     color: var(--text-color);
     text-decoration: none;
   }
 
- /*Buttons*/
+  /*Buttons*/
   --button-transition: all 0.3s ease;
   --button-transform: translate(-2px);
   --button-padding: 0.5rem 1rem;
- /*Padding*/
+  /*Padding*/
   --general-padding: 2rem; /*0.5rem 2rem*/
-  --pages-padding:0 6.25rem;
+  --pages-padding: 0 6.25rem;
 
   /*Margin*/
   --general-margin: 6rem;

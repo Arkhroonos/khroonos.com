@@ -32,10 +32,6 @@
 
   }
 
-  .icon {
-    width: var(--icon-size);
-    height: var(--icon-size);
-  }
 
   .stack-infos {
     display: grid;
@@ -64,8 +60,8 @@
 
       //Display
       display: grid;
-      flex-direction: column;
       gap: 1rem;
+
 
       //Shadows
       background-color: var(--liquid-glass-color);
@@ -105,6 +101,41 @@
         text-transform: uppercase;
       }*/
 
+    }
+  }
+}
+
+/**
+ * Breakpoints
+ */
+
+/* Smartphones portrait */
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+    padding: 0;
+
+    .content-wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .title-bar-text {
+      font-size: 4rem;
+    }
+    .stack-infos {
+      display: flex;
+      flex-direction: column;
+
+      .stack-text{
+        font-size: 1rem;
+      }
+
+      .stack-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 }

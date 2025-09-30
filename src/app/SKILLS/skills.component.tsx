@@ -78,5 +78,5 @@ Nunc posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat.`;
     </div>
   );
 }
-
+//todo: Refactor this component to use the new data structure and remove the defaultSkills variable.
 export default SkillsComponent;

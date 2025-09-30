@@ -66,3 +66,34 @@
   }
 
 }
+
+/**
+ * Breakpoints
+ */
+
+/* Smartphones portrait */
+@media (max-width: 480px) {
+  .container {
+    margin: 6.25rem 1.25rem 3.5rem 1.25rem;
+    width: auto;
+    height: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    gap: 1rem;
+
+    .profile-name {
+      font-size: 6rem;
+      padding: 0;
+    }
+
+    .job-name {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+

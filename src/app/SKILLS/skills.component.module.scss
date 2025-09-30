@@ -73,4 +73,40 @@
   }
 }
 
+
+/**
+ * Breakpoints
+ */
+
+/* Smartphones portrait */
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+    height: 100%;
+    padding: 0;
+
+    .content-wrapper {
+      flex-direction: column;
+      justify-content: space-between;
+
+      .title-bar-text {
+        font-size: 4rem;
+      }
+    }
+
+    .skills-wrapper {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0;
+      .skill-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0.5rem 0;
+      }
+    }
+  }
+}
+
+
 //TODO: CORRECT ALIGNEMENT OF SKILLS

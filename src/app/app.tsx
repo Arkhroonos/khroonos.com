@@ -12,7 +12,6 @@ import MotivationComponent from './MOTIVATION/motivation.component';
 import ProjectsComponent from './PROJECTS/projects.component';
 import SkillsComponent from './SKILLS/skills.component';
 import ExperienceComponent from './EXPERIENCE/experience.component';
-import HobbiesComponent from './HOBBIES/hobbies.component';
 import MarqueeComponent from './MARQUEE/marquee.component';
 import ThemeSwitcher from './THEME/theme-switcher';
 import NavbarComponent from './navbar/navbar.component';
@@ -48,9 +47,6 @@ export function App() {
         </div>
         <div className={styles.experience} id="experiences">
           <ExperienceComponent />
-        </div>
-        <div className={styles.hobbies}>
-          <HobbiesComponent />
         </div>
       </section>
       <section>

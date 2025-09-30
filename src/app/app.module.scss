@@ -2,9 +2,7 @@ main {
 
   display: flex;
   flex-direction: column;
-  width: 100%;
   box-sizing: border-box;
-  overflow-x: hidden;
 
   .app-hero {
     width: 100%;
@@ -103,3 +101,28 @@ h1 {
   font-size: 1.5rem;
   color: #fff;
 }
+
+/**
+ * Breakpoints
+ */
+
+@media (max-width: 480px) {
+  main {
+    width: 100%;
+
+    .app-container {
+      width: 100%;
+      padding: 0;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(12, auto);
+      grid-template-areas:
+        'motivation'
+        'projects'
+        'stack'
+        'skills'
+        'experience'
+    }
+  }
+}
+
+//todo: Fix width problems causing overflow

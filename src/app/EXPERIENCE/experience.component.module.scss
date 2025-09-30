@@ -121,10 +121,21 @@
         font-size: 0.8rem;
         font-family: 'inter', sans-serif;
       }
-
     }
   }
 }
 
+/**
+ * Breakpoints
+ */
+
+/* Smartphones portrait */
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+    height: 100%;
+    padding: 0;
+  }
+}
 
 

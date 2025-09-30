@@ -50,6 +50,7 @@
 
         .link {
           color: var(--text-color);
+          //color: var(--text-on-emphasis);
           text-decoration: none;
           font-family: 'Montserrat', sans-serif;
           font-weight: 200;
@@ -58,7 +59,8 @@
         }
 
         .link:hover {
-          color: var(--liquid-glass-color);
+          color: var(--text-color);
+          //color: var(--text-on-emphasis-hover);
           text-decoration: none;
           font-family: 'Montserrat', sans-serif;
           font-weight: 300;

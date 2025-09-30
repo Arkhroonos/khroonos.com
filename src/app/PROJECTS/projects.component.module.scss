@@ -52,6 +52,7 @@
     .introduction-text {
       color: var(--text-color);
     }
+
     .allProjects-button {
       align-self: start;
       padding: 0.5rem 1.5rem;
@@ -93,7 +94,6 @@
       max-height: 45rem;
       min-height: 45rem;
       min-width: 45rem;
-      overflow: hidden;
       border-radius: var(--rounded-corners);
       box-shadow: var(--shadow-color);
       border: var(--border-size) solid var(--border-color);
@@ -188,6 +188,64 @@
           background: var(--emphasis);
           transform: scale(1.2);
         }
+      }
+    }
+  }
+}
+
+/**
+ * Breakpoints
+ */
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+    height: 100%;
+    padding: 0;
+
+    grid-template-areas:
+          'content-wrapper'
+          'projects-wrapper'
+          'projects-introduction';
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0;
+    flex: 1 1 auto;
+
+    .content-wrapper {
+      padding: 1rem 0;
+
+      .title-bar-text {
+        font-size: 4rem;
+      }
+    }
+
+    .projects-introduction {
+      grid-area: projects-introduction;
+      margin: 1rem 0;
+
+      .introduction-text {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        justify-content: start;
+      }
+
+      .allProjects-button {
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    .projects-wrapper {
+      grid-area: projects-wrapper;
+      align-items: center;
+
+
+      .work-wrapper {
+        width: 100%;
+        max-width: 30rem;
+        max-height: 30rem;
+        min-height: 30rem;
+        min-width: 30rem;
       }
     }
   }

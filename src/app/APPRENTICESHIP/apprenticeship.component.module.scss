@@ -76,5 +76,19 @@
     color: var(--text-color);
     text-decoration: none;
   }
+}
 
+/**
+ * Breakpoints
+ */
+
+@media (max-width: 480px) {
+  .container {
+    grid-template-areas:
+      'content-wrapper'
+      'profile-info'
+      'apprenticeship-wrapper';
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
 }

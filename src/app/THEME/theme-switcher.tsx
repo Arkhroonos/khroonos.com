@@ -11,7 +11,6 @@ export function ThemeSwitcher() {
     return localStorage.getItem('emphasis-color') || colorVariants[0];
   });
 
-  // Appliquer la couleur au document et la sauvegarder
   useEffect(() => {
     document.documentElement.style.setProperty('--emphasis', color);
     localStorage.setItem('emphasis-color', color);
@@ -41,3 +40,5 @@ export function ThemeSwitcher() {
 }
 
 export default ThemeSwitcher;
+//Todo: Créer d’autres --Emphasis (ex —Button-emphasis..etc) les définir et les 'distribuer' aux éléments correspondants
+// puis faire les changement dans le thème switcher et appliquer le 'if'…
