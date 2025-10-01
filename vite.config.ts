@@ -20,6 +20,7 @@ export default defineConfig(() => ({
   // worker: {
   //  plugins: [ nxViteTsPaths() ],
   // },
+  base: './',
   build: {
     outDir: './dist/khroonos.com',
     emptyOutDir: true,
