@@ -51,6 +51,11 @@
 /* Smartphones portrait */
 @media (max-width: 480px) {
   .theme-switcher {
+    position: static;
+
+    .color-buttons {
+      flex-direction: row;
+    }
 
   }
 
