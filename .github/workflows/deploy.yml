@@ -31,5 +31,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT }}
-          local-dir: ./dist/khroonos.com   # chemin du build NX
+          local-dir: /dist/khroonos.com   # chemin du build NX
           server-dir: /public_html         # destination sur Hostinger
