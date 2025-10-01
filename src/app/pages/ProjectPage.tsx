@@ -12,6 +12,7 @@ import styles from './pagesStyles/ProjectPage.module.scss';
 import RtpButtonComponent from '../buttons/return-to-projects/rtp-button.component';
 import FooterComponent from '../footer/footer.component';
 import ThemeSwitcher from '../THEME/theme-switcher';
+import GalleryComponent from '../GALLERY/gallery.component';
 
 export default function ProjectPage() {
   const { id } = useParams<{ id: string }>();
@@ -28,6 +29,9 @@ export default function ProjectPage() {
       </section>
 
       <main className={styles['content']}>
+        <div className={styles['top-image']}>
+          <img className={styles['cover-image']} src={project.images?.[0]} alt={project.name} />
+        </div>
         <RtpButtonComponent />
         <div className={styles['layout']}>
           <div className={styles['infos']}>
@@ -37,6 +41,7 @@ export default function ProjectPage() {
                 <p>{project.year}</p>
               </div>
             </div>
+
             <div className={styles['project-type']}>
               {project.type?.map((type, i) => (
                 <p key={i} className={styles['type']}>
@@ -50,30 +55,19 @@ export default function ProjectPage() {
                 <p key={i} className={styles['software']}></p>
               ))}
             </div>
-            <div className={styles['desccription']}>
+
+            <div className={styles['description']}>
               <p>{project.description}</p>
             </div>
-            <div className={styles['separator']}></div>
-            <div className={styles['story']}>
-              <p>{project.story}</p>
-            </div>
           </div>
-          <div className={styles['top-image']}>
-            <img className={styles['cover-image']} src={project.images?.[0]} alt={project.name} />
+          <div className={styles['story']}>
+            <p>{project.story}</p>
+          </div>
+          <div className={styles['project-images']}>
+            <GalleryComponent images={project.images || []} projectName={project.name} />
           </div>
         </div>
-        <section className={styles['project-images']}>
-          <div className={styles['gallery']}>
-            {project.images?.map((img, i) => (
-              <img
-                key={i}
-                src={img}
-                alt={project.name}
-                style={{ width: '300px', margin: '1rem' }}
-              />
-            ))}
-          </div>
-        </section>
+
         <RtpButtonComponent />
       </main>
       <section>
@@ -85,3 +79,4 @@ export default function ProjectPage() {
     </div>
   );
 }
+//todo: change page layout & remove inline styles + change cover image selection + Create a new gallery component.

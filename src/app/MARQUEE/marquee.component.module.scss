@@ -33,3 +33,16 @@
     transform: translateX(-80%);
   }
 }
+
+/**
+ * Breakpoints
+ */
+
+/* Smartphones portrait */
+@media screen and (max-width: 480px) {
+  .marquee-text {
+    span {
+      font-size: 2rem;
+    }
+  }
+}

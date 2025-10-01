@@ -1,128 +1,146 @@
-main {
+body {
+  height: auto;
+  width: 100%;
+  margin: 0;
 
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
 
-  .app-hero {
+  main {
     width: 100%;
-    height: auto;
-    padding: 0 100px;
-    align-self: center;
-    background-image: url("src/assets/medias/images/backgrounds/blackdesert.jpg");
-    background-size: cover;
-    background-attachment: fixed;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+    box-sizing: border-box;
 
-  /**
-  * Grid Settings
-  */
+    .app-header {
+      width: 100%;
+    }
 
-  .app-container {
-    margin-top: 2.5rem;
-    margin-bottom: 2rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); // 3 equal columns
-    grid-template-rows: repeat(6, auto);
-    grid-template-areas:
+    .app-hero {
+      width: 100%;
+      height: auto;
+      align-self: center;
+      background-image: url("src/assets/medias/images/backgrounds/blackdesert.jpg");
+      background-size: cover;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /**
+    * Grid Settings
+    */
+
+    .app-container {
+      margin-top: 2.5rem;
+      margin-bottom: 2rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); // 3 equal columns
+      grid-template-rows: repeat(6, auto);
+      grid-template-areas:
       'motivation motivation motivation motivation'
       'projects projects projects projects'
       'stack stack stack stack'
       'skills skills skills skills'
       'experience experience experience experience'
       'hobbies hobbies hobbies hobbies';
-    gap: 1rem;
-    padding: var(--pages-padding);
-    z-index: 1;
+      gap: 1rem;
+      padding: var(--pages-padding);
+      z-index: 1;
 
-    /*
-    **Grid layout for the components
-    */
+      /*
+      **Grid layout for the components
+      */
 
-    .infos {
-      grid-area: infos;
-      height: 100%;
-      width: 100%;
-    }
+      .infos {
+        grid-area: infos;
+        height: 100%;
+        width: 100%;
+      }
 
-    .apprenticeship {
-      grid-area: apprenticeship;
-      height: 100%;
-      width: 100%;
-    }
+      .stack {
+        grid-area: stack;
+        height: 100%;
+      }
 
-    .stack {
-      grid-area: stack;
-      height: 100%;
-    }
+      .motivation {
+        grid-area: motivation;
+        height: auto;
+        width: 100%;
+      }
 
-    .motivation {
-      grid-area: motivation;
-      height: auto;
-      width: 100%;
-    }
+      .projects {
+        grid-area: projects;
+        height: 100%;
+        width: 100%;
+      }
 
-    .projects {
-      grid-area: projects;
-      height: 100%;
-      width: 100%;
-    }
+      .software {
+        grid-area: software;
+        height: 100%;
+      }
 
-    .software {
-      grid-area: software;
-      height: 100%;
-    }
+      .skills {
+        grid-area: skills;
+        height: 100%;
+        width: 100%;
+      }
 
-    .skills {
-      grid-area: skills;
-      height: 100%;
-      width: 100%;
-    }
-
-    .experience {
-      grid-area: experience;
-      height: 100%;
-      width: 100%;
-    }
-
-    .hobbies {
-      grid-area: hobbies;
-      height: 100%;
-      width: 100%;
+      .experience {
+        grid-area: experience;
+        height: 100%;
+        width: 100%;
+      }
     }
   }
-}
 
-h1 {
-  font-size: 1.5rem;
-  color: #fff;
+  h1 {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
 }
 
 /**
  * Breakpoints
  */
 
-@media (max-width: 480px) {
-  main {
-    width: 100%;
+/* Smartphones portrait */
 
-    .app-container {
-      width: 100%;
-      padding: 0;
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(12, auto);
-      grid-template-areas:
+
+@media screen and (max-width: 480px) {
+  body {
+    width: 100%;
+    display: block;
+
+
+    main {
+
+      .app-header {
+        width: auto;
+      }
+
+      .app-hero {
+        width: 100%; // Ne pas changer
+        height: auto;
+      }
+
+
+      .app-container {
+        width: auto;
+        display: grid; // Ne pas changer pour le moment.
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas:
         'motivation'
         'projects'
         'stack'
         'skills'
         'experience'
+        'hobbies';
+        padding: 0;
+
+      }
     }
   }
 }
-
-//todo: Fix width problems causing overflow

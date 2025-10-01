@@ -81,17 +81,23 @@
 /* Smartphones portrait */
 @media (max-width: 480px) {
   .container {
-    width: 100vw;
+    padding: var(--phone-padding);
     height: 100%;
-    padding: 0;
+    width: calc(100% - var(--phone-padding));
+
 
     .content-wrapper {
       flex-direction: column;
       justify-content: space-between;
+      width: 100%;
 
       .title-bar-text {
-        font-size: 4rem;
+        font-size: 3rem;
+        align-self: start;
       }
+    }
+
+    .skills-introduction {
     }
 
     .skills-wrapper {

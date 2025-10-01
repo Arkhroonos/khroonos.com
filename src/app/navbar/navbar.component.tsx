@@ -1,4 +1,8 @@
 /**
+ * React Imports
+ */
+
+/**
  * Internal Imports
  */
 
@@ -11,7 +15,11 @@ export function NavbarComponent() {
         <div className={styles['content-wrapper']}>
           <div className={styles['nav-link']}>
             <a href="/" className={styles['link']}>
-              Home
+              <img
+                className={styles['icon']}
+                src={'src/assets/medias/icons/icons/home.svg'}
+                alt="home button"
+              />
             </a>
           </div>
           <div className={styles['nav-link']}>

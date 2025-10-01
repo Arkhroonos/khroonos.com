@@ -10,7 +10,7 @@ import styles from './gallery.component.module.scss';
 
 interface GalleryProps {
   images: string[];
-  projectName: string;
+  projectName?: string;
 }
 
 export function GalleryComponent({ images, projectName }: GalleryProps) {

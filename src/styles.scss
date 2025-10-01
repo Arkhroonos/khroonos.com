@@ -10,7 +10,7 @@
 
 
 :root {
-  background-color: #0c0b0b;
+  background-color: rgba(12, 11, 11, 0.96);
   box-sizing: border-box;
   margin: 0;
   background-size: cover;
@@ -64,8 +64,8 @@
   h2 {
     font-size: 1.2rem;
     color: var(--emphasis);
-    font-family: 'Outfit', sans-serif;
-    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     text-transform: capitalize;
   }
 
@@ -105,7 +105,7 @@
   /*Padding*/
   --general-padding: 2rem; /*0.5rem 2rem*/
   --pages-padding: 0 6.25rem;
-
+  --phone-padding: 0 1.25rem;
   /*Margin*/
   --general-margin: 6rem;
 
@@ -126,6 +126,17 @@
   --right-radius-small: 0 16px 16px 0;
 }
 
+/**
+ * Breakpoints
+ */
+
+/* Smartphones portrait */
+
+@media screen and (max-width: 480px) {
+  :root {
+    width: 100%;
+  }
+}
 
 //TODO:[2025-08-16]: Ameliorer :
 //  border: 1px solid var(--border-color);

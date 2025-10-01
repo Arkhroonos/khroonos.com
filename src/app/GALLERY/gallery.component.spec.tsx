@@ -4,7 +4,7 @@ import GalleryComponent from './gallery.component';
 
 describe('GalleryComponent', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<GalleryComponent />);
+    const { baseElement } = render(<GalleryComponent images={[]} />);
     expect(baseElement).toBeTruthy();
   });
 });

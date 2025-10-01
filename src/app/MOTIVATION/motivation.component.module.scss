@@ -8,6 +8,7 @@
 
   color: var(--lg-text);
 
+
   .content-wrapper {
     display: flex;
     flex-direction: row;
@@ -87,24 +88,22 @@
 /* Smartphones portrait */
 @media (max-width: 480px) {
   .container {
-    width: 100vw;
+    padding: var(--phone-padding);
     height: 100%;
-    padding: 0;
+
 
     .content-wrapper {
-
       flex-direction: row;
       justify-content: space-between;
       gap: 1rem;
       padding: 0;
 
       .title-bar-text {
-        font-size: 4rem;
+        font-size: 3rem;
       }
     }
 
     .infos-wrapper {
-      width: 100vw;
       grid-template-areas:
         'content content'
         'info-wrapper info-wrapper';
@@ -119,7 +118,6 @@
       }
 
       .content {
-        width: 100%;
         grid-area: content;
 
         .about-text {
@@ -130,6 +128,7 @@
     }
   }
 }
+
 
 
 

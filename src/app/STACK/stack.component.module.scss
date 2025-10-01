@@ -112,17 +112,17 @@
 /* Smartphones portrait */
 @media (max-width: 480px) {
   .container {
-    width: 100vw;
-    padding: 0;
+    padding: var(--phone-padding);
+    height: 100%;
 
     .content-wrapper {
-      flex-direction: row;
       justify-content: space-between;
     }
     .title-bar-text {
-      font-size: 4rem;
+      font-size: 3rem;
     }
     .stack-infos {
+
       display: flex;
       flex-direction: column;
 
