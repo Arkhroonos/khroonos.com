@@ -88,12 +88,12 @@ export const softwaresLibrary: Record<string, Software> = {
   HTML: {
     type: 'UI - Styling',
     title: 'HTML',
-    logo: 'src/assets/medias/icons/logos/cib-html5.svg',
+    logo: '/medias/icons/logos/cib-html5.svg',
   },
   CSS: {
     type: 'UI - Styling',
     title: 'CSS',
-    logo: 'src/assets/medias/icons/logos/cib-css3-shiled.svg',
+    logo: '/medias/icons/logos/cib-css3-shiled.svg',
   },
   SASS: {
     type: 'UI - Styling',

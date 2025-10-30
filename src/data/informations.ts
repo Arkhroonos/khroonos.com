@@ -25,7 +25,7 @@ export interface Informations {
 }
 
 export const informations: Informations = {
-  photo: 'src/assets/medias/images/Profile Pictures/photo_cv_tshirt_noir.png',
+  photo: '/medias/images/Profile Pictures/photo_cv_tshirt_noir.png',
   name: 'Axel',
   surname: 'Priam',
   nickname: 'Khroonos',

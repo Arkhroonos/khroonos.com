@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "cp -r src/assets/medias public/ || true",
     "build": "next build",
     "start": "next start",
     "test": "nx test",
