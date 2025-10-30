@@ -7,10 +7,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "nx test"
+    "test": "nx test",
+    "clean": "rm -rf .next out"
   },
   "nx": {
     "includedScripts": []
+  },
+  "overrides": {
+    "@swc/core": "~1.5.7"
   },
   "dependencies": {
     "caniuse-lite": "^1.0.30001751",
@@ -44,6 +48,7 @@
     "@types/react-dom": "19.0.0",
     "babel-jest": "^30.0.2",
     "eslint": "^9.8.0",
+    "eslint-config-next": "^15.0.3",
     "eslint-config-prettier": "^10.0.0",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-jsx-a11y": "6.10.1",
