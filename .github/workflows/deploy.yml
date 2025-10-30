@@ -31,6 +31,18 @@ jobs:
       - name: List build output
         run: ls -la out/
 
+      - name: Check for index.html
+        run: |
+          echo "=== Vérification de la structure du build ==="
+          if [ -f "out/index.html" ]; then
+            echo "✅ index.html trouvé à la racine de out/"
+          else
+            echo "❌ index.html non trouvé à la racine de out/"
+            exit 1
+          fi
+          echo "=== Fichiers HTML générés ==="
+          find out/ -name "*.html" | head -20
+
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -41,7 +53,7 @@ jobs:
           port: 21
           local-dir: ./out/
           server-dir: /public_html/
-          dangerous-clean-slate: false
+          dangerous-clean-slate: true
           security: loose
           exclude: |
             **/.git*
