@@ -21,7 +21,7 @@
     "devicon": "^2.17.0",
     "next": "^15.0.3",
     "react": "19.0.0",
-    "react-dom": "19.0.0",
+    "react-dom": "^19.0.0",
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
@@ -46,6 +46,8 @@
     "@types/node": "^20.0.0",
     "@types/react": "19.0.0",
     "@types/react-dom": "19.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.46.2",
+    "@typescript-eslint/parser": "^8.46.2",
     "babel-jest": "^30.0.2",
     "eslint": "^9.8.0",
     "eslint-config-next": "^15.0.3",
@@ -55,6 +57,7 @@
     "eslint-plugin-playwright": "^1.6.2",
     "eslint-plugin-react": "7.35.0",
     "eslint-plugin-react-hooks": "5.0.0",
+    "ignore-loader": "^0.1.2",
     "jest": "^30.0.2",
     "jest-environment-jsdom": "^30.0.2",
     "jest-util": "^30.0.2",

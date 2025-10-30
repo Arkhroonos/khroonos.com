@@ -8,12 +8,17 @@ const colorVariants: string[] = ['#F77E2D', '#a5a68f', '#850000'];
 
 export function ThemeSwitcher() {
   const [color, setColor] = useState(() => {
-    return localStorage.getItem('emphasis-color') || colorVariants[0];
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('emphasis-color') || colorVariants[0];
+    }
+    return colorVariants[0];
   });
 
   useEffect(() => {
     document.documentElement.style.setProperty('--emphasis', color);
-    localStorage.setItem('emphasis-color', color);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('emphasis-color', color);
+    }
   }, [color]);
 
   return (
