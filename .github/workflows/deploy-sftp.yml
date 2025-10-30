@@ -1,9 +1,7 @@
-name: Deploy to Hostinger
+name: Deploy to Hostinger (SFTP Alternative)
 
 on:
-  push:
-    branches: [main]
-  workflow_dispatch: # Permet de lancer le déploiement manuellement
+  workflow_dispatch: # Manuel uniquement
 
 jobs:
   build-and-deploy:
@@ -31,20 +29,14 @@ jobs:
       - name: List build output
         run: ls -la out/
 
-      - name: Deploy to Hostinger via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy to Hostinger via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          port: 21
-          local-dir: ./out/
-          server-dir: /public_html/
-          dangerous-clean-slate: false
-          security: loose
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
+          port: 22
+          local_path: './out/*'
+          remote_path: '/public_html/'
+          sftp_only: true
 
