@@ -64,6 +64,12 @@ export const softwaresLibrary: Record<string, Software> = {
     title: 'TypeScript',
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg',
   },
+
+  Python: {
+    type: 'Programming Languages',
+    title: 'Python',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
+  },
   React: {
     type: 'Front-end libraries & frameworks',
     title: 'React',
@@ -73,6 +79,12 @@ export const softwaresLibrary: Record<string, Software> = {
     type: 'Front-end libraries & frameworks',
     title: 'Angular',
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-plain.svg',
+  },
+
+  VueJS: {
+    type: 'Front-end libraries & frameworks',
+    title: 'Vue.js',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original-wordmark.svg',
   },
 
   NodeJS: {
@@ -85,10 +97,15 @@ export const softwaresLibrary: Record<string, Software> = {
     title: 'Nest.js',
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg',
   },
+  Nextjs: {
+    type: 'Back-end libraries & frameworks',
+    title: 'Next.js',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg',
+  },
   HTML: {
     type: 'UI - Styling',
     title: 'HTML',
-    logo: '/medias/icons/logos/cib-html5.svg',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg',
   },
   CSS: {
     type: 'UI - Styling',
