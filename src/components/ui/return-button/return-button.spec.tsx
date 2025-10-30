@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import RtpButtonComponent from './rtp-button.component';
+import { ReturnButton } from './return-button';
 
-describe('RtpButtonComponent', () => {
+describe('ReturnButton', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<RtpButtonComponent />);
+    const { baseElement } = render(<ReturnButton />);
     expect(baseElement).toBeTruthy();
   });
 });

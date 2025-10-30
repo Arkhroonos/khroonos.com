@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import FooterComponent from './footer.component';
+import { Footer } from './footer';
 
-describe('FooterComponent', () => {
+describe('Footer', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<FooterComponent />);
+    const { baseElement } = render(<Footer />);
     expect(baseElement).toBeTruthy();
   });
 });

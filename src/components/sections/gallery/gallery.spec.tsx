@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import GalleryComponent from './gallery.component';
+import { Gallery } from './gallery';
 
-describe('GalleryComponent', () => {
+describe('Gallery', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<GalleryComponent images={[]} />);
+    const { baseElement } = render(<Gallery images={[]} />);
     expect(baseElement).toBeTruthy();
   });
 });

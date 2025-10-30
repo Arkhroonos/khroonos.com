@@ -94,21 +94,32 @@
       .stack-chip {
         display: flex;
         flex-direction: row;
-        align-items: start;
+        align-items: center;
         flex-wrap: wrap;
+        gap: 0.5rem;
 
         .chip {
           border: var(--border-size) solid var(--border-color);
           border-radius: var(--rounded-corners);
-          color: var(--text-color);
           background-color: var(--chips-color);
-          padding: 4px 8px;
-          margin: 4px;
-          font-size: 0.85rem;
-          transition: background-color 0.3s ease;
+          padding: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
+          width: 48px;
+          height: 48px;
 
           &:hover {
             background-color: var(--emphasis);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          }
+
+          .chip-icon {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
           }
         }
       }
@@ -165,9 +176,14 @@
 
         .stack-chip {
           .chip {
-            font-size: 0.8rem;
-            padding: 3px 6px;
-            margin: 3px;
+            width: 40px;
+            height: 40px;
+            padding: 6px;
+
+            .chip-icon {
+              width: 28px;
+              height: 28px;
+            }
           }
         }
       }

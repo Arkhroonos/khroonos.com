@@ -1,6 +1,3 @@
-/**
- * TypeScript Interface for Experience
- */
 export interface Experience {
   date: string;
   title: string;
@@ -47,7 +44,6 @@ export const experiences: Experience[] = [
       'Priorisation des tâches',
     ],
   },
-
   {
     date: '2012-2014',
     title: 'The Kase',

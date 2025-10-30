@@ -3,11 +3,12 @@
  */
 
 import styles from './stack.module.scss';
+import { softwaresLibrary, Software } from '../../../data/softwares';
 
 interface stackElement {
   id: number;
   type: string;
-  name: string[];
+  softwares: Software[];
 }
 
 interface StackComponentProps {
@@ -19,22 +20,22 @@ export function Stack({ stack }: StackComponentProps) {
     {
       id: 1,
       type: 'Programming Languages:',
-      name: ['JavaScript', 'TypeScript'],
+      softwares: [softwaresLibrary.Javascript, softwaresLibrary.TypeScript],
     },
     {
       id: 2,
       type: 'Front-end libraries & frameworks:',
-      name: ['React', 'Angular'],
+      softwares: [softwaresLibrary.React, softwaresLibrary.Angular],
     },
     {
       id: 3,
       type: 'Back-end libraries & frameworks:',
-      name: ['Node.js'],
+      softwares: [softwaresLibrary.NodeJS, softwaresLibrary.Nestjs],
     },
     {
       id: 4,
       type: 'UI - Styling:',
-      name: ['HTML', 'CSS', 'SASS'],
+      softwares: [softwaresLibrary.HTML, softwaresLibrary.CSS, softwaresLibrary.SASS],
     },
   ];
 
@@ -64,9 +65,9 @@ Nunc posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat.`;
               <h2>{element.type}</h2>
             </div>
             <div className={styles['stack-chip']}>
-              {element.name.map((item, i) => (
-                <div key={i} className={styles['chip']}>
-                  {item}
+              {element.softwares.map((software, i) => (
+                <div key={i} className={styles['chip']} title={software.title}>
+                  <img src={software.logo} alt={software.title} className={styles['chip-icon']} />
                 </div>
               ))}
             </div>

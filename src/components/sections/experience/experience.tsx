@@ -1,6 +1,4 @@
-/**
- * Internal Imports
- */
+import React from 'react';
 import styles from './experience.module.scss';
 import {
   experiences as defaultExperiences,
@@ -13,15 +11,15 @@ interface ExperiencesComponentProps {
 
 export function Experience({ experiences }: ExperiencesComponentProps) {
   const displayedExperiences = experiences ?? defaultExperiences;
-  const experiencesIntroduction = ` Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip. Duis aute irure dolor in reprehenderit in voluptate velit
-          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium
-          tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra. Est
-          eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh
-          euismod gravida. Mauris tincidunt sem sed arcu. Nunc posuere. Praesent turpis. Aenean
-          posuere, tortor sed cursus feugiat.`;
+  const experiencesIntroduction = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+ullamco laboris nisi ut aliquip. Duis aute irure dolor in reprehenderit in voluptate velit
+esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium
+tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra. Est
+eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh
+euismod gravida. Mauris tincidunt sem sed arcu. Nunc posuere. Praesent turpis. Aenean
+posuere, tortor sed cursus feugiat.`;
 
   return (
     <div className={styles['container']}>

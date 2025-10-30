@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import MarqueeComponent from './marquee.component';
+import { Marquee } from './marquee';
 
-describe('MarqueeComponent', () => {
+describe('Marquee', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<MarqueeComponent />);
+    const { baseElement } = render(<Marquee />);
     expect(baseElement).toBeTruthy();
   });
 });

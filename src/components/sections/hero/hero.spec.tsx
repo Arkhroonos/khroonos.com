@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import InfosComponent from './infos.component';
+import { Hero } from './hero';
 
-describe('InfosComponent', () => {
+describe('Hero', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<InfosComponent />);
+    const { baseElement } = render(<Hero />);
     expect(baseElement).toBeTruthy();
   });
 });

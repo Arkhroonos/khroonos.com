@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import StackComponent from './stack.component';
+import { Stack } from './stack';
 
-describe('StackComponent', () => {
+describe('Stack', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<StackComponent />);
+    const { baseElement } = render(<Stack />);
     expect(baseElement).toBeTruthy();
   });
 });

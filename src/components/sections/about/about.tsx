@@ -13,27 +13,44 @@ export function About() {
         <h1 className={styles['title-bar-text']}>About Me</h1>
       </div>
 
-      <div className={styles['infos-wrapper']}>
-        <div className={styles['info-wrapper']}>
+      <div className={styles['introduction']}>
+        <p className={styles['introduction-text']}>{informations.intro}</p>
+      </div>
+
+      <div className={styles['infos-grid']}>
+        <div className={styles['info-card']}>
+          <h3 className={styles['info-label']}>Location</h3>
           <p className={styles['info-text']}>{informations.city}</p>
         </div>
-        <div className={styles['info-wrapper']}>
+        <div className={styles['info-card']}>
+          <h3 className={styles['info-label']}>Language</h3>
           <p className={styles['info-text']}>{informations.languages[0]}</p>
         </div>
-        <div className={styles['info-wrapper']}>
+        <div className={styles['info-card']}>
+          <h3 className={styles['info-label']}>Age</h3>
           <p className={styles['info-text']}>{informations.age}</p>
         </div>
-        <div className={styles['info-wrapper links']}>
-          <a href={informations.linkedin} className={styles['info-link']}>
-            <img src={LinkedInIcon} alt="linkedin" />
-          </a>
-          <a href={informations.github} className={styles['info-link']}>
-            <img src={GitHubIcon} alt="github" />
-          </a>
-        </div>
-        <div className={styles['content']}>
-          <p className={styles['about-text']}>{informations.intro}</p>
-        </div>
+      </div>
+
+      <div className={styles['social-links']}>
+        <a
+          href={informations.linkedin}
+          className={styles['social-link']}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={LinkedInIcon} alt="LinkedIn" />
+          <span>LinkedIn</span>
+        </a>
+        <a
+          href={informations.github}
+          className={styles['social-link']}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={GitHubIcon} alt="GitHub" />
+          <span>GitHub</span>
+        </a>
       </div>
     </div>
   );

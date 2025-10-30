@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import ProjectsComponent from './projects.component';
+import { ProjectsSection } from './projects-section';
 
-describe('ProjectsComponent', () => {
+describe('ProjectsSection', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<ProjectsComponent />);
+    const { baseElement } = render(<ProjectsSection />);
     expect(baseElement).toBeTruthy();
   });
 });

@@ -2,10 +2,9 @@
  * Experience Component Container
  */
 .container {
-  height: 100%;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  height: 100%;
 
   /**
    * Liquid Glass Effect
@@ -24,7 +23,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 30px 0;
-    border-radius: var(--base-radius);
 
     /**
      * Title Bar Text
@@ -44,6 +42,8 @@
    * Introduction Section
    */
   .introduction {
+    display: flex;
+
     .introduction-text {
       color: var(--text-color);
     }
@@ -72,7 +72,6 @@
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, auto);
       gap: 1rem;
-      margin: 1rem 0;
       align-items: baseline;
       justify-content: start;
       background-color: var(--liquid-glass-color);
@@ -144,18 +143,22 @@
 /**
  * Smartphones portrait (iPhone SE, 12 Mini, 13, 14, 15)
  */
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
   .container {
     padding: var(--phone-padding);
     height: 100%;
+    width: 100%;
 
     .content-wrapper {
       flex-direction: column;
       justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
       padding: 1rem 0;
 
       .title-bar-text {
         font-size: 2.5rem;
+        align-self: flex-start;
       }
     }
 
@@ -215,7 +218,7 @@
 /**
  * Tablets portrait (iPad Mini, iPad)
  */
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
   .container {
     padding: var(--tablet-padding);
 
@@ -249,7 +252,7 @@
 /**
  * Tablets landscape (iPad Pro)
  */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .container {
     padding: var(--tablet-padding);
 
@@ -269,12 +272,11 @@
 /**
  * Large Desktop
  */
-@media screen and (min-width: 1441px) {
+@media (min-width: 1441px) {
   .container {
     .experiences {
       grid-template-columns: repeat(3, 1fr);
     }
   }
 }
-
 

@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import SkillsComponent from './skills.component';
+import { Skills } from './skills';
 
-describe('SkillsComponent', () => {
+describe('Skills', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<SkillsComponent />);
+    const { baseElement } = render(<Skills />);
     expect(baseElement).toBeTruthy();
   });
 });

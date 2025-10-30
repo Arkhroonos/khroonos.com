@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import MotivationComponent from './motivation.component';
+import { About } from './about';
 
-describe('MotivationComponent', () => {
+describe('About', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<MotivationComponent />);
+    const { baseElement } = render(<About />);
     expect(baseElement).toBeTruthy();
   });
 });
