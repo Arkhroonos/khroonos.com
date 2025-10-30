@@ -1,0 +1,223 @@
+/**
+ * Stack Component Container
+ */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  /**
+   * Liquid Glass Effect
+   */
+  flex: 1 1 auto;
+  color: var(--lg-text);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+  backdrop-filter: blur(10px);
+
+  /**
+   * Content Wrapper
+   */
+  .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+  }
+
+  /**
+   * Title Bar Text
+   */
+  .title-bar-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 8rem;
+    font-weight: 600;
+    color: var(--emphasis);
+  }
+
+  /**
+   * Stack Infos Grid
+   */
+  .stack-infos {
+    display: grid;
+    grid-template-areas:
+      'stack-text stack-wrapper stack-wrapper'
+      'stack-text stack-wrapper stack-wrapper';
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    /**
+     * Stack Text
+     */
+    .stack-text {
+      grid-area: stack-text;
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /**
+     * Stack Wrapper
+     */
+    .stack-wrapper {
+      border: var(--border-size) solid var(--border-color);
+      border-radius: var(--rounded-corners);
+      padding: var(--general-padding);
+      height: 9.375rem;
+      display: grid;
+      gap: 1rem;
+      background-color: var(--liquid-glass-color);
+      box-shadow: var(--shadow-color);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      /**
+       * Stack Type
+       */
+      .stack-type {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+      }
+
+      /**
+       * Stack Chip
+       */
+      .stack-chip {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        flex-wrap: wrap;
+
+        .chip {
+          border: var(--border-size) solid var(--border-color);
+          border-radius: var(--rounded-corners);
+          color: var(--text-color);
+          background-color: var(--chips-color);
+          padding: 4px 8px;
+          margin: 4px;
+          font-size: 0.85rem;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: var(--emphasis);
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Breakpoints
+ */
+
+/**
+ * Smartphones portrait (iPhone SE, 12 Mini, 13, 14, 15)
+ */
+@media (max-width: 480px) {
+  .container {
+    padding: var(--phone-padding);
+    height: 100%;
+
+    .content-wrapper {
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+
+    .title-bar-text {
+      font-size: 2.5rem;
+    }
+
+    .stack-infos {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .stack-text {
+        font-size: 0.95rem;
+        text-align: left;
+        align-items: flex-start;
+      }
+
+      .stack-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: auto;
+        min-height: 8rem;
+        padding: 1.5rem;
+
+        .stack-type {
+          h3 {
+            font-size: 1.1rem;
+          }
+        }
+
+        .stack-chip {
+          .chip {
+            font-size: 0.8rem;
+            padding: 3px 6px;
+            margin: 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Tablets portrait (iPad Mini, iPad)
+ */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    padding: var(--tablet-padding);
+
+    .title-bar-text {
+      font-size: 5rem;
+    }
+
+    .stack-infos {
+      grid-template-areas:
+        'stack-text stack-text'
+        'stack-wrapper stack-wrapper';
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+
+      .stack-wrapper {
+        height: auto;
+        min-height: 10rem;
+      }
+    }
+  }
+}
+
+/**
+ * Tablets landscape (iPad Pro)
+ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: var(--tablet-padding);
+
+    .title-bar-text {
+      font-size: 6rem;
+    }
+
+    .stack-infos {
+      grid-template-areas:
+        'stack-text stack-wrapper stack-wrapper'
+        'stack-text stack-wrapper stack-wrapper';
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+  }
+}

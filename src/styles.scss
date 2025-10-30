@@ -1,4 +1,6 @@
-/* Google Fonts*/
+/**
+ * Google Fonts Imports
+ */
 
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 /** Abril Fatface **/
@@ -6,7 +8,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-/*Other Imported Fonts*/
+/**
+ * Other Imported Fonts
+ */
 
 
 :root {
@@ -18,7 +22,9 @@
   background-attachment: fixed;
   width: 100%;
 
-  /* Couleurs principales */
+  /**
+   * Couleurs principales
+   */
   --primary-color: #2b2b2bbf;
   --secondary-color: #530080;
   --tertiary-color: #2B2B2B8E;
@@ -31,25 +37,35 @@
   --text-on-emphasis: #FFFFFF; /* valeur par défaut (sera écrasée par JS) */
   --text-on-emphasis-hover: #DDDDDD; /* valeur par défaut */
 
-  /**Liquid colors **/
+  /**
+   * Liquid colors
+   */
   --liquid-glass-color: rgba(0, 0, 0, 0.6);
   --title-bar-color: rgba(43, 43, 43, 0.94);
   --chips-color: rgb(0, 0, 0);
   --chips-color-secondary: #F77E2DBA;
 
-  /** Borders & Shadows **/
+  /**
+   * Borders & Shadows
+   */
   --border-color: rgba(170, 170, 170, 0.37);
   --border-size: 2px;
   --shadow-color: 0 10px px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 0, 0, 0.1);
 
-  /** icons-pills Heights & Widths **/
+  /**
+   * Icons-pills Heights & Widths
+   */
   --icon-size: 3rem;
   --pill-size: 3rem;
 
-  /** Sections Gap **/
+  /**
+   * Sections Gap
+   */
   --section-gap: 4rem 0;
 
-  /* Text Styles*/
+  /**
+   * Text Styles
+   */
 
   h1 {
     font-size: 2.5rem;
@@ -58,7 +74,6 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
     margin: 0;
-
   }
 
   h2 {
@@ -83,7 +98,6 @@
     text-align: justify;
     font-size: 1.1rem;
     line-height: 1.6;
-
   }
 
   li {
@@ -98,18 +112,29 @@
     text-decoration: none;
   }
 
-  /*Buttons*/
+  /**
+   * Buttons
+   */
   --button-transition: all 0.3s ease;
   --button-transform: translate(-2px);
   --button-padding: 0.5rem 1rem;
-  /*Padding*/
+
+  /**
+   * Padding
+   */
   --general-padding: 2rem; /*0.5rem 2rem*/
   --pages-padding: 0 6.25rem;
   --phone-padding: 0 1.25rem;
-  /*Margin*/
+  --tablet-padding: 0 3rem;
+
+  /**
+   * Margin
+   */
   --general-margin: 6rem;
 
-  /*Radius */
+  /**
+   * Radius
+   */
   --base-radius: 4px;
   --rounded-corners: 3rem;
   --grid-margin: 8px 0 8px 0;
@@ -118,8 +143,9 @@
   --top-radius: 64px 64px 0 0;
   --right-radius: 0 64px 64px 0;
 
-  /*Smaller radius*/
-
+  /**
+   * Smaller radius
+   */
   --left-radius-small: 16px 0 0 16px;
   --bottom-radius-small: 0 0 16px 16px;
   --top-radius-small: 16px 16px 0 0;
@@ -131,20 +157,96 @@
  */
 
 @media (prefers-color-scheme: dark) {
-
+  /* Dark mode styles can be added here */
 }
-
-
 
 /**
  * Breakpoints
  */
 
-/* Smartphones portrait */
-
+/**
+ * Smartphones portrait (iPhone SE, iPhone 12 Mini, etc.)
+ */
 @media screen and (max-width: 480px) {
   :root {
     width: 100%;
+    height: 100%;
+    --general-padding: 1rem;
+    --pages-padding: 0 1.25rem;
+    --general-margin: 3rem;
+    --icon-size: 2.5rem;
+    --rounded-corners: 2rem;
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    h3 {
+      font-size: 0.9rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+/**
+ * Smartphones landscape & Small tablets (iPad Mini portrait)
+ */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  :root {
+    --general-padding: 1.5rem;
+    --pages-padding: 0 2rem;
+    --general-margin: 4rem;
+    --tablet-padding: 0 2rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+/**
+ * Tablets (iPad, iPad Air, iPad Pro portrait)
+ */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --general-padding: 1.75rem;
+    --pages-padding: 0 3rem;
+    --general-margin: 5rem;
+    --tablet-padding: 0 3rem;
+
+    h1 {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+/**
+ * Desktop & Large screens
+ */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  :root {
+    --pages-padding: 0 5rem;
+  }
+}
+
+/**
+ * Extra Large screens
+ */
+@media screen and (min-width: 1441px) {
+  :root {
+    --pages-padding: 0 8rem;
   }
 }
 

@@ -1,0 +1,85 @@
+/**
+ * About Page Component
+ */
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+
+  /**
+   * Content Section
+   */
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--general-margin);
+    padding: var(--general-padding);
+
+    /**
+     * Title Bar Text
+     */
+    .title-bar-text {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 4rem;
+      font-weight: 600;
+      color: var(--emphasis);
+    }
+  }
+}
+
+/**
+ * Breakpoints
+ */
+
+/**
+ * Smartphones portrait (iPhone SE, 12 Mini, 13, 14, 15)
+ */
+@media (max-width: 480px) {
+  .page {
+    .content {
+      margin-top: 4rem;
+      padding: var(--phone-padding);
+
+      .title-bar-text {
+        font-size: 2rem;
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+/**
+ * Tablets portrait (iPad Mini, iPad)
+ */
+@media (min-width: 481px) and (max-width: 768px) {
+  .page {
+    .content {
+      margin-top: 4.5rem;
+      padding: var(--tablet-padding);
+
+      .title-bar-text {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+/**
+ * Tablets landscape (iPad Pro)
+ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .page {
+    .content {
+      margin-top: 5rem;
+      padding: var(--tablet-padding);
+
+      .title-bar-text {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}

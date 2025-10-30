@@ -1,0 +1,92 @@
+/**
+ * Marquee Component Wrapper
+ */
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 1rem 0;
+  align-self: end;
+}
+
+/**
+ * Marquee Text with Animation
+ */
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 100s linear infinite;
+  border: var(--border-size) solid var(--border-color);
+
+  span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-right: 2rem;
+    font-size: 4rem;
+    color: var(--emphasis);
+  }
+}
+
+/**
+ * Marquee Animation
+ */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-80%);
+  }
+}
+
+/**
+ * Breakpoints
+ */
+
+/**
+ * Smartphones portrait (iPhone SE, 12 Mini, 13, 14, 15)
+ */
+@media screen and (max-width: 480px) {
+  .marquee-wrapper {
+    padding: 0.75rem 0;
+  }
+
+  .marquee-text {
+    animation: marquee 60s linear infinite;
+
+    span {
+      font-size: 1.5rem;
+      margin-right: 1.5rem;
+      font-weight: 200;
+    }
+  }
+}
+
+/**
+ * Tablets portrait (iPad Mini, iPad)
+ */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .marquee-text {
+    animation: marquee 80s linear infinite;
+
+    span {
+      font-size: 2.5rem;
+      margin-right: 1.75rem;
+    }
+  }
+}
+
+/**
+ * Tablets landscape (iPad Pro)
+ */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .marquee-text {
+    animation: marquee 90s linear infinite;
+
+    span {
+      font-size: 3rem;
+    }
+  }
+}

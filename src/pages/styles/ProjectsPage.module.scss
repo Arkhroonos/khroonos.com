@@ -1,0 +1,262 @@
+/**
+ * Projects Page Component
+ */
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 100vh;
+
+  /**
+   * App Header
+   */
+  .app-header {
+    background-color: transparent;
+    position: fixed;
+    height: auto;
+    align-self: center;
+    z-index: 999;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+  }
+
+  /**
+   * Content Section
+   */
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--general-margin);
+    padding: var(--pages-padding);
+    flex: 1;
+
+    /**
+     * Content Header
+     */
+    .content-header {
+      margin-bottom: 2rem;
+
+      .title-bar-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 4rem;
+        font-weight: 600;
+        color: var(--emphasis);
+        margin-bottom: 1rem;
+      }
+
+      .subtitle {
+        font-size: 1.1rem;
+        color: var(--text-color);
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        line-height: 1.6;
+        max-width: 800px;
+      }
+    }
+
+    /**
+     * Projects Count
+     */
+    .projects-count {
+      margin-bottom: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--liquid-glass-color);
+      border: var(--border-size) solid var(--border-color);
+      border-radius: var(--rounded-corners);
+      backdrop-filter: blur(10px);
+      width: fit-content;
+
+      span {
+        font-size: 1rem;
+        color: var(--text-color);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+      }
+    }
+
+    /**
+     * Projects Grid
+     */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+
+      /**
+       * No Projects Message
+       */
+      .no-projects {
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 2rem;
+        background-color: var(--liquid-glass-color);
+        border: var(--border-size) solid var(--border-color);
+        border-radius: var(--rounded-corners);
+        backdrop-filter: blur(10px);
+        text-align: center;
+
+        p {
+          font-size: 1.2rem;
+          color: var(--text-color);
+          margin-bottom: 1.5rem;
+        }
+
+        .reset-filters-button {
+          padding: 0.75rem 1.5rem;
+          border: var(--border-size) solid var(--border-color);
+          border-radius: var(--rounded-corners);
+          background-color: var(--emphasis);
+          color: var(--text-color);
+          font-weight: 600;
+          font-family: 'Montserrat', sans-serif;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          }
+
+          &:active {
+            transform: scale(0.95);
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Breakpoints
+ */
+
+/**
+ * Smartphones portrait (iPhone SE, 12 Mini, 13, 14, 15)
+ */
+@media (max-width: 480px) {
+  .page {
+    .app-header {
+      width: 100%;
+    }
+
+    .content {
+      margin-top: 4rem;
+      padding: var(--phone-padding);
+
+      .content-header {
+        margin-bottom: 1.5rem;
+
+        .title-bar-text {
+          font-size: 2rem;
+          justify-content: flex-start;
+        }
+
+        .subtitle {
+          font-size: 0.95rem;
+        }
+      }
+
+      .projects-count {
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+
+        span {
+          font-size: 0.9rem;
+        }
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+
+        .no-projects {
+          padding: 3rem 1.5rem;
+
+          p {
+            font-size: 1rem;
+          }
+
+          .reset-filters-button {
+            padding: 0.6rem 1.25rem;
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Tablets portrait (iPad Mini, iPad)
+ */
+@media (min-width: 481px) and (max-width: 768px) {
+  .page {
+    .content {
+      margin-top: 4.5rem;
+      padding: var(--tablet-padding);
+
+      .content-header {
+        .title-bar-text {
+          font-size: 3rem;
+        }
+
+        .subtitle {
+          font-size: 1rem;
+        }
+      }
+
+      .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.75rem;
+      }
+    }
+  }
+}
+
+/**
+ * Tablets landscape (iPad Pro)
+ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .page {
+    .content {
+      margin-top: 5rem;
+      padding: var(--tablet-padding);
+
+      .content-header {
+        .title-bar-text {
+          font-size: 3.5rem;
+        }
+      }
+
+      .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      }
+    }
+  }
+}
+
+/**
+ * Large Desktop
+ */
+@media (min-width: 1441px) {
+  .page {
+    .content {
+      .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 2.5rem;
+      }
+    }
+  }
+}

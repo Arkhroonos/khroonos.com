@@ -1,0 +1,316 @@
+/**
+ * Navbar Component
+ */
+.navbar {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  height: auto;
+  align-self: center;
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+
+  /**
+   * Desktop Navigation Container
+   */
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    flex: 1 1 auto;
+    padding-top: 1rem;
+
+    /**
+     * Content Wrapper with Liquid Glass Effect
+     */
+    .content-wrapper {
+      border: var(--border-size) solid var(--border-color);
+      border-radius: var(--rounded-corners);
+      width: auto;
+      margin: 0 1rem;
+      padding: 0.5rem 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--emphasis);
+      opacity: 0.9;
+
+      /**
+       * Liquid Glass Effect
+       */
+      box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+      color: var(--lg-text);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+      backdrop-filter: blur(10px);
+
+      /**
+       * Navigation Links
+       */
+      .nav-link {
+        color: var(--text-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+        padding: 0 1rem;
+        gap: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .link {
+          color: var(--text-color);
+          text-decoration: none;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 200;
+          text-transform: uppercase;
+          font-size: 2rem;
+
+          .icon {
+            height: 3.5rem;
+            width: 3.5rem;
+          }
+
+          .icon:hover {
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+          }
+        }
+
+        .link:hover {
+          color: var(--text-color);
+          text-decoration: none;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 300;
+          text-transform: uppercase;
+          font-size: 2rem;
+          transform: scale(1.1);
+          transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .link:active {
+          color: var(--emphasis);
+          text-decoration: none;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 200;
+        }
+      }
+
+      /**
+       * Contact Links
+       */
+      .contact-link {
+        margin: 0 0.2rem;
+
+        .icon {
+          height: 2rem;
+          width: 2rem;
+          justify-self: center;
+          align-self: center;
+        }
+      }
+    }
+  }
+
+  /**
+   * Mobile Hamburger Container (Hidden on Desktop)
+   */
+  .hamburger-container {
+    display: none;
+  }
+
+  /**
+   * Mobile Menu Wrapper (Hidden on Desktop)
+   */
+  .menu-wrapper {
+    display: none;
+  }
+}
+
+/**
+ * Breakpoints
+ */
+
+/**
+ * Smartphones portrait (iPhone SE, 12 Mini, 13, 14, 15)
+ */
+@media (max-width: 480px) {
+  .navbar {
+    display: flex;
+    position: fixed;
+    top: 0.5rem;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    padding: 0 0.5rem;
+
+    /**
+     * Hide Desktop Navigation
+     */
+    .container {
+      display: none;
+      height: 100%;
+      padding: 0;
+
+      .content-wrapper {
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+
+    /**
+     * Mobile Menu Wrapper
+     */
+    .menu-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      max-width: 95%;
+      background-color: var(--liquid-glass-color);
+      border-radius: var(--rounded-corners);
+      padding: 0.5rem 0;
+      border: 3px solid var(--border-color);
+      box-shadow: var(--shadow-color);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+
+      /**
+       * Menu Button Container
+       */
+      .menu-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+
+        button {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          padding: 0.5rem;
+        }
+
+        /**
+         * Menu Content
+         */
+        .menu-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+          width: 100%;
+
+          /**
+           * Menu Items
+           */
+          .menu-item {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+
+            .nav-link {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+
+              .link {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 0.5rem;
+                font-size: 1.5rem;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 200;
+                text-transform: uppercase;
+                color: var(--text-color);
+                text-decoration: none;
+                transition: color 0.3s ease;
+              }
+            }
+
+            .theme-switcher {
+              margin: 1rem 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Tablets portrait (iPad Mini, iPad)
+ */
+@media (min-width: 481px) and (max-width: 768px) {
+  .navbar {
+    .container {
+      .content-wrapper {
+        margin: 0 0.5rem;
+        padding: 0.4rem 0.8rem;
+
+        .nav-link {
+          padding: 0 0.5rem;
+
+          .link {
+            font-size: 1.5rem;
+
+            .icon {
+              height: 2.5rem;
+              width: 2.5rem;
+            }
+          }
+        }
+
+        .contact-link {
+          .icon {
+            height: 1.75rem;
+            width: 1.75rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Tablets landscape (iPad Air, iPad Pro)
+ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    .container {
+      .content-wrapper {
+        .nav-link {
+          .link {
+            font-size: 1.75rem;
+
+            .icon {
+              height: 3rem;
+              width: 3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

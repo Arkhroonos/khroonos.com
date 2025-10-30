@@ -1,29 +1,105 @@
 # KhroonosCom
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+Portfolio personnel moderne développé avec React, TypeScript et Nx.
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
+## 🏗️ Architecture du Projet
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/tutorials/react-standalone-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+Le projet suit une architecture modulaire et organisée :
 
-## Finish your CI setup
+```
+src/
+├── components/          # Composants réutilisables
+│   ├── layout/         # Composants de mise en page (Navbar, Footer, ThemeSwitcher)
+│   ├── sections/       # Sections de la page d'accueil (Hero, Stack, About, etc.)
+│   ├── ui/             # Composants UI génériques (Buttons, etc.)
+│   └── project/        # Composants spécifiques aux projets
+├── pages/              # Pages de l'application
+│   ├── home.tsx        # Page d'accueil
+│   ├── about-page.tsx  # Page À propos
+│   ├── project-page.tsx # Page détail d'un projet
+│   └── projects-page.tsx # Page liste des projets
+├── data/               # Données et constantes
+└── assets/             # Médias et ressources statiques
+```
 
-[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/ow9AThHmBz)
+Pour plus de détails sur l'architecture, consultez [docs/ARCHITECTURE_REFACTORING.md](docs/ARCHITECTURE_REFACTORING.md).
 
+## 🚀 Démarrage Rapide
 
-## Run tasks
+### Installation
+```sh
+npm install
+```
 
-To run the dev server for your app, use:
+### Développement
+Pour lancer le serveur de développement :
 
 ```sh
+npm run start
+# ou
 npx nx serve khroonos.com
 ```
 
-To create a production bundle:
+### Production
+Pour créer un build de production :
 
 ```sh
+npm run build
+# ou
 npx nx build khroonos.com
 ```
+
+### Tests
+Pour exécuter les tests :
+
+```sh
+npm run test
+# ou
+npx nx test khroonos.com
+```
+
+## 📦 Composants
+
+### Layout
+- **Navbar** - Navigation principale
+- **Footer** - Pied de page
+- **ThemeSwitcher** - Sélecteur de thème
+
+### Sections
+- **Hero** - Section d'introduction
+- **Stack** - Technologies utilisées
+- **About** - Section à propos
+- **ProjectsSection** - Projets en vedette
+- **Skills** - Compétences
+- **Experience** - Expériences professionnelles
+- **Marquee** - Bandeau défilant
+
+### Imports Optimisés
+Les composants peuvent être importés de manière groupée :
+
+```typescript
+import { Navbar, Footer, ThemeSwitcher } from '../components/layout';
+import { Hero, Stack, About } from '../components/sections';
+import { ReturnButton } from '../components/ui';
+import { ProjectCard, ProjectFilters } from '../components/project';
+```
+
+## 🛠️ Technologies
+
+- **React 19** - Bibliothèque UI
+- **TypeScript** - Langage typé
+- **Vite** - Build tool
+- **Nx** - Monorepo tooling
+- **SCSS** - Styles
+- **React Router** - Routing
+
+## 📚 Documentation
+
+- [Architecture Refactoring](docs/ARCHITECTURE_REFACTORING.md) - Détails de la réorganisation
+- [Errors Fixed](docs/ERRORS_FIXED.md) - Historique des corrections
+- [Projects Page Implementation](docs/PROJECTS_PAGE_IMPLEMENTATION.md) - Implémentation de la page projets
+
+## 🔧 Nx Commands
 
 To see all available targets to run for a project, run:
 

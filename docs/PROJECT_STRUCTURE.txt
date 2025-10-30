@@ -1,0 +1,40 @@
+   |-assets
+   |---medias
+   |-----fonts
+   |-----icons
+   |-------icons
+   |-------logos
+   |-------utilities
+   |-----images
+   |-------Profile Pictures
+   |-------Projects Images
+   |---------Aichef
+   |---------Creaesthetic
+   |---------Dopestore
+   |---------Hexuvium
+   |---------Le Rucher Castelainaisien
+   |---------PESH NeuroEveil
+   |-------backgrounds
+   |-components
+   |---layout
+   |-----footer
+   |-----navbar
+   |-----theme-switcher
+   |---project
+   |---sections
+   |-----about
+   |-----apprenticeship
+   |-----experience
+   |-----gallery
+   |-----hero
+   |-----marquee
+   |-----projects-section
+   |-----skills
+   |-----stack
+   |---ui
+   |-----return-button
+   |-data
+   |-pages
+   |---__tests__
+   |---styles
+   |-types

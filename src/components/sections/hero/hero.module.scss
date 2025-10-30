@@ -1,0 +1,165 @@
+/**
+ * Infos Component Container
+ */
+.container {
+  height: auto;
+  margin: 6.25rem 6.25rem 3.5rem 6.25rem;
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+
+  /**
+   * Liquid Glass Effect
+   */
+  color: var(--lg-text);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+
+  /**
+   * Profile Name
+   */
+  .profile-name {
+    padding: 2rem;
+    font-size: 12rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--text-color);
+    width: auto;
+  }
+
+  /**
+   * Job Title
+   */
+  .job-name {
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--emphasis);
+    width: auto;
+    font-weight: 200;
+    backdrop-filter: blur(10px);
+    background-color: var(--liquid-glass-color);
+    border-radius: var(--rounded-corners);
+    border: var(--border-size) solid var(--border-color);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+/**
+ * Mouse Animation
+ */
+.mouse {
+  height: 4rem;
+  animation: mouse-rebound 1s linear infinite;
+  margin-bottom: 2rem;
+}
+
+@keyframes mouse-rebound {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-10%);
+  }
+}
+
+/**
+ * Breakpoints
+ */
+
+/**
+ * Smartphones portrait (iPhone SE, 12 Mini, 13, 14, 15)
+ */
+@media (max-width: 480px) {
+  .container {
+    margin: 4rem 1.25rem 2rem 1.25rem;
+    height: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    gap: 1rem;
+
+    .profile-name {
+      font-size: 3.5rem;
+      padding: 1rem 0;
+      line-height: 1.1;
+    }
+
+    .job-name {
+      font-size: 1.1rem;
+      padding: 0.4rem 1rem;
+      white-space: nowrap;
+    }
+  }
+
+  .mouse {
+    height: 3rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/**
+ * Tablets portrait (iPad Mini, iPad)
+ */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    margin: 5rem 2rem 3rem 2rem;
+
+    .profile-name {
+      font-size: 7rem;
+      padding: 1.5rem;
+    }
+
+    .job-name {
+      font-size: 1.75rem;
+      padding: 0.5rem 1.25rem;
+    }
+  }
+
+  .mouse {
+    height: 3.5rem;
+  }
+}
+
+/**
+ * Tablets landscape (iPad Pro)
+ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    margin: 5.5rem 3rem 3.25rem 3rem;
+
+    .profile-name {
+      font-size: 9rem;
+    }
+
+    .job-name {
+      font-size: 2rem;
+    }
+  }
+}
+
+/**
+ * Large Desktop
+ */
+@media (min-width: 1441px) {
+  .container {
+    .profile-name {
+      font-size: 14rem;
+    }
+
+    .job-name {
+      font-size: 3rem;
+    }
+  }
+}
+
+

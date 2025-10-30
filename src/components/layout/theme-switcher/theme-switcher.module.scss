@@ -1,0 +1,118 @@
+/**
+ * Theme Switcher Component
+ */
+.theme-switcher {
+  position: fixed;
+  top: 30rem;
+  right: 1rem;
+  z-index: 999;
+
+  /**
+   * Color Buttons Container
+   */
+  .color-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 1rem;
+    border-radius: var(--rounded-corners);
+    padding: 0.5rem;
+    border: var(--border-size) solid var(--border-color);
+    background-color: var(--liquid-glass-color);
+    backdrop-filter: blur(10px);
+
+    /**
+     * Individual Color Button
+     */
+    .color-button {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      border: 2px solid var(--border-color);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+
+      &:hover {
+        transform: scale(1.2);
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+      }
+
+      &:active {
+        transform: scale(1.1);
+      }
+    }
+
+    /**
+     * Color Picker (Hidden by default)
+     */
+    .color-picker {
+      display: none;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+
+      &:hover {
+        transform: scale(1.2);
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+}
+
+/**
+ * Breakpoints
+ */
+
+/**
+ * Smartphones portrait
+ */
+@media (max-width: 480px) {
+  .theme-switcher {
+    position: fixed;
+    top: auto;
+    bottom: 1rem;
+    right: 1rem;
+    left: auto;
+
+    .color-buttons {
+      flex-direction: row;
+      margin-left: 0;
+      padding: 0.4rem;
+
+      .color-button {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+
+      .color-picker {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+    }
+  }
+}
+
+/**
+ * Tablets portrait
+ */
+@media (min-width: 481px) and (max-width: 768px) {
+  .theme-switcher {
+    top: 20rem;
+    right: 0.75rem;
+
+    .color-buttons {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+/**
+ * Tablets landscape
+ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .theme-switcher {
+    top: 25rem;
+  }
+}

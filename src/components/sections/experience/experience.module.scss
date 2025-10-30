@@ -1,0 +1,280 @@
+/**
+ * Experience Component Container
+ */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  /**
+   * Liquid Glass Effect
+   */
+  flex: 1 1 auto;
+  color: var(--lg-text);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+  backdrop-filter: blur(10px);
+
+  /**
+   * Content Wrapper
+   */
+  .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    border-radius: var(--base-radius);
+
+    /**
+     * Title Bar Text
+     */
+    .title-bar-text {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 8rem;
+      font-weight: 600;
+      color: var(--emphasis);
+    }
+  }
+
+  /**
+   * Introduction Section
+   */
+  .introduction {
+    .introduction-text {
+      color: var(--text-color);
+    }
+  }
+
+  /**
+   * Experiences Grid
+   */
+  .experiences {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: var(--general-padding);
+
+    /**
+     * Individual Experience Wrapper
+     */
+    .experience-wrapper {
+      border: var(--border-size) solid var(--border-color);
+      border-radius: var(--rounded-corners);
+      padding: var(--general-padding);
+      display: grid;
+      grid-template-areas:
+        'experience-infos experience-infos experience-date'
+        'experience-description experience-description experience-description';
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 1rem;
+      margin: 1rem 0;
+      align-items: baseline;
+      justify-content: start;
+      background-color: var(--liquid-glass-color);
+      box-shadow: var(--shadow-color);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      /**
+       * Experience Infos
+       */
+      .experience-infos {
+        grid-area: experience-infos;
+
+        .experience-title-text {
+          text-wrap: nowrap;
+        }
+      }
+
+      /**
+       * Experience Date Badge
+       */
+      .experience-date {
+        grid-area: experience-date;
+        padding: 0 1rem;
+        border: var(--border-size) solid var(--border-color);
+        height: 1.5rem;
+        width: auto;
+        border-radius: var(--rounded-corners);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: var(--emphasis);
+        text-wrap: nowrap;
+      }
+
+      /**
+       * Experience Description
+       */
+      .experience-description {
+        grid-area: experience-description;
+
+        .experience-details-list {
+          .bullet-point {
+            color: var(--text-color);
+            font-size: 0.9rem;
+            font-family: 'inter', sans-serif;
+          }
+        }
+      }
+
+      p {
+        color: var(--text-color);
+        font-size: 0.8rem;
+        font-family: 'inter', sans-serif;
+      }
+    }
+  }
+}
+
+/**
+ * Breakpoints
+ */
+
+/**
+ * Smartphones portrait (iPhone SE, 12 Mini, 13, 14, 15)
+ */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: var(--phone-padding);
+    height: 100%;
+
+    .content-wrapper {
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem 0;
+
+      .title-bar-text {
+        font-size: 2.5rem;
+      }
+    }
+
+    .introduction {
+      margin-bottom: 1rem;
+
+      .introduction-text {
+        font-size: 0.95rem;
+      }
+    }
+
+    .experiences {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 0;
+
+      .experience-wrapper {
+        grid-template-areas:
+          'experience-infos'
+          'experience-date'
+          'experience-description';
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        padding: 1.5rem;
+        margin: 0;
+
+        .experience-infos {
+          .experience-title-text {
+            text-wrap: wrap;
+            font-size: 1.1rem;
+          }
+        }
+
+        .experience-date {
+          width: fit-content;
+          padding: 0.25rem 0.75rem;
+          font-size: 0.85rem;
+        }
+
+        .experience-description {
+          .experience-details-list {
+            .bullet-point {
+              font-size: 0.85rem;
+            }
+          }
+        }
+
+        p {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Tablets portrait (iPad Mini, iPad)
+ */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .container {
+    padding: var(--tablet-padding);
+
+    .content-wrapper {
+      .title-bar-text {
+        font-size: 5rem;
+      }
+    }
+
+    .experiences {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      padding: 1.5rem 0;
+
+      .experience-wrapper {
+        grid-template-areas:
+          'experience-infos experience-date'
+          'experience-description experience-description';
+        grid-template-columns: repeat(2, 1fr);
+
+        .experience-infos {
+          .experience-title-text {
+            text-wrap: wrap;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Tablets landscape (iPad Pro)
+ */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: var(--tablet-padding);
+
+    .content-wrapper {
+      .title-bar-text {
+        font-size: 6.5rem;
+      }
+    }
+
+    .experiences {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  }
+}
+
+/**
+ * Large Desktop
+ */
+@media screen and (min-width: 1441px) {
+  .container {
+    .experiences {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+
