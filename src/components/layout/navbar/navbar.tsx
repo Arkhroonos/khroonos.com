@@ -2,6 +2,7 @@
  * React Imports
  */
 import { useState } from 'react';
+import Link from 'next/link';
 
 /**
  * Internal Imports
@@ -22,19 +23,19 @@ export function Navbar() {
       <div className={styles['container']}>
         <div className={styles['content-wrapper']}>
           <div className={styles['nav-link']}>
-            <a href="/" className={styles['link']}>
+            <Link href="/" className={styles['link']}>
               Home
-            </a>
+            </Link>
           </div>
           <div className={styles['nav-link']}>
-            <a href="/about" className={styles['link']}>
+            <Link href="/about" className={styles['link']}>
               About
-            </a>
+            </Link>
           </div>
           <div className={styles['nav-link']}>
-            <a href="/projects" className={styles['link']}>
+            <Link href="/projects" className={styles['link']}>
               Projects
-            </a>
+            </Link>
           </div>
           <div className={styles['nav-link']}>
             <a href="/#stack" className={styles['link']}>
@@ -66,19 +67,19 @@ export function Navbar() {
         {isMenuOpen && (
           <div className={styles['menu-content']}>
             <div className={styles['menu-item']}>
-              <a href="/" className={styles['link']} onClick={handleLinkClick}>
+              <Link href="/" className={styles['link']} onClick={handleLinkClick}>
                 Home
-              </a>
+              </Link>
             </div>
             <div className={styles['menu-item']}>
-              <a href="/about" className={styles['link']} onClick={handleLinkClick}>
+              <Link href="/about" className={styles['link']} onClick={handleLinkClick}>
                 About
-              </a>
+              </Link>
             </div>
             <div className={styles['menu-item']}>
-              <a href="/projects" className={styles['link']} onClick={handleLinkClick}>
+              <Link href="/projects" className={styles['link']} onClick={handleLinkClick}>
                 Projects
-              </a>
+              </Link>
             </div>
             <div className={styles['menu-item']}>
               <a href="/#stack" className={styles['link']} onClick={handleLinkClick}>

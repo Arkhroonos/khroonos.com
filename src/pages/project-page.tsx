@@ -1,7 +1,7 @@
 /**
  * React Imports
  */
-import { useParams } from 'react-router-dom';
+import { useParams } from 'next/navigation';
 
 /**
  * Internal Imports

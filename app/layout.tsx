@@ -1,3 +1,5 @@
+import '../src/styles.scss';
+
 export const metadata = {
   title: 'Khroonos',
   description: 'Personal site',

@@ -4,12 +4,11 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "start": "nx serve",
-    "build": "nx build",
-    "test": "nx test",
     "dev": "next dev",
-    "build:next": "next build",
-    "start:next": "next start"
+    "build": "next build",
+    "start": "next start",
+    "test": "nx test",
+    "export": "next build && next export"
   },
   "nx": {
     "includedScripts": []
@@ -19,8 +18,7 @@
     "next": "^15.0.3",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "react-icons": "^5.5.0",
-    "react-router-dom": "6.29.0"
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",

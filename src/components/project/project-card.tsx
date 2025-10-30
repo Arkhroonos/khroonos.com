@@ -2,6 +2,7 @@
  * React Imports
  */
 import React from 'react';
+import { useRouter } from 'next/navigation';
 
 /**
  * Internal Imports
@@ -14,8 +15,10 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const router = useRouter();
+
   const handleClick = () => {
-    window.location.href = `/project/${project.id}`;
+    router.push(`/project/${project.id}`);
   };
 
   return (

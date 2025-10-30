@@ -26,7 +26,7 @@ jobs:
         run: npm run build
 
       - name: List build output
-        run: ls -la dist/
+        run: ls -la out/
 
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -34,7 +34,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/khroonos.com/
+          local-dir: ./out/
           server-dir: /public_html/
           dangerous-clean-slate: false
           exclude: |
