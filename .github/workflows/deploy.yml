@@ -40,7 +40,7 @@ jobs:
           protocol: ftp
           port: 21
           local-dir: ./out/
-          server-dir: /domains/khroonos.com/public_html/
+          server-dir: /public_html/
           dangerous-clean-slate: false
           security: loose
           exclude: |
