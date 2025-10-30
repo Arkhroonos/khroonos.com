@@ -57,7 +57,7 @@
     .return-button {
       display: flex;
       flex-direction: row;
-      justify-content: start;
+      justify-content: flex-start;
       align-items: center;
       margin-bottom: 2rem;
 
@@ -115,7 +115,7 @@
       grid-template-rows: repeat(2, auto);
       gap: 2rem;
       align-items: flex-start;
-      justify-content: start;
+      justify-content: flex-start;
 
       /**
        * Project Infos Section
@@ -124,7 +124,7 @@
         grid-area: infos;
         display: flex;
         flex-direction: column;
-        justify-content: start;
+        justify-content: flex-start;
         align-items: center;
         text-align: center;
         border: var(--border-size) solid var(--border-color);
