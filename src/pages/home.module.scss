@@ -1,113 +1,113 @@
 /**
- * Body & Main Layout
+ * Main Layout Container
  */
-body {
+.container {
   height: auto;
   width: 100%;
   margin: 0;
+}
+
+/**
+ * Main Container
+ */
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/**
+ * App Header
+ */
+.app-header {
+  width: 100%;
+}
+
+/**
+ * App Hero Section
+ */
+.app-hero {
+  width: 100%;
+  height: auto;
+  align-self: center;
+  background-image: url("src/assets/medias/images/backgrounds/blackdesert.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/**
+ * Grid Settings
+ */
+.app-container {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); // 4 equal columns
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas:
+    'motivation motivation motivation motivation'
+    'projects projects projects projects'
+    'stack stack stack stack'
+    'skills skills skills skills'
+    'experience experience experience experience'
+    'hobbies hobbies hobbies hobbies';
+  gap: 1rem;
+  padding: var(--pages-padding);
+  z-index: 1;
 
   /**
-   * Main Container
+   * Grid layout for the components
    */
-  main {
+
+  .infos {
+    grid-area: infos;
+    height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-
-    /**
-     * App Header
-     */
-    .app-header {
-      width: 100%;
-    }
-
-    /**
-     * App Hero Section
-     */
-    .app-hero {
-      width: 100%;
-      height: auto;
-      align-self: center;
-      background-image: url("src/assets/medias/images/backgrounds/blackdesert.jpg");
-      background-size: cover;
-      background-attachment: fixed;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    /**
-     * Grid Settings
-     */
-    .app-container {
-      margin-top: 2.5rem;
-      margin-bottom: 2rem;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr); // 4 equal columns
-      grid-template-rows: repeat(6, auto);
-      grid-template-areas:
-        'motivation motivation motivation motivation'
-        'projects projects projects projects'
-        'stack stack stack stack'
-        'skills skills skills skills'
-        'experience experience experience experience'
-        'hobbies hobbies hobbies hobbies';
-      gap: 1rem;
-      padding: var(--pages-padding);
-      z-index: 1;
-
-      /**
-       * Grid layout for the components
-       */
-
-      .infos {
-        grid-area: infos;
-        height: 100%;
-        width: 100%;
-      }
-
-      .stack {
-        grid-area: stack;
-        height: 100%;
-      }
-
-      .motivation {
-        grid-area: motivation;
-        height: auto;
-        width: 100%;
-      }
-
-      .projects {
-        grid-area: projects;
-        height: 100%;
-        width: 100%;
-      }
-
-      .software {
-        grid-area: software;
-        height: 100%;
-      }
-
-      .skills {
-        grid-area: skills;
-        height: 100%;
-        width: 100%;
-      }
-
-      .experience {
-        grid-area: experience;
-        height: 100%;
-        width: 100%;
-      }
-    }
   }
 
-  h1 {
-    font-size: 1.5rem;
-    color: #fff;
+  .stack {
+    grid-area: stack;
+    height: 100%;
   }
+
+  .motivation {
+    grid-area: motivation;
+    height: auto;
+    width: 100%;
+  }
+
+  .projects {
+    grid-area: projects;
+    height: 100%;
+    width: 100%;
+  }
+
+  .software {
+    grid-area: software;
+    height: 100%;
+  }
+
+  .skills {
+    grid-area: skills;
+    height: 100%;
+    width: 100%;
+  }
+
+  .experience {
+    grid-area: experience;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #fff;
 }
 
 /**
@@ -118,38 +118,38 @@ body {
  * Smartphones portrait
  */
 @media screen and (max-width: 480px) {
-  body {
+  .container {
     width: 100%;
     display: block;
+  }
 
-    main {
-      .app-header {
-        width: 100%;
-      }
-
-      .app-hero {
-        width: 100%;
-        height: auto;
-        background-attachment: scroll; // Fixed background can cause issues on mobile
-      }
-
-      .app-container {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, auto);
-        grid-template-areas:
-          'motivation'
-          'projects'
-          'stack'
-          'skills'
-          'experience'
-          'hobbies';
-        padding: 0;
-        gap: 1.5rem;
-        margin-top: 1.5rem;
-      }
+  .main {
+    .app-header {
+      width: 100%;
     }
+
+    .app-hero {
+      width: 100%;
+      height: auto;
+      background-attachment: scroll; // Fixed background can cause issues on mobile
+    }
+  }
+
+  .app-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      'motivation'
+      'projects'
+      'stack'
+      'skills'
+      'experience'
+      'hobbies';
+    padding: 0;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
   }
 }
 
@@ -157,25 +157,21 @@ body {
  * Tablets portrait (iPad, iPad Mini)
  */
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  body {
-    main {
-      .app-hero {
-        background-attachment: scroll;
-      }
+  .app-hero {
+    background-attachment: scroll;
+  }
 
-      .app-container {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-          'motivation motivation'
-          'projects projects'
-          'stack stack'
-          'skills skills'
-          'experience experience'
-          'hobbies hobbies';
-        padding: var(--tablet-padding);
-        gap: 1.5rem;
-      }
-    }
+  .app-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      'motivation motivation'
+      'projects projects'
+      'stack stack'
+      'skills skills'
+      'experience experience'
+      'hobbies hobbies';
+    padding: var(--tablet-padding);
+    gap: 1.5rem;
   }
 }
 
@@ -183,19 +179,15 @@ body {
  * Tablets landscape & Small desktops (iPad Pro)
  */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  body {
-    main {
-      .app-container {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas:
-          'motivation motivation motivation'
-          'projects projects projects'
-          'stack stack stack'
-          'skills skills skills'
-          'experience experience experience'
-          'hobbies hobbies hobbies';
-        padding: var(--tablet-padding);
-      }
-    }
+  .app-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      'motivation motivation motivation'
+      'projects projects projects'
+      'stack stack stack'
+      'skills skills skills'
+      'experience experience experience'
+      'hobbies hobbies hobbies';
+    padding: var(--tablet-padding);
   }
 }

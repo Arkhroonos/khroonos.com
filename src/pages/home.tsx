@@ -22,40 +22,42 @@ import {
  */
 export function Home() {
   return (
-    <main>
-      <section className={styles['app-header']}>
-        <Navbar />
-      </section>
+    <div className={styles.container}>
+      <main className={styles.main}>
+        <section className={styles['app-header']}>
+          <Navbar />
+        </section>
 
-      <section className={styles['app-hero']} id="hero">
-        <Hero />
-        <Marquee />
-      </section>
+        <section className={styles['app-hero']} id="hero">
+          <Hero />
+          <Marquee />
+        </section>
 
-      <section className={styles['app-container']}>
-        <div className={styles.stack} id="stack">
-          <Stack />
-        </div>
-        <div className={styles.motivation} id="aboutme">
-          <About />
-        </div>
-        <div className={styles.projects} id="projects">
-          <ProjectsSection />
-        </div>
-        <div className={styles.skills} id="skills">
-          <Skills />
-        </div>
-        <div className={styles.experience} id="experiences">
-          <Experience />
-        </div>
-      </section>
-      <section>
-        <Footer />
-      </section>
-      <section>
-        <ThemeSwitcher />
-      </section>
-    </main>
+        <section className={styles['app-container']}>
+          <div className={styles.stack} id="stack">
+            <Stack />
+          </div>
+          <div className={styles.motivation} id="aboutme">
+            <About />
+          </div>
+          <div className={styles.projects} id="projects">
+            <ProjectsSection />
+          </div>
+          <div className={styles.skills} id="skills">
+            <Skills />
+          </div>
+          <div className={styles.experience} id="experiences">
+            <Experience />
+          </div>
+        </section>
+        <section>
+          <Footer />
+        </section>
+        <section>
+          <ThemeSwitcher />
+        </section>
+      </main>
+    </div>
   );
 }
 
