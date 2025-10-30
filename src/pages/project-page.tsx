@@ -1,7 +1,7 @@
 /**
  * React Imports
  */
-import { useParams } from 'next/navigation';
+import React from 'react';
 
 /**
  * Internal Imports
@@ -12,9 +12,12 @@ import { Gallery } from '../components/sections';
 import { ReturnButton } from '../components/ui';
 import styles from './styles/ProjectPage.module.scss';
 
-export default function ProjectPage() {
-  const { id } = useParams<{ id: string }>();
-  const project = projects.find((p) => p.id === id);
+interface ProjectPageProps {
+  projectId: string;
+}
+
+export default function ProjectPage({ projectId }: ProjectPageProps) {
+  const project = projects.find((p) => p.id === projectId);
 
   if (!project) {
     return <h1>Projet non trouvé</h1>;

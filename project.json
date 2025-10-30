@@ -2,9 +2,29 @@
   "name": "khroonos.com",
   "$schema": "node_modules/nx/schemas/project-schema.json",
   "includedScripts": [],
-  "sourceRoot": "./src",
+  "sourceRoot": "./app",
   "projectType": "application",
   "tags": [],
-  "// targets": "to see all targets run: nx show project khroonos.com --web",
-  "targets": {}
+  "targets": {
+    "build": {
+      "executor": "@nx/js:node",
+      "outputs": ["{projectRoot}/out", "{projectRoot}/.next"],
+      "options": {
+        "main": "next.config.mjs",
+        "outputPath": "out"
+      }
+    },
+    "dev": {
+      "executor": "@nx/js:node",
+      "options": {
+        "command": "next dev"
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "options": {
+        "command": "next start"
+      }
+    }
+  }
 }

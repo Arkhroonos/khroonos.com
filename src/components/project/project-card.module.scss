@@ -12,6 +12,9 @@
   background-color: var(--liquid-glass-color);
   box-shadow: var(--shadow-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 
   &:hover {
     transform: translateY(-8px);

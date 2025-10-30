@@ -1,7 +1,11 @@
 'use client';
 
+import { useParams } from 'next/navigation';
 import ProjectPage from '../../../src/pages/project-page';
 
 export default function Project() {
-  return <ProjectPage />;
+  const params = useParams();
+  const id = params?.id as string;
+
+  return <ProjectPage projectId={id} />;
 }

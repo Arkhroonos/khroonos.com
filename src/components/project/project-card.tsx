@@ -2,7 +2,7 @@
  * React Imports
  */
 import React from 'react';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 /**
  * Internal Imports
@@ -15,14 +15,8 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
-  const router = useRouter();
-
-  const handleClick = () => {
-    router.push(`/project/${project.id}`);
-  };
-
   return (
-    <div className={styles['project-card']} onClick={handleClick}>
+    <Link href={`/project/${project.id}`} className={styles['project-card']}>
       {/* Image de la carte */}
       <div className={styles['card-image']}>
         {project.images && project.images.length > 0 ? (
@@ -74,7 +68,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
         <button className={styles['view-button']}>Voir le projet</button>
       </div>
-    </div>
+    </Link>
   );
 }
 

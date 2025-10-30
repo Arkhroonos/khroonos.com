@@ -5,13 +5,12 @@
  */
 
 import { render, screen, fireEvent } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
 import ProjectsPage from '../projects-page';
 import { projects } from '../../data/projects';
 
-// Helper function to render with router
-const renderWithRouter = (component: React.ReactElement) => {
-  return render(<BrowserRouter>{component}</BrowserRouter>);
+// Helper function to render
+const renderComponent = (component: React.ReactElement) => {
+  return render(component);
 };
 
 describe('ProjectsPage', () => {
@@ -19,7 +18,7 @@ describe('ProjectsPage', () => {
    * Test: La page affiche tous les projets par défaut
    */
   it('should display all projects by default', () => {
-    renderWithRouter(<ProjectsPage />);
+    renderComponent(<ProjectsPage />);
 
     // Vérifier que le compteur affiche le bon nombre
     expect(screen.getByText(`${projects.length} projets trouvés`)).toBeTruthy();
@@ -29,7 +28,7 @@ describe('ProjectsPage', () => {
    * Test: Filtrage par année
    */
   it('should filter projects by year', () => {
-    renderWithRouter(<ProjectsPage />);
+    renderComponent(<ProjectsPage />);
 
     // Sélectionner l'année 2025
     const yearSelect = screen.getByLabelText('Année');
@@ -44,7 +43,7 @@ describe('ProjectsPage', () => {
    * Test: Filtrage par technologie
    */
   it('should filter projects by technology', () => {
-    renderWithRouter(<ProjectsPage />);
+    renderComponent(<ProjectsPage />);
 
     // Sélectionner Figma
     const techSelect = screen.getByLabelText('Technologie');
