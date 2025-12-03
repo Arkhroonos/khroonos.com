@@ -42,11 +42,13 @@
    * Introduction Section
    */
   .introduction {
-    display: flex;
+    display: block;
 
+    // In experience.module.scss
     .introduction-text {
       color: var(--text-color);
     }
+
   }
 
   /**
@@ -164,6 +166,7 @@
 
     .introduction {
       margin-bottom: 1rem;
+      color: var(--text-color);
 
       .introduction-text {
         font-size: 0.95rem;

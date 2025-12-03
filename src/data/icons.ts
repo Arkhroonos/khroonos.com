@@ -82,7 +82,7 @@ export const IconsLibrary = {
   },
 
   linkedin: {
-    icon1: '/medias/icons/logos/Linkedin Liquid Glass ! -iOS-Dark-40x40@2x.png',
+    icon1: 'medias/icons/logos/Platform=Github, Color=Negative.svg',
     name: 'Linkedin',
     alt: 'Linkedin Icon',
   },

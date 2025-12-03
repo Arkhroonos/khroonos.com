@@ -2,6 +2,7 @@
  * Internal Imports
  */
 import styles from './skills.module.scss';
+import { informations } from '../../../data/informations';
 
 interface Skill {
   id: number;
@@ -38,16 +39,6 @@ export function Skills({ skills }: SkillsComponentProps) {
   ];
 
   const displayedSkills = skills ?? defaultSkills;
-  const skillsIntroduction = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-Curabitur pretium tincidunt lacus. Nulla gravida orci a odio.
-Nullam varius, turpis et commodo pharetra.
-Est eros bibendum elit, nec luctus magna felis sollicitudin mauris.
-Integer in mauris eu nibh euismod gravida. Mauris tincidunt sem sed arcu.
-Nunc posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat.`;
 
   return (
     <div className={styles['container']}>
@@ -56,7 +47,11 @@ Nunc posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat.`;
       </div>
 
       <div className={styles['skills-introduction']}>
-        <p className={styles['introduction-text']}>{skillsIntroduction}</p>
+        {informations.skillsIntroduction?.map((paragraph, index) => (
+          <p key={index} className={styles['introduction-text']}>
+            {paragraph}
+          </p>
+        ))}
       </div>
 
       <div className={styles['skills-wrapper']}>

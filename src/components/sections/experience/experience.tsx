@@ -4,22 +4,16 @@ import {
   experiences as defaultExperiences,
   Experience as ExperienceType,
 } from '../../../data/experiences';
+import { informations } from '../../../data/informations';
 
 interface ExperiencesComponentProps {
   experiences?: ExperienceType[];
 }
 
+//TODO: Verify Icon Links and Data Interfaces
+
 export function Experience({ experiences }: ExperiencesComponentProps) {
   const displayedExperiences = experiences ?? defaultExperiences;
-  const experiencesIntroduction = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
-ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-ullamco laboris nisi ut aliquip. Duis aute irure dolor in reprehenderit in voluptate velit
-esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium
-tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra. Est
-eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh
-euismod gravida. Mauris tincidunt sem sed arcu. Nunc posuere. Praesent turpis. Aenean
-posuere, tortor sed cursus feugiat.`;
 
   return (
     <div className={styles['container']}>
@@ -27,15 +21,16 @@ posuere, tortor sed cursus feugiat.`;
         <h1 className={styles['title-bar-text']}>Experiences</h1>
       </div>
       <div className={styles['introduction']}>
-        <p className={styles['introduction-text']}>{experiencesIntroduction}</p>
+        {informations.experienceIntroduction?.map((paragraph, index) => (
+          <p key={index} className={styles['introduction-text']}>
+            {paragraph}
+          </p>
+        ))}
       </div>
 
       <div className={styles['experiences']}>
         {displayedExperiences.map((experience, index) => (
           <div key={index} className={styles['experience-wrapper']}>
-            <div className={styles['experience-date']}>
-              <p>{experience.date}</p>
-            </div>
             <div className={styles['experience-infos']}>
               <h2 className={styles['experience-title-text']}>{experience.title}</h2>
             </div>

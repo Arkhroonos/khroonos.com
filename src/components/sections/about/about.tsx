@@ -3,8 +3,11 @@
  */
 import styles from './about.module.scss';
 import { informations } from '../../../data/informations';
-import LinkedInIcon from '../../../assets/medias/icons/logos/Platform=LinkedIn, Color=Negative.svg';
-import GitHubIcon from '../../../assets/medias/icons/logos/Platform=Github, Color=Negative.svg';
+import linkedin from '../../../assets/medias/icons/logos/Platform=LinkedIn, Color=Negative.svg';
+import github from '../../../assets/medias/icons/logos/GitHub-Icon.svg';
+
+//TODO: Verify Icon Links and Data Interfaces
+//TODO: Change Intro Text layout.... Too Blocky.
 
 export function About() {
   return (
@@ -13,8 +16,12 @@ export function About() {
         <h1 className={styles['title-bar-text']}>About Me</h1>
       </div>
 
-      <div className={styles['introduction']}>
-        <p className={styles['introduction-text']}>{informations.intro}</p>
+      <div className={styles['about-introduction']}>
+        {informations.intro.map((paragraph, index) => (
+          <p key={index} className={styles['introduction-text']}>
+            {paragraph}
+          </p>
+        ))}
       </div>
 
       <div className={styles['infos-grid']}>
@@ -39,7 +46,7 @@ export function About() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={LinkedInIcon} alt="LinkedIn" />
+          <img src="medias/icons/logos/LinkedIn-Icon.svg" alt="LinkedIn" />
           <span>LinkedIn</span>
         </a>
         <a
@@ -48,7 +55,7 @@ export function About() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={GitHubIcon} alt="GitHub" />
+          <img src={'/medias/icons/logos/GitHub-Icon.svg'} alt="GitHub" />
           <span>GitHub</span>
         </a>
       </div>

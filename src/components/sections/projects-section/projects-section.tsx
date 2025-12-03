@@ -8,6 +8,7 @@ import { useState } from 'react';
  */
 import styles from './projects-section.module.scss';
 import { projects } from '../../../data/projects';
+import { informations } from '../../../data/informations';
 
 export function ProjectsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -20,16 +21,6 @@ export function ProjectsSection() {
     setCurrentIndex(index);
   };
 
-  // Texte d’introduction
-  const projectIntroduction = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. 
-  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-  Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra. 
-  Est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. 
-  Mauris tincidunt sem sed arcu. Nunc posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat.`;
-
   return (
     <div className={styles['container']}>
       <div className={styles['content-wrapper']}>
@@ -37,7 +28,11 @@ export function ProjectsSection() {
       </div>
 
       <div className={styles['projects-introduction']}>
-        <p className={styles['introduction-text']}>{projectIntroduction}</p>
+        {informations.projectsIntroduction?.map((paragraph, index) => (
+          <p key={index} className={styles['introduction-text']}>
+            {paragraph}
+          </p>
+        ))}
         <button
           className={styles['allProjects-button']}
           onClick={() => (window.location.href = '/projects')}

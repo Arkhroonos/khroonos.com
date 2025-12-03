@@ -41,12 +41,11 @@
   /**
    * Introduction Section
    */
-  .introduction {
-    margin-bottom: 2rem;
+  .about-introduction {
+    display: block;
 
     .introduction-text {
       color: var(--text-color);
-      text-align: justify;
     }
   }
 
