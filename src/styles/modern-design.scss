@@ -1,0 +1,241 @@
+/**
+ * Modern Design Enhancements
+ * Gradients, shadows, and refined visual effects
+ */
+
+/**
+ * Enhanced Typography & Spacing
+ */
+:root {
+  /**
+   * Modern Gradients
+   */
+  --gradient-primary: linear-gradient(135deg, #530080 0%, #F77E2D 100%);
+  --gradient-secondary: linear-gradient(135deg, #F77E2D 0%, #530080 100%);
+  --gradient-dark: linear-gradient(135deg, rgba(83, 0, 128, 0.3) 0%, rgba(247, 126, 45, 0.3) 100%);
+  --gradient-text: linear-gradient(135deg, #F77E2D 0%, #EAEAEA 100%);
+
+  /**
+   * Enhanced Shadows for Depth
+   */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.35);
+  --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.45);
+
+  /**
+   * Glow Effects
+   */
+  --glow-orange: 0 0 20px rgba(247, 126, 45, 0.5);
+  --glow-purple: 0 0 20px rgba(83, 0, 128, 0.5);
+  --glow-combined: 0 0 30px rgba(247, 126, 45, 0.3), 0 0 30px rgba(83, 0, 128, 0.3);
+
+  /**
+   * Modern Transitions
+   */
+  --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.15s ease-out;
+
+  /**
+   * Enhanced Borders
+   */
+  --border-glow: 1px solid rgba(247, 126, 45, 0.2);
+  --border-interactive: 2px solid rgba(247, 126, 45, 0.5);
+}
+
+/**
+ * Modern Global Styles
+ */
+* {
+  transition: var(--transition-base);
+}
+
+/**
+ * Enhanced Typography
+ */
+h1 {
+  letter-spacing: -0.02em;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2 {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.01em;
+}
+
+/**
+ * Enhanced Buttons
+ */
+button, a[role='button'] {
+  position: relative;
+  overflow: hidden;
+  background: var(--gradient-primary);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-base);
+  box-shadow: var(--shadow-md);
+
+  &:hover {
+    box-shadow: var(--glow-combined), var(--shadow-lg);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+  }
+}
+
+/**
+ * Enhanced Cards
+ */
+.card, [class*='Card'] {
+  background: rgba(43, 43, 43, 0.5);
+  backdrop-filter: blur(20px);
+  border: var(--border-glow);
+  border-radius: 16px;
+  transition: var(--transition-base);
+  box-shadow: var(--shadow-md);
+
+  &:hover {
+    border-color: rgba(247, 126, 45, 0.5);
+    box-shadow: var(--glow-orange), var(--shadow-lg);
+    transform: translateY(-8px);
+    background: rgba(43, 43, 43, 0.8);
+  }
+}
+
+/**
+ * Enhanced Inputs & Textareas
+ */
+input, textarea {
+  background: rgba(14, 14, 14, 0.5);
+  border: var(--border-glow);
+  color: var(--text-color);
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  transition: var(--transition-base);
+
+  &:focus {
+    outline: none;
+    border-color: var(--emphasis);
+    box-shadow: 0 0 20px rgba(247, 126, 45, 0.3);
+    background: rgba(14, 14, 14, 0.8);
+  }
+}
+
+/**
+ * Modern Link Animations
+ */
+a:not([class]) {
+  position: relative;
+  color: var(--emphasis);
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: var(--transition-base);
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+/**
+ * Smooth Scrollbar
+ */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(43, 43, 43, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #530080 0%, #F77E2D 100%);
+  border-radius: 5px;
+
+  &:hover {
+    background: linear-gradient(180deg, #F77E2D 0%, #530080 100%);
+  }
+}
+
+/**
+ * Modern Backdrop Filters Enhancement
+ */
+.backdrop-blur {
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+/**
+ * Smooth Highlight Animation
+ */
+@keyframes highlight {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: rgba(247, 126, 45, 0.1);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.highlight-animate {
+  animation: highlight 2s ease-in-out;
+}
+
+/**
+ * Subtle Pulse Animation
+ */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(247, 126, 45, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(247, 126, 45, 0.6);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/**
+ * Modern Skeleton Loading
+ */
+@keyframes skeleton-loading {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(83, 0, 128, 0.1) 25%,
+    rgba(83, 0, 128, 0.2) 50%,
+    rgba(83, 0, 128, 0.1) 75%
+  );
+  background-size: 1000px 100%;
+  animation: skeleton-loading 2s infinite;
+}
