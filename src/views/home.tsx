@@ -7,6 +7,7 @@ import styles from './home.module.scss';
  * Components Imports
  */
 import { Navbar, Footer, ThemeSwitcher } from '../components/layout';
+
 import {
   Hero,
   Stack,
