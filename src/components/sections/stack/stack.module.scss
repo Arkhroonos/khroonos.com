@@ -1,239 +1,79 @@
 /**
- * Stack Component Container
+ * Apple-Inspired Stack Section
+ * Minimal, clean grid layout
  */
+
 .container {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  gap: var(--space-3xl);
+}
 
-  /**
-   * Liquid Glass Effect
-   */
-  flex: 1 1 auto;
-  color: var(--lg-text);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
-  backdrop-filter: blur(10px);
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2xl);
+}
 
-  /**
-   * Content Wrapper
-   */
-  .content-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 0;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: var(--space-2xl);
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
   }
 
-  /**
-   * Title Bar Text
-   */
-  .title-bar-text {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 8rem;
-    font-weight: 600;
-    color: var(--emphasis);
-  }
-
-  /**
-   * Stack Infos Grid
-   */
-  .stack-infos {
-    display: grid;
-    grid-template-areas:
-      'stack-text stack-wrapper stack-wrapper'
-      'stack-text stack-wrapper stack-wrapper';
+  @media (max-width: 480px) {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-
-    /**
-     * Stack Text
-     */
-    .stack-text {
-      grid-area: stack-text;
-      color: var(--text-color);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    /**
-     * Stack Wrapper
-     */
-    .stack-wrapper {
-      border: var(--border-size) solid var(--border-color);
-      border-radius: var(--rounded-corners);
-      padding: var(--general-padding);
-      height: 9.375rem;
-      display: grid;
-      gap: 1rem;
-      background-color: var(--liquid-glass-color);
-      box-shadow: var(--shadow-color);
-      transition: transform 0.3s ease;
-
-      &:hover {
-        transform: translateY(-5px);
-      }
-
-      /**
-       * Stack Type
-       */
-      .stack-type {
-        display: flex;
-        flex-direction: column;
-        width: auto;
-      }
-
-      /**
-       * Stack Chip
-       */
-      .stack-chip {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-
-        .chip {
-          border: var(--border-size) solid var(--border-color);
-          border-radius: var(--rounded-corners);
-          background-color: var(--chips-color);
-          padding: 8px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: all 0.3s ease;
-          width: 48px;
-          height: 48px;
-
-          &:hover {
-            background-color: var(--emphasis);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-          }
-
-          .chip-icon {
-            width: 32px;
-            height: 32px;
-            object-fit: contain;
-          }
-        }
-      }
-    }
+    gap: var(--space-md);
   }
 }
 
-/**
- * Breakpoints
- */
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  background: transparent;
+  border: 1px solid var(--border-light);
+  transition: var(--transition-base);
+  cursor: pointer;
 
-/**
- * Smartphones portrait (iPhone SE, 12 Mini, 13, 14, 15)
- */
-@media (max-width: 480px) {
-  .container {
-    padding: var(--phone-padding);
-    height: 100%;
-
-    .content-wrapper {
-      justify-content: space-between;
-      padding: 1rem 0;
-    }
-
-    .title-bar-text {
-      font-size: 2.5rem;
-    }
-
-    .stack-infos {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-
-      .stack-text {
-        font-size: 0.95rem;
-        text-align: left;
-        align-items: flex-start;
-      }
-
-      .stack-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        height: auto;
-        min-height: 8rem;
-        padding: 1.5rem;
-
-        .stack-type {
-          h3 {
-            font-size: 1.1rem;
-          }
-        }
-
-        .stack-chip {
-          .chip {
-            width: 40px;
-            height: 40px;
-            padding: 6px;
-
-            .chip-icon {
-              width: 28px;
-              height: 28px;
-            }
-          }
-        }
-      }
-    }
+  &:hover {
+    border-color: var(--accent-primary);
+    box-shadow: var(--shadow-md);
+    background: var(--surface-secondary);
+    transform: translateY(-4px);
   }
 }
 
-/**
- * Tablets portrait (iPad Mini, iPad)
- */
-@media (min-width: 481px) and (max-width: 768px) {
-  .container {
-    padding: var(--tablet-padding);
-
-    .title-bar-text {
-      font-size: 5rem;
-    }
-
-    .stack-infos {
-      grid-template-areas:
-        'stack-text stack-text'
-        'stack-wrapper stack-wrapper';
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.25rem;
-
-      .stack-wrapper {
-        height: auto;
-        min-height: 10rem;
-      }
-    }
-  }
+.icon {
+  font-size: 2.5rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/**
- * Tablets landscape (iPad Pro)
- */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .container {
-    padding: var(--tablet-padding);
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-align: center;
+  word-break: break-word;
 
-    .title-bar-text {
-      font-size: 6rem;
-    }
-
-    .stack-infos {
-      grid-template-areas:
-        'stack-text stack-wrapper stack-wrapper'
-        'stack-text stack-wrapper stack-wrapper';
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
+  @media (max-width: 480px) {
+    font-size: 0.75rem;
   }
 }
