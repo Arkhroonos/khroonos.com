@@ -1,165 +1,94 @@
 /**
- * Infos Component Container
+ * Apple-Inspired Hero Section
+ * Clean, minimal, premium feel
  */
+
 .container {
-  height: auto;
-  margin: 6.25rem 6.25rem 3.5rem 6.25rem;
   display: flex;
-  width: auto;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  flex: 1 1 auto;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--space-5xl) var(--space-xl);
+  gap: var(--space-lg);
+  text-align: center;
 
-  /**
-   * Liquid Glass Effect
-   */
-  color: var(--lg-text);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+  @media (max-width: 768px) {
+    min-height: auto;
+    padding: var(--space-3xl) var(--space-lg);
+  }
+}
 
-  /**
-   * Profile Name
-   */
-  .profile-name {
-    padding: 2rem;
-    font-size: 12rem;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: var(--text-color);
-    width: auto;
+.profile-name {
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin: 0;
+
+  @media (max-width: 1024px) {
+    font-size: 3.5rem;
   }
 
-  /**
-   * Job Title
-   */
-  .job-name {
+  @media (max-width: 768px) {
     font-size: 2.5rem;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    text-transform: uppercase;
-    color: var(--emphasis);
-    width: auto;
-    font-weight: 200;
-    backdrop-filter: blur(10px);
-    background-color: var(--liquid-glass-color);
-    border-radius: var(--rounded-corners);
-    border: var(--border-size) solid var(--border-color);
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
-    padding: 0.5rem 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
+}
+
+.job-name {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: -0.01em;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  border-radius: 0;
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
   }
 }
 
 /**
- * Mouse Animation
+ * Smooth Mouse Animation
  */
 .mouse {
-  height: 4rem;
-  animation: mouse-rebound 1s linear infinite;
-  margin-bottom: 2rem;
-}
+  height: 3rem;
+  animation: mouse-scroll 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  opacity: 0.7;
+  margin-top: var(--space-xl);
 
-@keyframes mouse-rebound {
-  0% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(-10%);
+  @media (max-width: 768px) {
+    height: 2.5rem;
+    margin-top: var(--space-lg);
   }
 }
 
-/**
- * Breakpoints
- */
-
-/**
- * Smartphones portrait (iPhone SE, 12 Mini, 13, 14, 15)
- */
-@media (max-width: 480px) {
-  .container {
-    margin: 4rem 1.25rem 2rem 1.25rem;
-    height: auto;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1 1 auto;
-    gap: 1rem;
-
-    .profile-name {
-      font-size: 3.5rem;
-      padding: 1rem 0;
-      line-height: 1.1;
-    }
-
-    .job-name {
-      font-size: 1.1rem;
-      padding: 0.4rem 1rem;
-      white-space: nowrap;
-    }
+@keyframes mouse-scroll {
+  0%, 20%, 50%, 80%, 100% {
+    opacity: 0.7;
+    transform: translateY(0);
   }
-
-  .mouse {
-    height: 3rem;
-    margin-bottom: 1.5rem;
+  40% {
+    opacity: 1;
+    transform: translateY(8px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(4px);
   }
 }
-
-/**
- * Tablets portrait (iPad Mini, iPad)
- */
-@media (min-width: 481px) and (max-width: 768px) {
-  .container {
-    margin: 5rem 2rem 3rem 2rem;
-
-    .profile-name {
-      font-size: 7rem;
-      padding: 1.5rem;
-    }
-
-    .job-name {
-      font-size: 1.75rem;
-      padding: 0.5rem 1.25rem;
-    }
-  }
-
-  .mouse {
-    height: 3.5rem;
-  }
-}
-
-/**
- * Tablets landscape (iPad Pro)
- */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .container {
-    margin: 5.5rem 3rem 3.25rem 3rem;
-
-    .profile-name {
-      font-size: 9rem;
-    }
-
-    .job-name {
-      font-size: 2rem;
-    }
-  }
-}
-
-/**
- * Large Desktop
- */
-@media (min-width: 1441px) {
-  .container {
-    .profile-name {
-      font-size: 14rem;
-    }
-
-    .job-name {
-      font-size: 3rem;
-    }
-  }
-}
-
-

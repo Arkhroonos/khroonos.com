@@ -1,14 +1,17 @@
 /**
  * Internal Imports
  */
+import { useHeroAnimation } from '../../../hooks/useAnimations';
 import styles from './hero.module.scss';
 import { IconsLibrary } from '../../../data/icons';
 import { informations } from '../../../data/informations';
 
 export function Hero() {
+  const containerRef = useHeroAnimation();
+
   return (
     <>
-      <div className={styles['container']}>
+      <div className={styles['container']} ref={containerRef}>
         <h1 className={styles['profile-name']}>
           {informations.name}
           <br /> {informations.surname}
