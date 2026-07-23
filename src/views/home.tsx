@@ -40,9 +40,6 @@ export function Home() {
           <div className={styles.motivation} id="aboutme">
             <About />
           </div>
-          <div className={styles.projects} id="projects">
-            <ProjectsSection />
-          </div>
           <div className={styles.skills} id="skills">
             <Skills />
           </div>

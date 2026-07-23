@@ -28,16 +28,6 @@ export function Navbar() {
             </Link>
           </div>
           <div className={styles['nav-link']}>
-            <Link href="/about" className={styles['link']}>
-              About
-            </Link>
-          </div>
-          <div className={styles['nav-link']}>
-            <Link href="/projects" className={styles['link']}>
-              Projects
-            </Link>
-          </div>
-          <div className={styles['nav-link']}>
             <a href="/#stack" className={styles['link']}>
               Stack
             </a>
@@ -47,7 +37,7 @@ export function Navbar() {
               Experiences
             </a>
           </div>
-          <div className={styles['theme-switcher-desktop']}></div>
+
         </div>
       </div>
 
@@ -69,16 +59,6 @@ export function Navbar() {
             <div className={styles['menu-item']}>
               <Link href="/" className={styles['link']} onClick={handleLinkClick}>
                 Home
-              </Link>
-            </div>
-            <div className={styles['menu-item']}>
-              <Link href="/about" className={styles['link']} onClick={handleLinkClick}>
-                About
-              </Link>
-            </div>
-            <div className={styles['menu-item']}>
-              <Link href="/projects" className={styles['link']} onClick={handleLinkClick}>
-                Projects
               </Link>
             </div>
             <div className={styles['menu-item']}>

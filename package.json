@@ -7,7 +7,7 @@
     "dev": "next dev",
     "prebuild": "cp -r src/assets/medias public/ || true",
     "build": "next build",
-    "start": "next start",
+    "start": "npx serve@latest -l 3000 out",
     "test": "nx test",
     "clean": "rm -rf .next out"
   },
@@ -15,15 +15,17 @@
     "includedScripts": []
   },
   "overrides": {
-    "@swc/core": "~1.5.7"
+    "@swc/core": "~1.5.7",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3"
   },
   "dependencies": {
     "@octokit/rest": "^22.0.1",
     "caniuse-lite": "^1.0.30001751",
     "devicon": "^2.17.0",
-    "next": "^15.0.3",
-    "react": "19.0.0",
-    "react-dom": "^19.0.0",
+    "next": "16.2.11",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
@@ -46,13 +48,13 @@
     "@testing-library/react": "16.1.0",
     "@types/jest": "^30.0.0",
     "@types/node": "^20.0.0",
-    "@types/react": "19.0.0",
-    "@types/react-dom": "19.0.0",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
     "@typescript-eslint/eslint-plugin": "^8.46.2",
     "@typescript-eslint/parser": "^8.46.2",
     "babel-jest": "^30.0.2",
     "eslint": "^9.8.0",
-    "eslint-config-next": "^15.0.3",
+    "eslint-config-next": "16.2.11",
     "eslint-config-prettier": "^10.0.0",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-jsx-a11y": "6.10.1",
